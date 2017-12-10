@@ -69,9 +69,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_glossary -> {
 
             }
-            R.id.nav_configuration -> {
-
-            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
