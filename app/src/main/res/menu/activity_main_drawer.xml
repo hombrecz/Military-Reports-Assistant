@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/navigation_drawer_reports">
+        <menu>
+            <item
+                android:id="@+id/nav_medevac"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/navigation_drawer_reports_medevac" />
+            <item
+                android:id="@+id/nav_sitrep"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/navigation_drawer_reports_sitrep" />
+            <item
+                android:id="@+id/nav_salute"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/navigation_drawer_reports_salute" />
+            <item
+                android:id="@+id/nav_saltr"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/navigation_drawer_reports_saltr" />
+            <item
+                android:id="@+id/nav_ied"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/navigation_drawer_reports_ied" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_glossary"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="@string/navigation_drawer_glossary" />
+    <item
+        android:id="@+id/nav_configuration"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="@string/navigation_drawer_configuration" />
+
+</menu>

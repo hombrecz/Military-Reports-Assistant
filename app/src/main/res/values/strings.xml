@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TacAssistant</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_">Close navigation drawer</string>
+    <string name="navigation_drawer_reports">Reports</string>
+    <string name="navigation_drawer_reports_medevac">Medevac 9-liner</string>
+    <string name="navigation_drawer_reports_sitrep">Sitrep</string>
+    <string name="navigation_drawer_reports_salute">SALUTE</string>
+    <string name="navigation_drawer_reports_saltr">SALTR</string>
+    <string name="navigation_drawer_reports_ied">IED/UXO</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="navigation_drawer_glossary">Glossary</string>
+    <string name="navigation_drawer_configuration">Configuration</string>
+</resources>
