@@ -26,6 +26,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cz.hombre.tacassistant.MainActivity" />
         </activity>
+        <activity android:name=".report.MedevacReport"></activity>
     </application>
 
 </manifest>

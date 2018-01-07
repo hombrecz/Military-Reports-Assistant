@@ -32,6 +32,51 @@
     <string name="status_location_image_description">Location info</string>
     <string name="status_time_image_description">Time info</string>
 
+    <!--Reports-->
+
+    <!--Medevac-->
+    <string name="report_medevac_line_1">Line 1 - Location of the pick-up site</string>
+    <string name="report_medevac_line_1_coordinates">Coordinates</string>
+    <string name="report_medevac_line_1_button">Get location</string>
+    <string name="report_medevac_line_2">Line 2 - Radio frequency and call sign</string>
+    <string name="report_medevac_line_2_frequency">Frequency</string>
+    <string name="report_medevac_line_2_call_sign">Call sign</string>
+    <string name="report_medevac_line_3">Line 3 - Number of patients of precedence</string>
+    <string name="report_medevac_line_3_alpha">A - Urgent</string>
+    <string name="report_medevac_line_3_bravo">B - Urgent surgical</string>
+    <string name="report_medevac_line_3_charlie">C - Priority</string>
+    <string name="report_medevac_line_3_delta">D - Routine</string>
+    <string name="report_medevac_line_3_echo">E - Convenience</string>
+    <string name="report_medevac_line_4">Line 4 - Special equipment required</string>
+    <string name="report_medevac_line_4_alpha">A - None</string>
+    <string name="report_medevac_line_4_bravo">B - Hoist</string>
+    <string name="report_medevac_line_4_charlie">C - Extraction equipment</string>
+    <string name="report_medevac_line_4_delta">D - Ventilator</string>
+    <string name="report_medevac_line_5">Line 5 - Number of patients</string>
+    <string name="report_medevac_line_5_alpha">A -  Litter</string>
+    <string name="report_medevac_line_5_bravo">B - Ambulatory.</string>
+    <string name="report_medevac_line_6">Line 6 - Security at pick-up site</string>
+    <string name="report_medevac_line_6_alpha">A - No enemy troops in area</string>
+    <string name="report_medevac_line_6_bravo">B - Possible enemy troops in area (approach with caution)</string>
+    <string name="report_medevac_line_6_charlie">C - enemy troops in area (approach with caution)</string>
+    <string name="report_medevac_line_6_delta">D - enemy troops in area (armed escort required)</string>
+    <string name="report_medevac_line_7">Line 7 - Method of pick-up site marking</string>
+    <string name="report_medevac_line_7_alpha">A - Panel</string>
+    <string name="report_medevac_line_7_bravo">B - Pyrotechnic signal</string>
+    <string name="report_medevac_line_7_charlie">C - Smoke signal</string>
+    <string name="report_medevac_line_7_delta">D - None</string>
+    <string name="report_medevac_line_7_echo">E - Other</string>
+    <string name="report_medevac_line_8">Line 8 - Patient nationality and status</string>
+    <string name="report_medevac_line_8_alpha">A - US military</string>
+    <string name="report_medevac_line_8_bravo">B - US civilian</string>
+    <string name="report_medevac_line_8_charlie">C - Non-US military</string>
+    <string name="report_medevac_line_8_delta">D - Non-US civilian</string>
+    <string name="report_medevac_line_8_echo">E - Enemy POW </string>
+    <string name="report_medevac_line_9">Line 9 - NBC contamination</string>
+    <string name="report_medevac_line_9_november">N - Nuclear</string>
+    <string name="report_medevac_line_9_biological">B - Biological</string>
+    <string name="report_medevac_line_9_chemical">C - Chemical</string>
+
     <!-- Settings -->
     <string name="title_activity_settings">Settings</string>
     <string name="preference_callsign_summary">Callsign used in reports.</string>
