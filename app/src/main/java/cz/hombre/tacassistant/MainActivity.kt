@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import cz.hombre.tacassistant.report.MedevacReport
+import cz.hombre.tacassistant.report.SaluteReport
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -59,13 +61,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_medevac -> {
-
+                startActivity(Intent(this, MedevacReport::class.java))
+                return true
             }
             R.id.nav_sitrep -> {
 
             }
             R.id.nav_salute -> {
-
+                startActivity(Intent(this, SaluteReport::class.java))
+                return true
             }
             R.id.nav_saltr -> {
 

@@ -93,4 +93,6 @@
         <item>NATO</item>
         <item>Czech</item>
     </string-array>
+    <string name="title_activity_salute_report">Salute report</string>
+    <string name="title_activity_medevac_report">Medevac 9-line request</string>
 </resources>
