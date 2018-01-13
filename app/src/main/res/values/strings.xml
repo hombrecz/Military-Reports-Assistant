@@ -33,11 +33,12 @@
     <string name="status_time_image_description">Time info</string>
 
     <!--Reports-->
+    <string name="report_location_button">Get location</string>
 
     <!--Medevac-->
+    <string name="title_activity_medevac_report">Medevac 9-line request</string>
     <string name="report_medevac_line_1">Line 1 - Location of the pick-up site</string>
     <string name="report_medevac_line_1_coordinates">Coordinates</string>
-    <string name="report_medevac_line_1_button">Get location</string>
     <string name="report_medevac_line_2">Line 2 - Radio frequency and call sign</string>
     <string name="report_medevac_line_2_frequency">Frequency</string>
     <string name="report_medevac_line_2_call_sign">Call sign</string>
@@ -77,6 +78,22 @@
     <string name="report_medevac_line_9_biological">B - Biological</string>
     <string name="report_medevac_line_9_chemical">C - Chemical</string>
 
+    <!--SALUTE-->
+    <string name="title_activity_salute_report">Salute report</string>
+    <string name="report_salute_size">Size</string>
+    <string name="report_salute_size_description">Number of personnel, vehicles and equipment</string>
+    <string name="report_salute_activity">Activity</string>
+    <string name="report_salute_activity_description">Actions or activity of the enemy</string>
+    <string name="report_salute_location">Location</string>
+    <string name="report_salute_location_description">Location of the enemy</string>
+    <string name="report_salute_uniform">Uniform</string>
+    <string name="report_salute_uniform_description">Unit identification - by markings, unforms etc</string>
+    <string name="report_salute_time">Time</string>
+    <string name="report_salute_time_description">Time and date the enemy was observed</string>
+    <string name="report_salute_equipment">Equipment</string>
+    <string name="report_salute_equipment_description">Equipment and weapons observed</string>
+
+
     <!-- Settings -->
     <string name="title_activity_settings">Settings</string>
     <string name="preference_callsign_summary">Callsign used in reports.</string>
@@ -93,6 +110,5 @@
         <item>NATO</item>
         <item>Czech</item>
     </string-array>
-    <string name="title_activity_salute_report">Salute report</string>
-    <string name="title_activity_medevac_report">Medevac 9-line request</string>
+
 </resources>

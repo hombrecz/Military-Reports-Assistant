@@ -48,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/report_medevac_line_1_button" />
+                    android:text="@string/report_location_button" />
             </LinearLayout>
 
         </LinearLayout>
