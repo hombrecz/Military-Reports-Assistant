@@ -14,7 +14,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -37,6 +36,14 @@
         <activity
             android:name=".report.SaluteReport"
             android:label="@string/title_activity_salute_report"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.hombre.tacassistant.MainActivity" />
+        </activity>
+        <activity
+            android:name=".report.SaltrReport"
+            android:label="@string/title_activity_saltr_report"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

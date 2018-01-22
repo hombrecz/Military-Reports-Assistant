@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import cz.hombre.tacassistant.report.MedevacReport
+import cz.hombre.tacassistant.report.SaltrReport
 import cz.hombre.tacassistant.report.SaluteReport
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -72,7 +73,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 return true
             }
             R.id.nav_saltr -> {
-
+                startActivity(Intent(this, SaltrReport::class.java))
+                return true
             }
             R.id.nav_ied -> {
 
