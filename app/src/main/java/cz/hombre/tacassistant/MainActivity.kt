@@ -12,6 +12,7 @@ import android.view.MenuItem
 import cz.hombre.tacassistant.report.MedevacReport
 import cz.hombre.tacassistant.report.SaltrReport
 import cz.hombre.tacassistant.report.SaluteReport
+import cz.hombre.tacassistant.report.SituationReport
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -66,7 +67,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 return true
             }
             R.id.nav_sitrep -> {
-
+                startActivity(Intent(this, SituationReport::class.java))
+                return true
             }
             R.id.nav_salute -> {
                 startActivity(Intent(this, SaluteReport::class.java))

@@ -116,4 +116,18 @@
     <string name="report_saltr_requets">Request / Remarks</string>
     <string name="report_saltr_request_hint">Another requests or remarks to be added to the report</string>
 
+    <!--Situation report-->
+    <string name="title_activity_situation_report">SITREP</string>
+    <string name="report_situation_status">Unit status</string>
+    <string name="report_situation_status_green">Green (100-90%)</string>
+    <string name="report_situation_status_amber">Amber (90-75%)</string>
+    <string name="report_situation_status_red">Red (75-60%)</string>
+    <string name="report_situation_status_black">Black (60-0%)</string>
+    <string name="report_situation_enemy">Enemy situation</string>
+    <string name="report_situation_enemy_hint">What is enemy doing</string>
+    <string name="report_situation_own">Own situation</string>
+    <string name="report_situation_own_hint">Actual situation of my unit</string>
+    <string name="report_situation_following">Following actions</string>
+    <string name="report_situation_following_hint">Step that would be taken</string>
+
 </resources>
