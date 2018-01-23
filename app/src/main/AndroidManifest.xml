@@ -53,7 +53,15 @@
         <activity
             android:name=".report.SituationReport"
             android:label="@string/title_activity_situation_report"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.hombre.tacassistant.MainActivity" />
+        </activity>
+        <activity
+            android:name=".report.ExplosiveReport"
+            android:label="@string/title_activity_explosive_report"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cz.hombre.tacassistant.MainActivity" />

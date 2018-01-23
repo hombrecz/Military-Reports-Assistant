@@ -128,6 +128,9 @@
     <string name="report_situation_own">Own situation</string>
     <string name="report_situation_own_hint">Actual situation of my unit</string>
     <string name="report_situation_following">Following actions</string>
-    <string name="report_situation_following_hint">Step that would be taken</string>
+    <string name="report_situation_following_hint">Actions that would be taken</string>
+
+    <!--IED/UXO report-->
+    <string name="title_activity_explosive_report">IED/UXO Report</string>
 
 </resources>

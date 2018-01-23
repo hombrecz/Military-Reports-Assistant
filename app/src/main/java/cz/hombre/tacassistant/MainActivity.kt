@@ -9,10 +9,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import cz.hombre.tacassistant.report.MedevacReport
-import cz.hombre.tacassistant.report.SaltrReport
-import cz.hombre.tacassistant.report.SaluteReport
-import cz.hombre.tacassistant.report.SituationReport
+import cz.hombre.tacassistant.report.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -79,7 +76,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 return true
             }
             R.id.nav_ied -> {
-
+                startActivity(Intent(this, ExplosiveReport::class.java))
+                return true
             }
             R.id.nav_glossary -> {
 
