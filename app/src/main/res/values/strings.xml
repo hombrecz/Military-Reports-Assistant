@@ -7,7 +7,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_reports">Reports</string>
     <string name="navigation_drawer_reports_medevac">Medevac 9-liner</string>
-    <string name="navigation_drawer_reports_sitrep">Sitrep</string>
+    <string name="navigation_drawer_reports_sitrep">Situation report</string>
     <string name="navigation_drawer_reports_salute">SALUTE</string>
     <string name="navigation_drawer_reports_saltr">SALTR</string>
     <string name="navigation_drawer_reports_ied">IED/UXO</string>
