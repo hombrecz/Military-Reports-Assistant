@@ -76,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/report_medevac_line_2_frequency"
+                    android:hint="@string/report_frequency"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -84,7 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/report_medevac_line_2_call_sign"
+                    android:hint="@string/report_call_sign"
                     android:inputType="textPersonName" />
             </LinearLayout>
 

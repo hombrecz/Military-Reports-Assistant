@@ -60,14 +60,14 @@
     <string name="report_activity_hint">Actions or activity of the enemy</string>
     <string name="report_location">Location</string>
     <string name="report_location_hint">Location of the enemy</string>
+    <string name="report_frequency">Frequency</string>
+    <string name="report_call_sign">Call sign</string>
 
     <!--Medevac-->
     <string name="title_activity_medevac_report">Medevac 9-line request</string>
     <string name="report_medevac_line_1">Line 1 - Location of the pick-up site</string>
     <string name="report_medevac_line_1_coordinates">Coordinates</string>
     <string name="report_medevac_line_2">Line 2 - Radio frequency and call sign</string>
-    <string name="report_medevac_line_2_frequency">Frequency</string>
-    <string name="report_medevac_line_2_call_sign">Call sign</string>
     <string name="report_medevac_line_3">Line 3 - Number of patients of precedence</string>
     <string name="report_medevac_line_3_alpha">A - Urgent</string>
     <string name="report_medevac_line_3_bravo">B - Urgent surgical</string>
@@ -132,5 +132,29 @@
 
     <!--IED/UXO report-->
     <string name="title_activity_explosive_report">IED/UXO Report</string>
+    <string name="explosive_report_line_1">Line 1 - Date time group</string>
+    <string name="explosive_report_line_2">Line 2 - Unit, call sign and location</string>
+    <string name="explosive_report_unit">Unit identifier</string>
+    <string name="explosive_report_line_3">Line 3 - Call sign and frequency</string>
+    <string name="explosive_report_line_4">Line 4 - Type of ammunition</string>
+    <string name="explosive_report_line_4_dropped">Dropped</string>
+    <string name="explosive_report_line_4_projected">Projected</string>
+    <string name="explosive_report_line_4_placed">Placed</string>
+    <string name="explosive_report_line_4_thrown">Thrown</string>
+    <string name="explosive_report_line_4_description">Describe all possible details</string>
+    <string name="explosive_report_line_5">Line 5 - NBC contamination</string>
+    <string name="explosive_report_line_5_checkbox">NBC observed</string>
+    <string name="explosive_report_line_5_description_hint">Type of agent, if identified</string>
+    <string name="explosive_report_line_6">Line 6 - Resources threatened</string>
+    <string name="explosive_report_line_6_hint">What resource is threatened? Is it a critical asset?</string>
+    <string name="explosive_report_line_7">Line 7 - Impact on mission</string>
+    <string name="explosive_report_line_7_hint">How the IED/UXO is affecting the assigned mission?</string>
+    <string name="explosive_report_line_8">Line 8 - Protective measures</string>
+    <string name="explosive_report_line_8_hint">Describe measures taken to protect personal/equiment</string>
+    <string name="explosive_report_line_9">Line 9 - Recommended priority</string>
+    <string name="explosive_report_line_9_immediate">Immediate</string>
+    <string name="explosive_report_line_9_indirect">Indirect</string>
+    <string name="explosive_report_line_9_minor">Minor</string>
+    <string name="explosive_report_line_9_no_threat">No Threat</string>
 
 </resources>
