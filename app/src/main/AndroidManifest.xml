@@ -66,6 +66,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cz.hombre.tacassistant.MainActivity" />
         </activity>
+        <activity
+            android:name=".ReportPreviewActivity"
+            android:label="@string/title_activity_report_preview">
+        </activity>
     </application>
 
 </manifest>

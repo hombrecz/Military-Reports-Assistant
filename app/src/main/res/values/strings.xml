@@ -157,4 +157,8 @@
     <string name="explosive_report_line_9_minor">Minor</string>
     <string name="explosive_report_line_9_no_threat">No Threat</string>
 
+    <!--Report preview-->
+    <string name="title_activity_report_preview">Report Preview</string>
+    <string name="title_activity_report_preview_hint">Prepared report text</string>
+
 </resources>
