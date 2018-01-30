@@ -16,8 +16,9 @@ data class ReportData(val name: String, val lines: Array<ReportLine>) : Serializ
                 sb.append(SEPARATOR_DASH)
             }
             if (line.value.isNotEmpty()) {
-                sb.appendln(line.value)
+                sb.append(line.value)
             }
+            sb.appendln()
         }
 
         return sb.toString()

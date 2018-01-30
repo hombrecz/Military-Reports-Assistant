@@ -27,12 +27,10 @@ class SituationReport : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-
     private fun getReportData(): ReportData {
 
-        val statusRadioButton = findViewById(sitrep_value_status.checkedRadioButtonId) as RadioButton
         val time = ReportLine(sitrep_value_time.text.toString())
-        val status = ReportLine(statusRadioButton.text.toString())
+        val status = ReportLine(getRadioButtonValue(sitrep_value_status.checkedRadioButtonId))
         val enemy = ReportLine(sitrep_value_enemy.text.toString())
         val own = ReportLine(sitrep_value_own.text.toString())
         val follow = ReportLine(sitrep_value_follow.text.toString())
@@ -40,6 +38,11 @@ class SituationReport : AppCompatActivity() {
         val reportData = ReportData("Situation report", arrayOf(time, status, enemy, own, follow))
 
         return reportData
+    }
+
+    private fun getRadioButtonValue(radioButtonGroupId: Int): String {
+        val radioButton = findViewById(radioButtonGroupId) as RadioButton
+        return radioButton.text.toString()
     }
 
 }
