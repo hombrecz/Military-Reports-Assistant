@@ -19,18 +19,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/explosive_label_line1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/explosive_report_line_1" />
 
             <LinearLayout
+                android:id="@+id/explosive_content_line1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText22"
+                    android:id="@+id/explosive_value_line1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -48,18 +49,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/explosive_label_line2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/explosive_report_line_2" />
 
             <LinearLayout
+                android:id="@+id/explosive_content_line2_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/explosive_value_line2_unit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -67,7 +69,7 @@
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/explosive_value_line2_callsign"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -76,12 +78,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/explosive_content_line2_2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/explosive_content_line2_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -90,7 +93,7 @@
                     android:inputType="textPersonName" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/explosive_button_line2_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -107,18 +110,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/explosive_label_line3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/explosive_report_line_3" />
 
             <LinearLayout
+                android:id="@+id/explosive_content_line3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/explosive_value_line3_frequency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -126,7 +130,7 @@
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editText5"
+                    android:id="@+id/explosive_value_line3_callsign"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -142,48 +146,50 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/explosive_label_line4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/explosive_report_line_4" />
 
             <LinearLayout
+                android:id="@+id/explosive_content_line4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <RadioGroup
+                    android:id="@+id/explosive_radio_group_line4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:checkedButton="@+id/radioButton17">
 
                     <RadioButton
-                        android:id="@+id/radioButton17"
+                        android:id="@+id/explosive_value_line4_dropped"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/explosive_report_line_4_dropped" />
 
                     <RadioButton
-                        android:id="@+id/radioButton18"
+                        android:id="@+id/explosive_value_line4_projected"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/explosive_report_line_4_projected" />
 
                     <RadioButton
-                        android:id="@+id/radioButton19"
+                        android:id="@+id/explosive_value_line4_placed"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/explosive_report_line_4_placed" />
 
                     <RadioButton
-                        android:id="@+id/radioButton20"
+                        android:id="@+id/explosive_value_line4_thrown"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/explosive_report_line_4_thrown" />
                 </RadioGroup>
 
                 <EditText
-                    android:id="@+id/editText18"
+                    android:id="@+id/explosive_value_line4_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -198,24 +204,25 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView23"
+                android:id="@+id/explosive_label_line5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/explosive_report_line_5" />
 
             <LinearLayout
+                android:id="@+id/explosive_content_line5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <CheckBox
-                    android:id="@+id/checkBox5"
+                    android:id="@+id/explosive_value_line5_observed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/explosive_report_line_5_checkbox" />
 
                 <EditText
-                    android:id="@+id/editText27"
+                    android:id="@+id/explosive_value_line5_details"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -230,18 +237,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/explosive_label_line6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/explosive_report_line_6" />
 
             <LinearLayout
+                android:id="@+id/explosive_content_line6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText28"
+                    android:id="@+id/explosive_value_line6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -256,18 +264,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView25"
+                android:id="@+id/explosive_label_line7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/explosive_report_line_7" />
 
             <LinearLayout
+                android:id="@+id/explosive_content_line7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText29"
+                    android:id="@+id/explosive_value_line7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -282,18 +291,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView26"
+                android:id="@+id/explosive_label_line8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/explosive_report_line_8" />
 
             <LinearLayout
+                android:id="@+id/explosive_content_line8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText30"
+                    android:id="@+id/explosive_value_line8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -308,36 +318,37 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView27"
+                android:id="@+id/explosive_label_line9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/explosive_report_line_9" />
 
             <RadioGroup
+                android:id="@+id/explosive_content_line9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:checkedButton="@+id/radioButton21">
 
                 <RadioButton
-                    android:id="@+id/radioButton21"
+                    android:id="@+id/explosive_value_line9_immediate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/explosive_report_line_9_immediate" />
 
                 <RadioButton
-                    android:id="@+id/radioButton22"
+                    android:id="@+id/explosive_value_line9_indirect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/explosive_report_line_9_indirect" />
 
                 <RadioButton
-                    android:id="@+id/radioButton23"
+                    android:id="@+id/explosive_value_line9_minor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/explosive_report_line_9_minor" />
 
                 <RadioButton
-                    android:id="@+id/radioButton24"
+                    android:id="@+id/explosive_value_line9_no_threat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/explosive_report_line_9_no_threat" />
