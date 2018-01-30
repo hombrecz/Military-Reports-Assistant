@@ -7,7 +7,6 @@ import cz.hombre.tacassistant.dto.ReportData
 
 import kotlinx.android.synthetic.main.activity_report_preview.*
 import kotlinx.android.synthetic.main.content_report_preview.*
-import kotlinx.android.synthetic.main.content_saltr_report.*
 
 class ReportPreviewActivity : AppCompatActivity() {
 
@@ -26,6 +25,8 @@ class ReportPreviewActivity : AppCompatActivity() {
         }
 
         val report = intent?.getSerializableExtra("report") as ReportData
+
+        setTitle(report.name)
         setReportPreview(report)
     }
 
