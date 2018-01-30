@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cz.hombre.tacassistant.report.SituationReport"
-    tools:showIn="@layout/activity_situation_report"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    tools:showIn="@layout/activity_situation_report">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,10 +52,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/report_situation_status" />
 
-            <LinearLayout
+
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:checkedButton="@+id/radioButton13">
 
                 <RadioButton
                     android:id="@+id/radioButton13"
@@ -80,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_situation_status_black" />
-            </LinearLayout>
+            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout

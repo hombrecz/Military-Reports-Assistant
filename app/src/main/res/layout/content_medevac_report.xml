@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cz.hombre.tacassistant.report.MedevacReport"
-    tools:showIn="@layout/activity_medevac_report"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    tools:showIn="@layout/activity_medevac_report">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -245,10 +245,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_6" />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:checkedButton="@+id/radioButton">
 
                 <RadioButton
                     android:id="@+id/radioButton"
@@ -273,7 +273,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_6_delta" />
-            </LinearLayout>
+            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
@@ -288,10 +288,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_7" />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:checkedButton="@+id/radioButton5">
 
                 <RadioButton
                     android:id="@+id/radioButton5"
@@ -322,7 +322,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_7_echo" />
-            </LinearLayout>
+            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
@@ -396,10 +396,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_9" />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
+                android:checkedButton="@+id/radioButton10">
 
                 <RadioButton
                     android:id="@+id/radioButton10"
@@ -418,7 +418,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_9_chemical" />
-            </LinearLayout>
+            </RadioGroup>
         </LinearLayout>
 
     </LinearLayout>

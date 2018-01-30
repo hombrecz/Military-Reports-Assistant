@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cz.hombre.tacassistant.report.ExplosiveReport"
-    tools:showIn="@layout/activity_explosive_report"
-    tools:layout_editor_absoluteY="81dp">
+    tools:layout_editor_absoluteY="81dp"
+    tools:showIn="@layout/activity_explosive_report">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -152,29 +152,35 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/radioButton17"
+                <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/explosive_report_line_4_dropped" />
+                    android:layout_height="match_parent"
+                    android:checkedButton="@+id/radioButton17">
 
-                <RadioButton
-                    android:id="@+id/radioButton18"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/explosive_report_line_4_projected" />
+                    <RadioButton
+                        android:id="@+id/radioButton17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/explosive_report_line_4_dropped" />
 
-                <RadioButton
-                    android:id="@+id/radioButton19"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/explosive_report_line_4_placed" />
+                    <RadioButton
+                        android:id="@+id/radioButton18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/explosive_report_line_4_projected" />
 
-                <RadioButton
-                    android:id="@+id/radioButton20"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/explosive_report_line_4_thrown" />
+                    <RadioButton
+                        android:id="@+id/radioButton19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/explosive_report_line_4_placed" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/explosive_report_line_4_thrown" />
+                </RadioGroup>
 
                 <EditText
                     android:id="@+id/editText18"
@@ -307,10 +313,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/explosive_report_line_9" />
 
-            <LinearLayout
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:checkedButton="@+id/radioButton21">
 
                 <RadioButton
                     android:id="@+id/radioButton21"
@@ -335,7 +341,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/explosive_report_line_9_no_threat" />
-            </LinearLayout>
+            </RadioGroup>
         </LinearLayout>
 
     </LinearLayout>
