@@ -80,8 +80,8 @@
     <string name="report_medevac_line_4_charlie">C - Extraction equipment</string>
     <string name="report_medevac_line_4_delta">D - Ventilator</string>
     <string name="report_medevac_line_5">Line 5 - Number of patients</string>
-    <string name="report_medevac_line_5_alpha">A -  Litter</string>
-    <string name="report_medevac_line_5_bravo">B - Ambulatory.</string>
+    <string name="report_medevac_line_5_alpha">A - Ambulatory.</string>
+    <string name="report_medevac_line_5_lima">L -  Litter</string>
     <string name="report_medevac_line_6">Line 6 - Security at pick-up site</string>
     <string name="report_medevac_line_6_alpha">A - No enemy troops in area</string>
     <string name="report_medevac_line_6_bravo">B - Possible enemy troops in area (approach with caution)</string>

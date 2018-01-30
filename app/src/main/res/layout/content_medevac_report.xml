@@ -24,18 +24,19 @@
             tools:layout_editor_absoluteY="8dp">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/medevac_label_line1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_1" />
 
             <LinearLayout
+                android:id="@+id/medevac_content_line1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/medevac_value_line1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -44,7 +45,7 @@
                     android:inputType="textPersonName" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/medevac_button_line1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -61,18 +62,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/medevac_label_line2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_2" />
 
             <LinearLayout
+                android:id="@+id/medevac_content_line2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/medevac_value_line2_frequency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -80,7 +82,7 @@
                     android:inputType="textPersonName" />
 
                 <EditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/medevac_value_line2_callsign"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -98,18 +100,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/medevac_label_line3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_3" />
 
             <LinearLayout
+                android:id="@+id/medevac_content_line3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/medevac_value_line3_alpha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -119,7 +122,7 @@
                     android:singleLine="true" />
 
                 <EditText
-                    android:id="@+id/editText5"
+                    android:id="@+id/medevac_value_line3_bravo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -128,7 +131,7 @@
                     android:singleLine="true" />
 
                 <EditText
-                    android:id="@+id/editText6"
+                    android:id="@+id/medevac_value_line3_charlie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -137,7 +140,7 @@
                     android:singleLine="true" />
 
                 <EditText
-                    android:id="@+id/editText10"
+                    android:id="@+id/medevac_value_line3_delta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -145,7 +148,7 @@
                     android:inputType="number" />
 
                 <EditText
-                    android:id="@+id/editText11"
+                    android:id="@+id/medevac_value_line3_echo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -161,36 +164,37 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/medevac_label_line4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_4" />
 
             <LinearLayout
+                android:id="@+id/medevac_content_line4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/medevac_value_line4_alpha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_4_alpha" />
 
                 <CheckBox
-                    android:id="@+id/checkBox2"
+                    android:id="@+id/medevac_value_line4_bravo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_4_bravo" />
 
                 <CheckBox
-                    android:id="@+id/checkBox3"
+                    android:id="@+id/medevac_value_line4_charlie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_4_charlie" />
 
                 <CheckBox
-                    android:id="@+id/checkBox4"
+                    android:id="@+id/medevac_value_line4_delta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_4_delta" />
@@ -205,18 +209,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/medevac_label_line5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_5" />
 
             <LinearLayout
+                android:id="@+id/medevac_content_line5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText8"
+                    android:id="@+id/medevac_value_line5_alpha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -224,11 +229,11 @@
                     android:inputType="number" />
 
                 <EditText
-                    android:id="@+id/editText9"
+                    android:id="@+id/medevac_value_line5_lima"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/report_medevac_line_5_bravo"
+                    android:hint="@string/report_medevac_line_5_lima"
                     android:inputType="number" />
             </LinearLayout>
         </LinearLayout>
@@ -240,36 +245,37 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/medevac_label_line6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_6" />
 
             <RadioGroup
+                android:id="@+id/medevac_content_line6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:checkedButton="@+id/radioButton">
+                android:checkedButton="@+id/report_medevac_line_6_alpha">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/medevac_value_line6_alpha"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_6_alpha" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/medevac_value_line6_bravo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_6_bravo" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/medevac_value_line6_charlie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_6_charlie" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/medevac_value_line6_delta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_6_delta" />
@@ -283,42 +289,43 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/medevac_label_line7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_7" />
 
             <RadioGroup
+                android:id="@+id/medevac_content_line7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:checkedButton="@+id/radioButton5">
+                android:checkedButton="@+id/medevac_value_line7_delta">
 
                 <RadioButton
-                    android:id="@+id/radioButton5"
+                    android:id="@+id/medevac_value_line7_alpha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_7_alpha" />
 
                 <RadioButton
-                    android:id="@+id/radioButton6"
+                    android:id="@+id/medevac_value_line7_bravo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_7_bravo" />
 
                 <RadioButton
-                    android:id="@+id/radioButton7"
+                    android:id="@+id/medevac_value_line7_charlie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_7_charlie" />
 
                 <RadioButton
-                    android:id="@+id/radioButton8"
+                    android:id="@+id/medevac_value_line7_delta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_7_delta" />
 
                 <RadioButton
-                    android:id="@+id/radioButton9"
+                    android:id="@+id/medevac_value_line7_echo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_7_echo" />
@@ -332,18 +339,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/medevac_label_line8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_8" />
 
             <LinearLayout
+                android:id="@+id/medevac_content_line8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText12"
+                    android:id="@+id/medevac_value_line8_alpha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -351,7 +359,7 @@
                     android:inputType="number" />
 
                 <EditText
-                    android:id="@+id/editText13"
+                    android:id="@+id/medevac_value_line8_bravo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -359,7 +367,7 @@
                     android:inputType="number" />
 
                 <EditText
-                    android:id="@+id/editText14"
+                    android:id="@+id/medevac_value_line8_charlie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -367,7 +375,7 @@
                     android:inputType="number" />
 
                 <EditText
-                    android:id="@+id/editText15"
+                    android:id="@+id/medevac_value_line8_delta"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -375,7 +383,7 @@
                     android:inputType="number" />
 
                 <EditText
-                    android:id="@+id/editText16"
+                    android:id="@+id/medevac_value_line8_echo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -391,30 +399,30 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/medevac_label_line9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_9" />
 
             <RadioGroup
+                android:id="@+id/medevac_content_line9"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:checkedButton="@+id/radioButton10">
+                android:layout_height="match_parent">
 
                 <RadioButton
-                    android:id="@+id/radioButton10"
+                    android:id="@+id/medevac_value_line9_november"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_9_november" />
 
                 <RadioButton
-                    android:id="@+id/radioButton11"
+                    android:id="@+id/medevac_value_line9_bravo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_9_biological" />
 
                 <RadioButton
-                    android:id="@+id/radioButton12"
+                    android:id="@+id/medevac_value_line9_charlie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_9_chemical" />
