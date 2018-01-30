@@ -1,11 +1,16 @@
 package cz.hombre.tacassistant.report
 
+import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.widget.RadioButton
 import cz.hombre.tacassistant.R
+import cz.hombre.tacassistant.ReportPreviewActivity
+import cz.hombre.tacassistant.dto.ReportData
+import cz.hombre.tacassistant.dto.ReportLine
 
 import kotlinx.android.synthetic.main.activity_situation_report.*
+import kotlinx.android.synthetic.main.content_situation_report.*
 
 class SituationReport : AppCompatActivity() {
 
@@ -14,10 +19,27 @@ class SituationReport : AppCompatActivity() {
         setContentView(R.layout.activity_situation_report)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            val report = getReportData()
+            val previewIntent = Intent(this, ReportPreviewActivity::class.java)
+            previewIntent.putExtra("report", report)
+            startActivity(previewIntent)
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+
+    private fun getReportData(): ReportData {
+
+        val statusRadioButton = findViewById(sitrep_value_status.checkedRadioButtonId) as RadioButton
+        val time = ReportLine(sitrep_value_time.text.toString())
+        val status = ReportLine(statusRadioButton.text.toString())
+        val enemy = ReportLine(sitrep_value_enemy.text.toString())
+        val own = ReportLine(sitrep_value_own.text.toString())
+        val follow = ReportLine(sitrep_value_follow.text.toString())
+
+        val reportData = ReportData("Situation report", arrayOf(time, status, enemy, own, follow))
+
+        return reportData
     }
 
 }

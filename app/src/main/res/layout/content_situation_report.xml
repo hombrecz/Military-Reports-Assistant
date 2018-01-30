@@ -19,18 +19,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/sitrep_label_time"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/report_time" />
 
             <LinearLayout
+                android:id="@+id/sitrep_content_time"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText22"
+                    android:id="@+id/sitrep_value_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -47,37 +48,38 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/sitrep_label_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/report_situation_status" />
 
 
             <RadioGroup
+                android:id="@+id/sitrep_value_status"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:checkedButton="@+id/radioButton13">
+                android:checkedButton="@+id/sitrep_value_status_green">
 
                 <RadioButton
-                    android:id="@+id/radioButton13"
+                    android:id="@+id/sitrep_value_status_green"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_situation_status_green" />
 
                 <RadioButton
-                    android:id="@+id/radioButton14"
+                    android:id="@+id/sitrep_value_status_red"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_situation_status_amber" />
 
                 <RadioButton
-                    android:id="@+id/radioButton15"
+                    android:id="@+id/sitrep_value_status_amber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_situation_status_red" />
 
                 <RadioButton
-                    android:id="@+id/radioButton16"
+                    android:id="@+id/sitrep_value_status_black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_situation_status_black" />
@@ -90,18 +92,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/sitrep_label_enemy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/report_situation_enemy" />
 
             <LinearLayout
+                android:id="@+id/sitrep_content_enemy"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText24"
+                    android:id="@+id/sitrep_value_enemy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -116,18 +119,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/sitrep_label_own"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/report_situation_own" />
 
             <LinearLayout
+                android:id="@+id/sitrep_content_own"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText25"
+                    android:id="@+id/sitrep_value_own"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -142,18 +146,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/sitrep_label_follow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/report_situation_following" />
 
             <LinearLayout
+                android:id="@+id/sitrep_content_follow"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/editText26"
+                    android:id="@+id/sitrep_value_follow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
