@@ -2,8 +2,8 @@ package cz.hombre.tacassistant.report
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.RadioButton
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
@@ -17,7 +17,7 @@ class ExplosiveReport : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_medevac_report)
+        setContentView(R.layout.activity_explosive_report)
 
         fab.setOnClickListener { view ->
             val report = getReportData()
@@ -25,7 +25,42 @@ class ExplosiveReport : AppCompatActivity() {
             previewIntent.putExtra("report", report)
             startActivity(previewIntent)
         }
+
+        setLineFiveCheckboxFunction()
+        setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun setLineFiveCheckboxFunction() {
+        explosive_value_line5_observed.setOnClickListener { view ->
+            if (explosive_value_line5_observed.isChecked) {
+                explosive_value_line5_details.setVisibility(View.VISIBLE)
+            } else {
+                explosive_value_line5_details.setVisibility(View.GONE)
+            }
+        }
+    }
+
+    private fun setHidingContent() {
+        switchVisibility(explosive_label_line1, explosive_content_line1)
+        switchVisibility(explosive_label_line2, explosive_content_line2)
+        switchVisibility(explosive_label_line3, explosive_content_line3)
+        switchVisibility(explosive_label_line4, explosive_content_line4)
+        switchVisibility(explosive_label_line5, explosive_content_line5)
+        switchVisibility(explosive_label_line6, explosive_content_line6)
+        switchVisibility(explosive_label_line7, explosive_content_line7)
+        switchVisibility(explosive_label_line8, explosive_content_line8)
+        switchVisibility(explosive_label_line9, explosive_content_line9)
+    }
+
+    private fun switchVisibility(initiator: View, target: View) {
+        initiator.setOnClickListener { view ->
+            if (target.visibility.equals(View.VISIBLE)) {
+                target.setVisibility(View.GONE)
+            } else {
+                target.setVisibility(View.VISIBLE)
+            }
+        }
     }
 
     private fun getReportData(): ReportData {

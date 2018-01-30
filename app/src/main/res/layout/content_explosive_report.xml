@@ -55,49 +55,56 @@
                 android:text="@string/explosive_report_line_2" />
 
             <LinearLayout
-                android:id="@+id/explosive_content_line2_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText
-                    android:id="@+id/explosive_value_line2_unit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/explosive_report_unit"
-                    android:inputType="textPersonName" />
-
-                <EditText
-                    android:id="@+id/explosive_value_line2_callsign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="@string/report_call_sign"
-                    android:inputType="textPersonName" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/explosive_content_line2_2"
+                android:id="@+id/explosive_content_line2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:gravity="top"
+                android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/explosive_content_line2_location"
+                <LinearLayout
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="@string/report_medevac_line_1_coordinates"
-                    android:inputType="textPersonName" />
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/explosive_button_line2_location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/report_location_button" />
+                    <EditText
+                        android:id="@+id/explosive_value_line2_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/explosive_report_unit"
+                        android:inputType="textPersonName" />
+
+                    <EditText
+                        android:id="@+id/explosive_value_line2_callsign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/report_call_sign"
+                        android:inputType="textPersonName" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/explosive_content_line2_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/report_medevac_line_1_coordinates"
+                        android:inputType="textPersonName" />
+
+                    <Button
+                        android:id="@+id/explosive_button_line2_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/report_location_button" />
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
@@ -227,7 +234,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="@string/explosive_report_line_5_description_hint"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
 

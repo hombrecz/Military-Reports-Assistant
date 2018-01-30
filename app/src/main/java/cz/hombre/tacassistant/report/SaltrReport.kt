@@ -3,6 +3,7 @@ package cz.hombre.tacassistant.report
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
@@ -23,7 +24,27 @@ class SaltrReport : AppCompatActivity() {
             previewIntent.putExtra("report", report)
             startActivity(previewIntent)
         }
+
+        setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun setHidingContent() {
+        switchVisibility(saltr_label_size, saltr_content_size)
+        switchVisibility(saltr_label_activity, saltr_content_activity)
+        switchVisibility(saltr_label_location, saltr_content_location)
+        switchVisibility(saltr_label_time, saltr_content_time)
+        switchVisibility(saltr_label_request, saltr_content_request)
+    }
+
+    private fun switchVisibility(initiator: View, target: View) {
+        initiator.setOnClickListener { view ->
+            if (target.visibility.equals(View.VISIBLE)) {
+                target.setVisibility(View.GONE)
+            } else {
+                target.setVisibility(View.VISIBLE)
+            }
+        }
     }
 
     private fun getReportData(): ReportData {

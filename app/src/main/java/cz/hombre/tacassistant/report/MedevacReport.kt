@@ -3,12 +3,13 @@ package cz.hombre.tacassistant.report
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.RadioButton
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
-import kotlinx.android.synthetic.main.activity_salute_report.*
+import kotlinx.android.synthetic.main.activity_medevac_report.*
 import kotlinx.android.synthetic.main.content_medevac_report.*
 
 class MedevacReport : AppCompatActivity() {
@@ -23,13 +24,37 @@ class MedevacReport : AppCompatActivity() {
             previewIntent.putExtra("report", report)
             startActivity(previewIntent)
         }
+
+        setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun setHidingContent() {
+        switchVisibility(medevac_label_line1, medevac_content_line1)
+        switchVisibility(medevac_label_line2, medevac_content_line2)
+        switchVisibility(medevac_label_line3, medevac_content_line3)
+        switchVisibility(medevac_label_line4, medevac_content_line4)
+        switchVisibility(medevac_label_line5, medevac_content_line5)
+        switchVisibility(medevac_label_line6, medevac_content_line6)
+        switchVisibility(medevac_label_line7, medevac_content_line7)
+        switchVisibility(medevac_label_line8, medevac_content_line8)
+        switchVisibility(medevac_label_line9, medevac_content_line9)
+    }
+
+    private fun switchVisibility(initiator: View, target: View) {
+        initiator.setOnClickListener { view ->
+            if (target.visibility.equals(View.VISIBLE)) {
+                target.setVisibility(View.GONE)
+            } else {
+                target.setVisibility(View.VISIBLE)
+            }
+        }
     }
 
     private fun getReportData(): ReportData {
 
         val line1 = ReportLine("Line 1", medevac_value_line1.text.toString())
-        val line2 = ReportLine("Line 2", medevac_value_line2_frequency.text.toString() + ", " + medevac_value_line2_callsign.text.toString())
+        val line2 = ReportLine("Line 2", getSecondLine())
         val line3 = ReportLine("Line 3", getThirdLineValue())
         val line4 = ReportLine("Line 4", getFourthLineValue())
         val line5 = ReportLine("Line 5", getFifthLineValue())
@@ -42,6 +67,8 @@ class MedevacReport : AppCompatActivity() {
 
         return reportData
     }
+
+    private fun getSecondLine() = medevac_value_line2_frequency.text.toString() + ", " + medevac_value_line2_callsign.text.toString()
 
     private fun getThirdLineValue(): String {
         val stringBuilder = StringBuilder()

@@ -55,7 +55,7 @@
 
 
             <RadioGroup
-                android:id="@+id/sitrep_value_status"
+                android:id="@+id/sitrep_content_status"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:checkedButton="@+id/sitrep_value_status_green">

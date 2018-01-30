@@ -116,7 +116,7 @@
                 android:text="@string/report_salute_uniform" />
 
             <LinearLayout
-                android:id="@+id/salute_uniform_content"
+                android:id="@+id/salute_content_uniform"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
