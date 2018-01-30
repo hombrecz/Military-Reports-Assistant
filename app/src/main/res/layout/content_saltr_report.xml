@@ -19,19 +19,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/label_size"
+                android:id="@+id/saltr_label_size"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/report_size" />
 
             <LinearLayout
-                android:id="@+id/content_size"
+                android:id="@+id/saltr_content_size"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/value_size"
+                    android:id="@+id/saltr_value_size"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -47,19 +47,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/label_activity"
+                android:id="@+id/saltr_label_activity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/report_activity" />
 
             <LinearLayout
-                android:id="@+id/content_activity"
+                android:id="@+id/saltr_content_activity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/value_activity"
+                    android:id="@+id/saltr_value_activity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -75,19 +75,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/label_location"
+                android:id="@+id/saltr_label_location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/report_location" />
 
             <LinearLayout
-                android:id="@+id/content_location"
+                android:id="@+id/saltr_content_location"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/value_location"
+                    android:id="@+id/saltr_value_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -96,7 +96,7 @@
                     android:inputType="textPersonName" />
 
                 <Button
-                    android:id="@+id/button_location"
+                    android:id="@+id/saltr_button_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -110,19 +110,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/label_time"
+                android:id="@+id/saltr_label_time"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/report_time" />
 
             <LinearLayout
-                android:id="@+id/content_time"
+                android:id="@+id/saltr_content_time"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/value_time"
+                    android:id="@+id/saltr_value_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -138,19 +138,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/label_request"
+                android:id="@+id/saltr_label_request"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/report_saltr_requets" />
 
             <LinearLayout
-                android:id="@+id/content_request"
+                android:id="@+id/saltr_content_request"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/value_request"
+                    android:id="@+id/saltr_value_request"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"

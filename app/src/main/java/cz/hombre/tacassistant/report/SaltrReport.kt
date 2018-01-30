@@ -27,11 +27,11 @@ class SaltrReport : AppCompatActivity() {
     }
 
     private fun getReportData(): ReportData {
-        val size = ReportLine(value_size.text.toString())
-        val activity = ReportLine(value_activity.text.toString())
-        val location = ReportLine(value_location.text.toString())
-        val time = ReportLine(value_time.text.toString())
-        val request = ReportLine(value_request.text.toString())
+        val size = ReportLine(saltr_value_size.text.toString())
+        val activity = ReportLine(saltr_value_activity.text.toString())
+        val location = ReportLine(saltr_value_location.text.toString())
+        val time = ReportLine(saltr_value_time.text.toString())
+        val request = ReportLine(saltr_value_request.text.toString())
 
         val reportData = ReportData("SALTR report", arrayOf(size, activity, location, time, request))
 
