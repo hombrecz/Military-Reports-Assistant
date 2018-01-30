@@ -7,6 +7,7 @@ import cz.hombre.tacassistant.dto.ReportData
 
 import kotlinx.android.synthetic.main.activity_report_preview.*
 import kotlinx.android.synthetic.main.content_report_preview.*
+import kotlinx.android.synthetic.main.content_saltr_report.*
 
 class ReportPreviewActivity : AppCompatActivity() {
 
@@ -29,7 +30,7 @@ class ReportPreviewActivity : AppCompatActivity() {
     }
 
     private fun setReportPreview(report: ReportData) {
-        preview_content.setText(report.toString()) //TODO OD - improve serialization - in ReportData
+        preview_content.setText(report.formattedReport())
     }
 
 }

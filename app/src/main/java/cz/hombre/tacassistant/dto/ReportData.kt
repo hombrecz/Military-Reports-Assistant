@@ -5,6 +5,23 @@ import java.util.*
 
 data class ReportData(val name: String, val lines: Array<ReportLine>) : Serializable {
 
+    private val SEPARATOR_DASH = " - "
+
+    fun formattedReport(): String {
+        val sb = StringBuilder()
+
+        for (line in lines) {
+            if (line.description.isNotEmpty()) {
+                sb.append(line.description)
+                sb.append(SEPARATOR_DASH)
+            }
+            if (line.value.isNotEmpty()) {
+                sb.appendln(line.value)
+            }
+        }
+
+        return sb.toString()
+    }
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
