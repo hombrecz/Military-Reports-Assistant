@@ -12,7 +12,6 @@ import cz.hombre.tacassistant.dto.ReportLine
 
 import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
-
 class ExplosiveReport : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,25 +82,36 @@ class ExplosiveReport : AppCompatActivity() {
     private fun getSecondLine(): String {
         val sb = StringBuilder()
         sb.append(explosive_value_line2_unit.text.toString())
-        sb.append(", ")
+        if (explosive_value_line2_unit.text.toString().isNotBlank()) {
+            sb.append(", ")
+        }
         sb.appendln(explosive_value_line2_callsign.text.toString())
         sb.appendln(explosive_content_line2_location.text.toString())
 
         return sb.toString()
     }
 
-    private fun getThirdLine() = explosive_value_line3_frequency.text.toString() + ", " + explosive_value_line3_callsign.text.toString()
+    private fun getThirdLine(): String {
+        val sb = StringBuilder()
+        sb.append(explosive_value_line3_frequency.text.toString())
+        if (explosive_value_line3_frequency.text.toString().isNotBlank()) {
+            sb.append(", ")
+        }
+        sb.append(explosive_value_line3_callsign.text.toString())
+
+        return sb.toString()
+    }
 
     private fun getFourthLine(): String {
         val sb = StringBuilder()
-        sb.appendln(getRadioButtonValue(explosive_radio_group_line4.id))
+        sb.appendln(getRadioButtonValue(explosive_radio_group_line4.checkedRadioButtonId))
         sb.append(explosive_value_line4_details.text.toString())
 
         return sb.toString()
     }
 
     private fun getFifthLine(): String {
-        var result = "negative"
+        var result = "Negative"
         if (explosive_value_line5_observed.isChecked) {
             result = explosive_value_line5_details.text.toString()
         }
@@ -115,3 +125,4 @@ class ExplosiveReport : AppCompatActivity() {
     }
 
 }
+

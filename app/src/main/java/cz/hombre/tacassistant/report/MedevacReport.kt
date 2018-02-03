@@ -61,7 +61,7 @@ class MedevacReport : AppCompatActivity() {
         val line6 = ReportLine("Line 6", getRadioButtonValue(medevac_content_line6.checkedRadioButtonId))
         val line7 = ReportLine("Line 7", getRadioButtonValue(medevac_content_line7.checkedRadioButtonId))
         val line8 = ReportLine("Line 8", getEightLineValue())
-        val line9 = ReportLine("Line 9", getRadioButtonValue(medevac_content_line9.checkedRadioButtonId))
+        val line9 = ReportLine("Line 9", getNinthLineValue())
 
         val reportData = ReportData("Medevac 9-liner", arrayOf(line1, line2, line3, line4, line5, line6, line7, line8, line9))
 
@@ -158,4 +158,20 @@ class MedevacReport : AppCompatActivity() {
 
         return stringBuilder.toString()
     }
+
+    private fun getNinthLineValue(): String {
+        val stringBuilder = StringBuilder()
+        if (medevac_value_line9_november.isChecked) {
+            stringBuilder.appendln("a")
+        }
+        if (medevac_value_line9_bravo.isChecked) {
+            stringBuilder.appendln("b")
+        }
+        if (medevac_value_line9_charlie.isChecked) {
+            stringBuilder.appendln("c")
+        }
+
+        return stringBuilder.toString()
+    }
+
 }

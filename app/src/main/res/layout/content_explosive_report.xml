@@ -168,7 +168,7 @@
                     android:id="@+id/explosive_radio_group_line4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:checkedButton="@+id/radioButton17">
+                    android:checkedButton="@+id/explosive_value_line4_dropped">
 
                     <RadioButton
                         android:id="@+id/explosive_value_line4_dropped"
@@ -335,7 +335,7 @@
                 android:id="@+id/explosive_content_line9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:checkedButton="@+id/radioButton21">
+                android:checkedButton="@+id/explosive_value_line9_no_threat">
 
                 <RadioButton
                     android:id="@+id/explosive_value_line9_immediate"

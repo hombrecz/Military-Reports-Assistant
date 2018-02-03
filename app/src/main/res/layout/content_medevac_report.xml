@@ -254,7 +254,7 @@
                 android:id="@+id/medevac_content_line6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:checkedButton="@+id/report_medevac_line_6_alpha">
+                android:checkedButton="@+id/medevac_value_line6_alpha">
 
                 <RadioButton
                     android:id="@+id/medevac_value_line6_alpha"
@@ -404,29 +404,31 @@
                 android:layout_height="wrap_content"
                 android:text="@string/report_medevac_line_9" />
 
-            <RadioGroup
+            <LinearLayout
                 android:id="@+id/medevac_content_line9"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-                <RadioButton
+                <CheckBox
                     android:id="@+id/medevac_value_line9_november"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_9_november" />
 
-                <RadioButton
+                <CheckBox
                     android:id="@+id/medevac_value_line9_bravo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_9_biological" />
 
-                <RadioButton
+                <CheckBox
                     android:id="@+id/medevac_value_line9_charlie"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/report_medevac_line_9_chemical" />
-            </RadioGroup>
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
