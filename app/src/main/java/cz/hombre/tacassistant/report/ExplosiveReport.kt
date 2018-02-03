@@ -12,6 +12,8 @@ import cz.hombre.tacassistant.dto.ReportLine
 
 import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
+import kotlinx.android.synthetic.main.content_medevac_report.*
+
 class ExplosiveReport : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,11 +74,9 @@ class ExplosiveReport : AppCompatActivity() {
         val line6 = ReportLine("Line 6", explosive_value_line6.text.toString())
         val line7 = ReportLine("Line 7", explosive_value_line7.text.toString())
         val line8 = ReportLine("Line 8", explosive_value_line8.text.toString())
-        val line9 = ReportLine("Line 9", getRadioButtonValue(explosive_content_line9.checkedRadioButtonId))
+        val line9 = ReportLine("Line 9", getNinthLineValue())
 
-        val reportData = ReportData("UXO/IED 9-liner", arrayOf(line1, line2, line3, line4, line5, line6, line7, line8, line9))
-
-        return reportData
+        return ReportData("UXO/IED 9-liner", arrayOf(line1, line2, line3, line4, line5, line6, line7, line8, line9))
     }
 
     private fun getSecondLine(): String {
@@ -117,6 +117,11 @@ class ExplosiveReport : AppCompatActivity() {
         }
 
         return result
+    }
+
+    private fun getNinthLineValue(): String {
+        val radioButton = findViewById(explosive_content_line9.checkedRadioButtonId) as RadioButton
+        return radioButton.text.toString()
     }
 
     private fun getRadioButtonValue(radioButtonGroupId: Int): String {

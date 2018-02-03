@@ -58,14 +58,12 @@ class MedevacReport : AppCompatActivity() {
         val line3 = ReportLine("Line 3", getThirdLineValue())
         val line4 = ReportLine("Line 4", getFourthLineValue())
         val line5 = ReportLine("Line 5", getFifthLineValue())
-        val line6 = ReportLine("Line 6", getRadioButtonValue(medevac_content_line6.checkedRadioButtonId))
-        val line7 = ReportLine("Line 7", getRadioButtonValue(medevac_content_line7.checkedRadioButtonId))
+        val line6 = ReportLine("Line 6", getSixthLineValue())
+        val line7 = ReportLine("Line 7", getSeventhLineValue())
         val line8 = ReportLine("Line 8", getEightLineValue())
         val line9 = ReportLine("Line 9", getNinthLineValue())
 
-        val reportData = ReportData("Medevac 9-liner", arrayOf(line1, line2, line3, line4, line5, line6, line7, line8, line9))
-
-        return reportData
+        return ReportData("Medevac 9-liner", arrayOf(line1, line2, line3, line4, line5, line6, line7, line8, line9))
     }
 
     private fun getSecondLine() = medevac_value_line2_frequency.text.toString() + ", " + medevac_value_line2_callsign.text.toString()
@@ -128,9 +126,55 @@ class MedevacReport : AppCompatActivity() {
         return stringBuilder.toString()
     }
 
-    private fun getRadioButtonValue(radioButtonGroupId: Int): String {
-        val radioButton = findViewById(radioButtonGroupId) as RadioButton
-        return radioButton.text.toString()
+    private fun getSixthLineValue(): String {
+        val status: String
+
+        when (medevac_content_line6.checkedRadioButtonId) {
+            medevac_value_line6_alpha.id -> {
+                status = "A"
+            }
+            medevac_value_line6_bravo.id -> {
+                status = "B"
+            }
+            medevac_value_line6_charlie.id -> {
+                status = "C"
+            }
+            medevac_value_line6_delta.id -> {
+                status = "D"
+            }
+            else -> {
+                status = ""
+            }
+        }
+
+        return status
+    }
+
+    private fun getSeventhLineValue(): String {
+        val status: String
+
+        when (medevac_content_line7.checkedRadioButtonId) {
+            medevac_value_line7_alpha.id -> {
+                status = "A"
+            }
+            medevac_value_line7_bravo.id -> {
+                status = "B"
+            }
+            medevac_value_line7_charlie.id -> {
+                status = "C"
+            }
+            medevac_value_line7_delta.id -> {
+                status = "D"
+            }
+            medevac_value_line7_echo.id -> {
+                status = "E"
+            }
+            else -> {
+                status = ""
+            }
+        }
+
+        return status
     }
 
     private fun getEightLineValue(): String {

@@ -52,19 +52,36 @@ class SituationReport : AppCompatActivity() {
     private fun getReportData(): ReportData {
 
         val time = ReportLine(sitrep_value_time.text.toString())
-        val status = ReportLine(getRadioButtonValue(sitrep_content_status.checkedRadioButtonId))
+        val status = ReportLine(getStatusValue())
         val enemy = ReportLine(sitrep_value_enemy.text.toString())
         val own = ReportLine(sitrep_value_own.text.toString())
         val follow = ReportLine(sitrep_value_follow.text.toString())
 
-        val reportData = ReportData("Situation report", arrayOf(time, status, enemy, own, follow))
-
-        return reportData
+        return ReportData("Situation report", arrayOf(time, status, enemy, own, follow))
     }
 
-    private fun getRadioButtonValue(radioButtonGroupId: Int): String {
-        val radioButton = findViewById(radioButtonGroupId) as RadioButton
-        return radioButton.text.toString()
+    private fun getStatusValue(): String {
+        val status: String
+
+        when (sitrep_content_status.checkedRadioButtonId) {
+            sitrep_value_status_green.id -> {
+                status = "Green"
+            }
+            sitrep_value_status_amber.id -> {
+                status = "Amber"
+            }
+            sitrep_value_status_red.id -> {
+                status = "Red"
+            }
+            sitrep_value_status_black.id -> {
+                status = "Black"
+            }
+            else -> {
+                status = ""
+            }
+        }
+
+        return status
     }
 
 }

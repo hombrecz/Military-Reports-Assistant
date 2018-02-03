@@ -54,9 +54,7 @@ class SaltrReport : AppCompatActivity() {
         val time = ReportLine(saltr_value_time.text.toString())
         val request = ReportLine(saltr_value_request.text.toString())
 
-        val reportData = ReportData("SALTR report", arrayOf(size, activity, location, time, request))
-
-        return reportData
+        return ReportData("SALTR report", arrayOf(size, activity, location, time, request))
     }
 
 }

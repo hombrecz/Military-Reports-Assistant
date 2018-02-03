@@ -56,8 +56,6 @@ class SaluteReport : AppCompatActivity() {
         val time = ReportLine(salute_value_time.text.toString())
         val equipment = ReportLine(salute_value_equipment.text.toString())
 
-        val reportData = ReportData("SALTR report", arrayOf(size, activity, location, uniform, time, equipment))
-
-        return reportData
+        return ReportData("SALTR report", arrayOf(size, activity, location, uniform, time, equipment))
     }
 }
