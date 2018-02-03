@@ -2,6 +2,7 @@ package cz.hombre.tacassistant.report
 
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.RadioButton
@@ -24,11 +25,23 @@ class ExplosiveReport : AppCompatActivity() {
             previewIntent.putExtra("report", report)
             startActivity(previewIntent)
         }
-
+        setDefaultPreferencesValues()
         setLineFiveCheckboxFunction()
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
+
+    private fun setDefaultPreferencesValues() {
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+
+        val frequency = prefs.getString("preference_frequency", "")
+        explosive_value_line3_frequency.setText(frequency)
+
+        val callSign = prefs.getString("preference_callsign", "")
+        explosive_value_line2_callsign.setText(callSign)
+        explosive_value_line3_callsign.setText(callSign)
+    }
+
 
     private fun setLineFiveCheckboxFunction() {
         explosive_value_line5_observed.setOnClickListener {

@@ -2,6 +2,7 @@ package cz.hombre.tacassistant.report
 
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import cz.hombre.tacassistant.R
@@ -10,6 +11,7 @@ import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import kotlinx.android.synthetic.main.activity_medevac_report.*
 import kotlinx.android.synthetic.main.content_medevac_report.*
+
 
 class MedevacReport : AppCompatActivity() {
 
@@ -23,9 +25,19 @@ class MedevacReport : AppCompatActivity() {
             previewIntent.putExtra("report", report)
             startActivity(previewIntent)
         }
-
+        setDefaultPreferencesValues()
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun setDefaultPreferencesValues() {
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+
+        val frequency = prefs.getString("preference_frequency", "")
+        medevac_value_line2_frequency.setText(frequency)
+
+        val callSign = prefs.getString("preference_callsign", "")
+        medevac_value_line2_callsign.setText(callSign)
     }
 
     private fun setHidingContent() {
