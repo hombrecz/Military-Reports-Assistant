@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.RadioButton
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
@@ -19,7 +18,7 @@ class SituationReport : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_situation_report)
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener {
             val report = getReportData()
             val previewIntent = Intent(this, ReportPreviewActivity::class.java)
             previewIntent.putExtra("report", report)
@@ -40,11 +39,11 @@ class SituationReport : AppCompatActivity() {
     }
 
     private fun switchVisibility(initiator: View, target: View) {
-        initiator.setOnClickListener { view ->
-            if (target.visibility.equals(View.VISIBLE)) {
-                target.setVisibility(View.GONE)
+        initiator.setOnClickListener {
+            if (target.visibility == View.VISIBLE) {
+                target.visibility = View.GONE
             } else {
-                target.setVisibility(View.VISIBLE)
+                target.visibility = View.VISIBLE
             }
         }
     }

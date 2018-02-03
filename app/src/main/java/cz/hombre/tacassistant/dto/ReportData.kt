@@ -3,7 +3,7 @@ package cz.hombre.tacassistant.dto
 import java.io.Serializable
 import java.util.*
 
-data class ReportData(val name: String, val lines: Array<ReportLine>) : Serializable {
+data class ReportData(val name: String, private val lines: Array<ReportLine>) : Serializable {
 
     private val SEPARATOR_DASH = " - "
 
@@ -18,7 +18,9 @@ data class ReportData(val name: String, val lines: Array<ReportLine>) : Serializ
             if (line.value.isNotEmpty()) {
                 sb.append(line.value)
             }
-            sb.appendln()
+            if ((line.description.isNotEmpty() || line.value.isNotEmpty()) && (line != lines[lines.lastIndex])) {
+                sb.appendln()
+            }
         }
 
         return sb.toString()

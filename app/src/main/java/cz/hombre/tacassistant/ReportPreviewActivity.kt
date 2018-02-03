@@ -26,7 +26,7 @@ class ReportPreviewActivity : AppCompatActivity() {
 
         val report = intent?.getSerializableExtra("report") as ReportData
 
-        setTitle(report.name)
+        title = report.name
         setReportPreview(report)
     }
 

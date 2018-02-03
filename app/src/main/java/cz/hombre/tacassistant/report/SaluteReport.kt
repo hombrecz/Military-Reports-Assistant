@@ -18,7 +18,7 @@ class SaluteReport : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_salute_report)
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener {
             val report = getReportData()
             val previewIntent = Intent(this, ReportPreviewActivity::class.java)
             previewIntent.putExtra("report", report)
@@ -39,11 +39,11 @@ class SaluteReport : AppCompatActivity() {
     }
 
     private fun switchVisibility(initiator: View, target: View) {
-        initiator.setOnClickListener { view ->
-            if (target.visibility.equals(View.VISIBLE)) {
-                target.setVisibility(View.GONE)
+        initiator.setOnClickListener {
+            if (target.visibility == View.VISIBLE) {
+                target.visibility = View.GONE
             } else {
-                target.setVisibility(View.VISIBLE)
+                target.visibility = View.VISIBLE
             }
         }
     }

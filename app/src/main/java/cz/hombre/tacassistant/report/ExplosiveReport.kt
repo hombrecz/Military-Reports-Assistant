@@ -9,10 +9,8 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
-
 import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
-import kotlinx.android.synthetic.main.content_medevac_report.*
 
 class ExplosiveReport : AppCompatActivity() {
 
@@ -20,7 +18,7 @@ class ExplosiveReport : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_explosive_report)
 
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener {
             val report = getReportData()
             val previewIntent = Intent(this, ReportPreviewActivity::class.java)
             previewIntent.putExtra("report", report)
@@ -33,11 +31,11 @@ class ExplosiveReport : AppCompatActivity() {
     }
 
     private fun setLineFiveCheckboxFunction() {
-        explosive_value_line5_observed.setOnClickListener { view ->
+        explosive_value_line5_observed.setOnClickListener {
             if (explosive_value_line5_observed.isChecked) {
-                explosive_value_line5_details.setVisibility(View.VISIBLE)
+                explosive_value_line5_details.visibility = View.VISIBLE
             } else {
-                explosive_value_line5_details.setVisibility(View.GONE)
+                explosive_value_line5_details.visibility = View.GONE
             }
         }
     }
@@ -55,11 +53,11 @@ class ExplosiveReport : AppCompatActivity() {
     }
 
     private fun switchVisibility(initiator: View, target: View) {
-        initiator.setOnClickListener { view ->
-            if (target.visibility.equals(View.VISIBLE)) {
-                target.setVisibility(View.GONE)
+        initiator.setOnClickListener {
+            if (target.visibility == View.VISIBLE) {
+                target.visibility = View.GONE
             } else {
-                target.setVisibility(View.VISIBLE)
+                target.visibility = View.VISIBLE
             }
         }
     }
@@ -120,12 +118,12 @@ class ExplosiveReport : AppCompatActivity() {
     }
 
     private fun getNinthLineValue(): String {
-        val radioButton = findViewById(explosive_content_line9.checkedRadioButtonId) as RadioButton
+        val radioButton = findViewById<RadioButton>(explosive_content_line9.checkedRadioButtonId)
         return radioButton.text.toString()
     }
 
     private fun getRadioButtonValue(radioButtonGroupId: Int): String {
-        val radioButton = findViewById(radioButtonGroupId) as RadioButton
+        val radioButton = findViewById<RadioButton>(radioButtonGroupId)
         return radioButton.text.toString()
     }
 
