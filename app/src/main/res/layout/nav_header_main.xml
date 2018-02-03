@@ -32,16 +32,20 @@
 
             <TextView
                 android:id="@+id/status_callname"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:paddingEnd="2dp"
+                android:paddingStart="2dp"
                 android:text="@string/status_callname_default" />
 
             <TextView
                 android:id="@+id/status_frequency"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:paddingEnd="2dp"
+                android:paddingStart="2dp"
                 android:text="@string/status_frequency_default" />
 
         </LinearLayout>
@@ -65,14 +69,16 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
                     android:text="@string/status_gps_label" />
 
                 <TextView
@@ -80,19 +86,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
                     android:text="@string/status_gps_default" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
                     android:text="@string/status_mgrs_label" />
 
                 <TextView
@@ -100,6 +110,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
                     android:text="@string/status_mgrs_default" />
             </LinearLayout>
 
@@ -113,6 +125,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
                     android:text="@string/status_precision_default" />
 
                 <TextView
@@ -120,6 +134,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
                     android:text="@string/status_time_position_retrieved_default" />
 
                 <TextView
@@ -127,6 +143,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
                     android:text="@string/status_duration_postion_retrieved_default" />
             </LinearLayout>
 
@@ -152,20 +170,26 @@
 
             <TextView
                 android:id="@+id/status_dtg_zulu_time"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingEnd="2dp"
+                android:paddingStart="2dp"
                 android:text="@string/status_zulu_time_default" />
 
             <TextView
                 android:id="@+id/status_local_date"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingEnd="2dp"
+                android:paddingStart="2dp"
                 android:text="@string/status_local_date_default" />
 
             <TextView
                 android:id="@+id/status_local_time"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingEnd="2dp"
+                android:paddingStart="2dp"
                 android:text="@string/status_local_time_default" />
 
         </LinearLayout>

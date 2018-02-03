@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.EditText
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
@@ -11,6 +12,8 @@ import cz.hombre.tacassistant.dto.ReportLine
 
 import kotlinx.android.synthetic.main.activity_saltr_report.*
 import kotlinx.android.synthetic.main.content_saltr_report.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class SaltrReport : AppCompatActivity() {
 
@@ -24,9 +27,15 @@ class SaltrReport : AppCompatActivity() {
             previewIntent.putExtra("report", report)
             startActivity(previewIntent)
         }
-
+        setAutoTime(saltr_value_time)
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun setAutoTime(target: EditText) {
+        val zuluFormat = SimpleDateFormat("ddHHmm'Z' MMM yy", Locale.getDefault())
+        val zuluTimeValue = Calendar.getInstance(TimeZone.getTimeZone("UTC")).time
+        target.setText(zuluFormat.format(zuluTimeValue).toUpperCase())
     }
 
     private fun setHidingContent() {

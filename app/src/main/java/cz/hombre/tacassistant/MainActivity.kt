@@ -9,9 +9,13 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import cz.hombre.tacassistant.report.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.nav_header_main.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -20,14 +24,50 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        val toggle = object : ActionBarDrawerToggle(this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+            override fun onDrawerOpened(drawerView: View) {
+                super.onDrawerOpened(drawerView)
+                setHeaderValues()
+            }
+        }
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
 
         PreferenceManager.setDefaultValues(this, R.xml.pref_settings, false)
+    }
+
+    private fun setHeaderValues() {
+        setUserData()
+        setLocationData()
+        setTimeData()
+    }
+
+    private fun setUserData() {
+        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
+
+        val frequency = prefs.getString("preference_frequency", "")
+        status_frequency.text = frequency
+
+        val callSign = prefs.getString("preference_callsign", "")
+        status_callname.text = callSign
+    }
+
+    private fun setLocationData() {
+        //TODO OD
+    }
+
+    private fun setTimeData() {
+        val timeFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+        val dateFormat = SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault())
+        val actualDateTime = Calendar.getInstance().time
+        status_local_date.text = dateFormat.format(actualDateTime)
+        status_local_time.text = timeFormat.format(actualDateTime)
+
+        val zuluFormat = SimpleDateFormat("ddHHmm'Z' MMM yy", Locale.getDefault())
+        val zuluTimeValue = Calendar.getInstance(TimeZone.getTimeZone("UTC")).time
+        status_dtg_zulu_time.text = zuluFormat.format(zuluTimeValue).toUpperCase()
     }
 
     override fun onBackPressed() {

@@ -53,7 +53,7 @@
     <!--Reports-->
     <string name="report_location_button">Get location</string>
     <string name="report_time">Time</string>
-    <string name="report_time_hint">Time and date the enemy was observed</string>
+    <string name="report_time_hint">Time and date</string>
     <string name="report_size">Size</string>
     <string name="report_size_hint">Number of personnel, vehicles and equipment</string>
     <string name="report_activity">Activity</string>

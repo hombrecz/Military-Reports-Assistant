@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.EditText
 import android.widget.RadioButton
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
@@ -12,6 +13,8 @@ import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ExplosiveReport : AppCompatActivity() {
 
@@ -26,9 +29,16 @@ class ExplosiveReport : AppCompatActivity() {
             startActivity(previewIntent)
         }
         setDefaultPreferencesValues()
+        setAutoTime(explosive_value_line1)
         setLineFiveCheckboxFunction()
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun setAutoTime(target: EditText) {
+        val zuluFormat = SimpleDateFormat("ddHHmm'Z' MMM yy", Locale.getDefault())
+        val zuluTimeValue = Calendar.getInstance(TimeZone.getTimeZone("UTC")).time
+        target.setText(zuluFormat.format(zuluTimeValue).toUpperCase())
     }
 
     private fun setDefaultPreferencesValues() {
