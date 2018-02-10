@@ -1,10 +1,15 @@
 package cz.hombre.tacassistant.report
 
 import android.content.Intent
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
+import android.widget.EditText
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
@@ -26,8 +31,31 @@ class MedevacReport : AppCompatActivity() {
             startActivity(previewIntent)
         }
         setDefaultPreferencesValues()
+        setAutoLocation(medevac_value_line1)
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun setAutoLocation(textField: EditText?) {
+        var locationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
+
+        val locationListener: LocationListener = object : LocationListener {
+            override fun onLocationChanged(location: Location) {
+                textField!!.setText("${location.longitude}:${location.latitude}");
+            }
+
+            override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
+            override fun onProviderEnabled(provider: String) {}
+            override fun onProviderDisabled(provider: String) {}
+        }
+
+        try {
+            locationManager?.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0L, 0f, locationListener)
+        } catch (e: SecurityException) {
+            Log.e("Medevac report", "Fail to request location update", e)
+        } catch (e: IllegalArgumentException) {
+            Log.e("Medevac report", "GPS provider does not exist", e)
+        }
     }
 
     private fun setDefaultPreferencesValues() {

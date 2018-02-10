@@ -1,15 +1,26 @@
 package cz.hombre.tacassistant
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.design.widget.NavigationView
+import android.support.design.widget.Snackbar
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.EditText
+import android.widget.TextView
 import cz.hombre.tacassistant.report.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -17,7 +28,10 @@ import kotlinx.android.synthetic.main.nav_header_main.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ActivityCompat.OnRequestPermissionsResultCallback {
+
+    private val PERMISSION_REQUEST_LOCATION = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +50,26 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
 
         PreferenceManager.setDefaultValues(this, R.xml.pref_settings, false)
+
+        requestLocationDataPermission()
+    }
+
+    private fun requestLocationDataPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                            Manifest.permission.ACCESS_FINE_LOCATION)) {
+                Snackbar.make(this.currentFocus, "Navigation permission was granted.",
+                        Snackbar.LENGTH_SHORT)
+                        .show()
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                        PERMISSION_REQUEST_LOCATION)
+            }
+        }
+
     }
 
     private fun setHeaderValues() {
@@ -55,7 +89,30 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun setLocationData() {
-        //TODO OD
+        setAutoLocation(status_gps)
+        setAutoLocation(status_mgrs)
+    }
+
+    private fun setAutoLocation(textField: TextView?) {
+        var locationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
+
+
+        val locationListener: LocationListener = object : LocationListener {
+            override fun onLocationChanged(location: Location) {
+                textField!!.setText("${location.longitude}:${location.latitude}");
+            }
+            override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
+            override fun onProviderEnabled(provider: String) {}
+            override fun onProviderDisabled(provider: String) {}
+        }
+
+        try {
+            locationManager?.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0L, 0f, locationListener)
+        } catch (e: SecurityException) {
+            Log.e("SALTR report", "Fail to request location update", e)
+        } catch (e: IllegalArgumentException) {
+            Log.e("SALTR report", "GPS provider does not exist", e)
+        }
     }
 
     private fun setTimeData() {
@@ -126,5 +183,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>,
+                                            grantResults: IntArray) {
+
+        when (requestCode) {
+            PERMISSION_REQUEST_LOCATION -> {
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    Snackbar.make(this.currentFocus, "Navigation permission was granted.",
+                            Snackbar.LENGTH_SHORT)
+                            .show()
+                } else {
+                    Snackbar.make(this.currentFocus, "Camera permission request was denied.",
+                            Snackbar.LENGTH_SHORT)
+                            .show()
+                }
+                return
+            }
+        }
+
     }
 }
