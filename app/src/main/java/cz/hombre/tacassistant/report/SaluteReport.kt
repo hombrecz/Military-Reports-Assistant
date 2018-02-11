@@ -13,13 +13,14 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
-
+import cz.hombre.tacassistant.services.DateTimeService
 import kotlinx.android.synthetic.main.activity_salute_report.*
 import kotlinx.android.synthetic.main.content_salute_report.*
-import java.text.SimpleDateFormat
-import java.util.*
+import org.koin.android.ext.android.inject
 
 class SaluteReport : AppCompatActivity() {
+
+    private val dateTimeService: DateTimeService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,18 +32,11 @@ class SaluteReport : AppCompatActivity() {
             previewIntent.putExtra("report", report)
             startActivity(previewIntent)
         }
-        setAutoTime(salute_value_time)
+        salute_value_time.setText(dateTimeService.getZuluDateTimeGroup())
         setAutoLocation(salute_value_location)
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
-
-    private fun setAutoTime(target: EditText) {
-        val zuluFormat = SimpleDateFormat("ddHHmm'Z' MMM yy", Locale.getDefault())
-        val zuluTimeValue = Calendar.getInstance(TimeZone.getTimeZone("UTC")).time
-        target.setText(zuluFormat.format(zuluTimeValue).toUpperCase())
-    }
-
 
     private fun setAutoLocation(textField: EditText?) {
         var locationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
@@ -51,6 +45,7 @@ class SaluteReport : AppCompatActivity() {
             override fun onLocationChanged(location: Location) {
                 textField!!.setText("${location.longitude}:${location.latitude}");
             }
+
             override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
             override fun onProviderEnabled(provider: String) {}
             override fun onProviderDisabled(provider: String) {}

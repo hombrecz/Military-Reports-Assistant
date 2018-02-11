@@ -13,13 +13,15 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
+import cz.hombre.tacassistant.services.DateTimeService
 
 import kotlinx.android.synthetic.main.activity_saltr_report.*
 import kotlinx.android.synthetic.main.content_saltr_report.*
-import java.text.SimpleDateFormat
-import java.util.*
+import org.koin.android.ext.android.inject
 
 class SaltrReport : AppCompatActivity() {
+
+    private val dateTimeService: DateTimeService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +33,7 @@ class SaltrReport : AppCompatActivity() {
             previewIntent.putExtra("report", report)
             startActivity(previewIntent)
         }
-        setAutoTime(saltr_value_time)
+        saltr_value_time.setText(dateTimeService.getZuluDateTimeGroup())
         setAutoLocation(saltr_value_location)
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -57,12 +59,6 @@ class SaltrReport : AppCompatActivity() {
         } catch (e: IllegalArgumentException) {
             Log.e("SALTR report", "GPS provider does not exist", e)
         }
-    }
-
-    private fun setAutoTime(target: EditText) {
-        val zuluFormat = SimpleDateFormat("ddHHmm'Z' MMM yy", Locale.getDefault())
-        val zuluTimeValue = Calendar.getInstance(TimeZone.getTimeZone("UTC")).time
-        target.setText(zuluFormat.format(zuluTimeValue).toUpperCase())
     }
 
     private fun setHidingContent() {

@@ -19,22 +19,24 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 import cz.hombre.tacassistant.report.*
+import cz.hombre.tacassistant.services.DateTimeService
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
-import java.text.SimpleDateFormat
-import java.util.*
+import org.koin.android.ext.android.inject
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
     private val PERMISSION_REQUEST_LOCATION = 0
 
+    private val dateTimeService: DateTimeService by inject()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
@@ -94,13 +96,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun setAutoLocation(textField: TextView?) {
-        var locationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
+        val locationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
 
 
         val locationListener: LocationListener = object : LocationListener {
             override fun onLocationChanged(location: Location) {
                 textField!!.setText("${location.longitude}:${location.latitude}");
             }
+
             override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
             override fun onProviderEnabled(provider: String) {}
             override fun onProviderDisabled(provider: String) {}
@@ -116,15 +119,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun setTimeData() {
-        val timeFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
-        val dateFormat = SimpleDateFormat("MMMM dd, yyyy", Locale.getDefault())
-        val actualDateTime = Calendar.getInstance().time
-        status_local_date.text = dateFormat.format(actualDateTime)
-        status_local_time.text = timeFormat.format(actualDateTime)
-
-        val zuluFormat = SimpleDateFormat("ddHHmm'Z' MMM yy", Locale.getDefault())
-        val zuluTimeValue = Calendar.getInstance(TimeZone.getTimeZone("UTC")).time
-        status_dtg_zulu_time.text = zuluFormat.format(zuluTimeValue).toUpperCase()
+        status_local_date.text = dateTimeService.getLocalDate()
+        status_local_time.text = dateTimeService.getLocalTime()
+        status_dtg_zulu_time.text = dateTimeService.getZuluDateTimeGroup()
     }
 
     override fun onBackPressed() {
