@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cz.hombre.tacassistant.report.SituationReport">
+    tools:context=".activity.report.SituationReport">
 
     <include layout="@layout/content_situation_report" />
 

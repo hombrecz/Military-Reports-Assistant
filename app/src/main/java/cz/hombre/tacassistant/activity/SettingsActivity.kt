@@ -1,4 +1,4 @@
-package cz.hombre.tacassistant
+package cz.hombre.tacassistant.activity
 
 import android.annotation.TargetApi
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.preference.PreferenceActivity
 import android.preference.PreferenceFragment
 import android.view.MenuItem
+import cz.hombre.tacassistant.R
 
 class SettingsActivity : PreferenceActivity() {
 

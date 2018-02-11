@@ -1,8 +1,9 @@
-package cz.hombre.tacassistant
+package cz.hombre.tacassistant.activity
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 
 import kotlinx.android.synthetic.main.activity_report_preview.*

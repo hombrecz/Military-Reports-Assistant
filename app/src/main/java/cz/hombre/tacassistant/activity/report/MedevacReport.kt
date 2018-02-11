@@ -1,4 +1,4 @@
-package cz.hombre.tacassistant.report
+package cz.hombre.tacassistant.activity.report
 
 import android.content.Intent
 import android.location.Location
@@ -11,7 +11,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import cz.hombre.tacassistant.R
-import cz.hombre.tacassistant.ReportPreviewActivity
+import cz.hombre.tacassistant.activity.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import kotlinx.android.synthetic.main.activity_medevac_report.*

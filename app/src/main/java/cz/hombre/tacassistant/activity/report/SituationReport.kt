@@ -1,11 +1,11 @@
-package cz.hombre.tacassistant.report
+package cz.hombre.tacassistant.activity.report
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import cz.hombre.tacassistant.R
-import cz.hombre.tacassistant.ReportPreviewActivity
+import cz.hombre.tacassistant.activity.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.DateTimeService

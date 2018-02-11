@@ -1,4 +1,4 @@
-package cz.hombre.tacassistant
+package cz.hombre.tacassistant.activity
 
 import android.Manifest
 import android.content.Intent
@@ -20,7 +20,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
-import cz.hombre.tacassistant.report.*
+import cz.hombre.tacassistant.R
+import cz.hombre.tacassistant.activity.report.*
 import cz.hombre.tacassistant.services.DateTimeService
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*

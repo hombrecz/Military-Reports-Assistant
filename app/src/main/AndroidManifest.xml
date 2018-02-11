@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -22,55 +22,55 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".activity.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.MainActivity" />
+                android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".report.MedevacReport"
+            android:name="cz.hombre.tacassistant.activity.report.MedevacReport"
             android:label="@string/title_activity_medevac_report"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.MainActivity" />
+                android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".report.SaluteReport"
+            android:name="cz.hombre.tacassistant.activity.report.SaluteReport"
             android:label="@string/title_activity_salute_report"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.MainActivity" />
+                android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".report.SaltrReport"
+            android:name="cz.hombre.tacassistant.activity.report.SaltrReport"
             android:label="@string/title_activity_saltr_report"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.MainActivity" />
+                android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".report.SituationReport"
+            android:name="cz.hombre.tacassistant.activity.report.SituationReport"
             android:label="@string/title_activity_situation_report"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.MainActivity" />
+                android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".report.ExplosiveReport"
+            android:name="cz.hombre.tacassistant.activity.report.ExplosiveReport"
             android:label="@string/title_activity_explosive_report"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.MainActivity" />
+                android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".ReportPreviewActivity"
+            android:name=".activity.ReportPreviewActivity"
             android:label="@string/title_activity_report_preview">
         </activity>
     </application>
