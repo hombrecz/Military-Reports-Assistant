@@ -3,9 +3,6 @@ package cz.hombre.tacassistant.activity
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.design.widget.NavigationView
@@ -15,14 +12,13 @@ import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.TextView
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.activity.report.*
 import cz.hombre.tacassistant.services.DateTimeService
+import cz.hombre.tacassistant.services.LocationService
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
@@ -34,6 +30,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private val PERMISSION_REQUEST_LOCATION = 0
 
     private val dateTimeService: DateTimeService by inject()
+    private val locationService: LocationService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,31 +89,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun setLocationData() {
-        setAutoLocation(status_gps)
-        setAutoLocation(status_mgrs)
-    }
-
-    private fun setAutoLocation(textField: TextView?) {
-        val locationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
-
-
-        val locationListener: LocationListener = object : LocationListener {
-            override fun onLocationChanged(location: Location) {
-                textField!!.setText("${location.longitude}:${location.latitude}");
-            }
-
-            override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
-            override fun onProviderEnabled(provider: String) {}
-            override fun onProviderDisabled(provider: String) {}
-        }
-
-        try {
-            locationManager?.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0L, 0f, locationListener)
-        } catch (e: SecurityException) {
-            Log.e("SALTR report", "Fail to request location update", e)
-        } catch (e: IllegalArgumentException) {
-            Log.e("SALTR report", "GPS provider does not exist", e)
-        }
+        status_gps.text = locationService.getCurrentGPSLocation()
+        status_mgrs.text = locationService.getCurrentMGRSLocation()
     }
 
     private fun setTimeData() {

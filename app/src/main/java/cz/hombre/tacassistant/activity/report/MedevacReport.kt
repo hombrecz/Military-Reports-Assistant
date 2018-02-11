@@ -14,11 +14,15 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.activity.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
+import cz.hombre.tacassistant.services.LocationService
 import kotlinx.android.synthetic.main.activity_medevac_report.*
 import kotlinx.android.synthetic.main.content_medevac_report.*
+import org.koin.android.ext.android.inject
 
 
 class MedevacReport : AppCompatActivity() {
+
+    private val locationService: LocationService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,31 +35,9 @@ class MedevacReport : AppCompatActivity() {
             startActivity(previewIntent)
         }
         setDefaultPreferencesValues()
-        setAutoLocation(medevac_value_line1)
+        medevac_value_line1.setText(locationService.getCurrentMGRSLocation())
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
-    private fun setAutoLocation(textField: EditText?) {
-        var locationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
-
-        val locationListener: LocationListener = object : LocationListener {
-            override fun onLocationChanged(location: Location) {
-                textField!!.setText("${location.longitude}:${location.latitude}");
-            }
-
-            override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
-            override fun onProviderEnabled(provider: String) {}
-            override fun onProviderDisabled(provider: String) {}
-        }
-
-        try {
-            locationManager?.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0L, 0f, locationListener)
-        } catch (e: SecurityException) {
-            Log.e("Medevac report", "Fail to request location update", e)
-        } catch (e: IllegalArgumentException) {
-            Log.e("Medevac report", "GPS provider does not exist", e)
-        }
     }
 
     private fun setDefaultPreferencesValues() {

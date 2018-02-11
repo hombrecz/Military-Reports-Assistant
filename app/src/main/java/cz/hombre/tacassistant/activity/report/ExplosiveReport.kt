@@ -16,6 +16,7 @@ import cz.hombre.tacassistant.activity.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.DateTimeService
+import cz.hombre.tacassistant.services.LocationService
 import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
 import org.koin.android.ext.android.inject
@@ -23,6 +24,7 @@ import org.koin.android.ext.android.inject
 class ExplosiveReport : AppCompatActivity() {
 
     private val dateTimeService: DateTimeService by inject()
+    private val locationService: LocationService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,32 +38,10 @@ class ExplosiveReport : AppCompatActivity() {
         }
         setDefaultPreferencesValues()
         explosive_value_line1.setText(dateTimeService.getZuluDateTimeGroup())
-        setAutoLocation(explosive_content_line2_location)
+        explosive_content_line2_location.setText(locationService.getCurrentMGRSLocation())
         setLineFiveCheckboxFunction()
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-
-    private fun setAutoLocation(textField: EditText?) {
-        var locationManager = getSystemService(LOCATION_SERVICE) as LocationManager?
-
-
-        val locationListener: LocationListener = object : LocationListener {
-            override fun onLocationChanged(location: Location) {
-                textField!!.setText("${location.longitude}:${location.latitude}");
-            }
-            override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
-            override fun onProviderEnabled(provider: String) {}
-            override fun onProviderDisabled(provider: String) {}
-        }
-
-        try {
-            locationManager?.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0L, 0f, locationListener)
-        } catch (e: SecurityException) {
-            Log.e("UXO/IED report", "Fail to request location update", e)
-        } catch (e: IllegalArgumentException) {
-            Log.e("UXO/IED report", "GPS provider does not exist", e)
-        }
     }
 
     private fun setDefaultPreferencesValues() {
