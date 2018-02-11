@@ -30,7 +30,7 @@
                 android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.report.MedevacReport"
+            android:name="cz.hombre.tacassistant.activity.reports.MedevacReport"
             android:label="@string/title_activity_medevac_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -38,7 +38,7 @@
                 android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.report.SaluteReport"
+            android:name="cz.hombre.tacassistant.activity.reports.SaluteReport"
             android:label="@string/title_activity_salute_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -46,7 +46,7 @@
                 android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.report.SaltrReport"
+            android:name="cz.hombre.tacassistant.activity.reports.SaltrReport"
             android:label="@string/title_activity_saltr_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -54,7 +54,7 @@
                 android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.report.SituationReport"
+            android:name="cz.hombre.tacassistant.activity.reports.SituationReport"
             android:label="@string/title_activity_situation_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -62,7 +62,7 @@
                 android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.report.ExplosiveReport"
+            android:name="cz.hombre.tacassistant.activity.reports.ExplosiveReport"
             android:label="@string/title_activity_explosive_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
@@ -70,7 +70,7 @@
                 android:value="cz.hombre.tacassistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name=".activity.ReportPreviewActivity"
+            android:name=".activity.reports.ReportPreviewActivity"
             android:label="@string/title_activity_report_preview">
         </activity>
     </application>

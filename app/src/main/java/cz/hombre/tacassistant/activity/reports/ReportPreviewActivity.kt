@@ -1,4 +1,4 @@
-package cz.hombre.tacassistant.activity
+package cz.hombre.tacassistant.activity.reports
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar

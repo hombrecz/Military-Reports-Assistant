@@ -1,14 +1,14 @@
-package cz.hombre.tacassistant.activity.report
+package cz.hombre.tacassistant.activity.reports
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import cz.hombre.tacassistant.R
-import cz.hombre.tacassistant.activity.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.DateTimeService
+import cz.hombre.tacassistant.services.ReportFormService
 import kotlinx.android.synthetic.main.activity_situation_report.*
 import kotlinx.android.synthetic.main.content_situation_report.*
 import org.koin.android.ext.android.inject
@@ -16,6 +16,7 @@ import org.koin.android.ext.android.inject
 class SituationReport : AppCompatActivity() {
 
     private val dateTimeService: DateTimeService by inject()
+    private val reportFormService: ReportFormService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,21 +34,11 @@ class SituationReport : AppCompatActivity() {
     }
 
     private fun setHidingContent() {
-        switchVisibility(sitrep_label_time, sitrep_content_time)
-        switchVisibility(sitrep_label_status, sitrep_content_status)
-        switchVisibility(sitrep_label_enemy, sitrep_content_enemy)
-        switchVisibility(sitrep_label_own, sitrep_content_own)
-        switchVisibility(sitrep_label_follow, sitrep_content_follow)
-    }
-
-    private fun switchVisibility(initiator: View, target: View) {
-        initiator.setOnClickListener {
-            if (target.visibility == View.VISIBLE) {
-                target.visibility = View.GONE
-            } else {
-                target.visibility = View.VISIBLE
-            }
-        }
+        reportFormService.setHideableItem(sitrep_label_time, sitrep_content_time)
+        reportFormService.setHideableItem(sitrep_label_status, sitrep_content_status)
+        reportFormService.setHideableItem(sitrep_label_enemy, sitrep_content_enemy)
+        reportFormService.setHideableItem(sitrep_label_own, sitrep_content_own)
+        reportFormService.setHideableItem(sitrep_label_follow, sitrep_content_follow)
     }
 
     private fun getReportData(): ReportData {

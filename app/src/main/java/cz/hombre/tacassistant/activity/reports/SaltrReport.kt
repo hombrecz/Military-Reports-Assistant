@@ -1,20 +1,15 @@
-package cz.hombre.tacassistant.activity.report
+package cz.hombre.tacassistant.activity.reports
 
 import android.content.Intent
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.View
-import android.widget.EditText
 import cz.hombre.tacassistant.R
-import cz.hombre.tacassistant.activity.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
+import cz.hombre.tacassistant.services.ReportFormService
 
 import kotlinx.android.synthetic.main.activity_saltr_report.*
 import kotlinx.android.synthetic.main.content_saltr_report.*
@@ -24,6 +19,7 @@ class SaltrReport : AppCompatActivity() {
 
     private val dateTimeService: DateTimeService by inject()
     private val locationService: LocationService by inject()
+    private val reportFormService: ReportFormService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,21 +38,11 @@ class SaltrReport : AppCompatActivity() {
     }
 
     private fun setHidingContent() {
-        switchVisibility(saltr_label_size, saltr_content_size)
-        switchVisibility(saltr_label_activity, saltr_content_activity)
-        switchVisibility(saltr_label_location, saltr_content_location)
-        switchVisibility(saltr_label_time, saltr_content_time)
-        switchVisibility(saltr_label_request, saltr_content_request)
-    }
-
-    private fun switchVisibility(initiator: View, target: View) {
-        initiator.setOnClickListener {
-            if (target.visibility == View.VISIBLE) {
-                target.visibility = View.GONE
-            } else {
-                target.visibility = View.VISIBLE
-            }
-        }
+        reportFormService.setHideableItem(saltr_label_size, saltr_content_size)
+        reportFormService.setHideableItem(saltr_label_activity, saltr_content_activity)
+        reportFormService.setHideableItem(saltr_label_location, saltr_content_location)
+        reportFormService.setHideableItem(saltr_label_time, saltr_content_time)
+        reportFormService.setHideableItem(saltr_label_request, saltr_content_request)
     }
 
     private fun getReportData(): ReportData {

@@ -16,7 +16,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import cz.hombre.tacassistant.R
-import cz.hombre.tacassistant.activity.report.*
+import cz.hombre.tacassistant.activity.reports.*
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
 import kotlinx.android.synthetic.main.activity_main.*

@@ -1,22 +1,17 @@
-package cz.hombre.tacassistant.activity.report
+package cz.hombre.tacassistant.activity.reports
 
 import android.content.Intent
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.View
-import android.widget.EditText
 import android.widget.RadioButton
 import cz.hombre.tacassistant.R
-import cz.hombre.tacassistant.activity.ReportPreviewActivity
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
+import cz.hombre.tacassistant.services.ReportFormService
 import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
 import org.koin.android.ext.android.inject
@@ -25,6 +20,7 @@ class ExplosiveReport : AppCompatActivity() {
 
     private val dateTimeService: DateTimeService by inject()
     private val locationService: LocationService by inject()
+    private val reportFormService: ReportFormService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,25 +63,15 @@ class ExplosiveReport : AppCompatActivity() {
     }
 
     private fun setHidingContent() {
-        switchVisibility(explosive_label_line1, explosive_content_line1)
-        switchVisibility(explosive_label_line2, explosive_content_line2)
-        switchVisibility(explosive_label_line3, explosive_content_line3)
-        switchVisibility(explosive_label_line4, explosive_content_line4)
-        switchVisibility(explosive_label_line5, explosive_content_line5)
-        switchVisibility(explosive_label_line6, explosive_content_line6)
-        switchVisibility(explosive_label_line7, explosive_content_line7)
-        switchVisibility(explosive_label_line8, explosive_content_line8)
-        switchVisibility(explosive_label_line9, explosive_content_line9)
-    }
-
-    private fun switchVisibility(initiator: View, target: View) {
-        initiator.setOnClickListener {
-            if (target.visibility == View.VISIBLE) {
-                target.visibility = View.GONE
-            } else {
-                target.visibility = View.VISIBLE
-            }
-        }
+        reportFormService.setHideableItem(explosive_label_line1, explosive_content_line1)
+        reportFormService.setHideableItem(explosive_label_line2, explosive_content_line2)
+        reportFormService.setHideableItem(explosive_label_line3, explosive_content_line3)
+        reportFormService.setHideableItem(explosive_label_line4, explosive_content_line4)
+        reportFormService.setHideableItem(explosive_label_line5, explosive_content_line5)
+        reportFormService.setHideableItem(explosive_label_line6, explosive_content_line6)
+        reportFormService.setHideableItem(explosive_label_line7, explosive_content_line7)
+        reportFormService.setHideableItem(explosive_label_line8, explosive_content_line8)
+        reportFormService.setHideableItem(explosive_label_line9, explosive_content_line9)
     }
 
     private fun getReportData(): ReportData {
