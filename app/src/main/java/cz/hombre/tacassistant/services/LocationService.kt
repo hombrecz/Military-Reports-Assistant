@@ -11,22 +11,20 @@ interface LocationService {
     fun getCurrentGPSLocation(): String
 
     fun getCurrentMGRSLocation(): String
+
+    fun getLocationPrecision(): String
+
+    fun getLocationTime(): String
+
+    fun getLocationTimeAgo(): String
 }
 
 class LocationServiceImpl(applicationContext: Context) : LocationService {
 
     private val locationListener: LocationListener = LocationListener()
     private val locationManager: LocationManager = applicationContext.getSystemService(AppCompatActivity.LOCATION_SERVICE) as LocationManager
-    override fun getCurrentGPSLocation(): String {
-        return this.locationListener.getGpsLocation()
-    }
-
-    override fun getCurrentMGRSLocation(): String {
-        return "MGRS TODO"
-    }
 
     init {
-
         try {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0L, 0f, locationListener)
         } catch (e: SecurityException) {
@@ -34,6 +32,27 @@ class LocationServiceImpl(applicationContext: Context) : LocationService {
         } catch (e: IllegalArgumentException) {
             Log.e("Location service", "GPS provider does not exist", e)
         }
+    }
+
+    override fun getLocationTime(): String {
+        return "time TODO"
+    }
+
+    override fun getLocationTimeAgo(): String {
+        return "time ago TODO"
+    }
+
+    override fun getLocationPrecision(): String {
+        return "precision TODO"
+    }
+
+    override fun getCurrentGPSLocation(): String {
+        return this.locationListener.getGpsLocation()
+    }
+
+    override fun getCurrentMGRSLocation(): String {
+        //TODO OD - implement MGRS
+        return "MGRS TODO"
     }
 
 }

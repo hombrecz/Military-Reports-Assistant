@@ -2,7 +2,6 @@ package cz.hombre.tacassistant.activity.reports
 
 import android.content.Intent
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.RadioButton
@@ -11,6 +10,7 @@ import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
+import cz.hombre.tacassistant.services.PreferencesService
 import cz.hombre.tacassistant.services.ReportFormService
 import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
@@ -21,6 +21,7 @@ class ExplosiveReport : AppCompatActivity() {
     private val dateTimeService: DateTimeService by inject()
     private val locationService: LocationService by inject()
     private val reportFormService: ReportFormService by inject()
+    private val preferencesService: PreferencesService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,25 +33,17 @@ class ExplosiveReport : AppCompatActivity() {
             previewIntent.putExtra("report", report)
             startActivity(previewIntent)
         }
-        setDefaultPreferencesValues()
+
+        explosive_value_line3_frequency.setText(preferencesService.getFrequency())
+        explosive_value_line2_callsign.setText(preferencesService.getCallSign())
+        explosive_value_line3_callsign.setText(preferencesService.getCallSign())
         explosive_value_line1.setText(dateTimeService.getZuluDateTimeGroup())
         explosive_content_line2_location.setText(locationService.getCurrentMGRSLocation())
+
         setLineFiveCheckboxFunction()
         setHidingContent()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
-
-    private fun setDefaultPreferencesValues() {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-
-        val frequency = prefs.getString("preference_frequency", "")
-        explosive_value_line3_frequency.setText(frequency)
-
-        val callSign = prefs.getString("preference_callsign", "")
-        explosive_value_line2_callsign.setText(callSign)
-        explosive_value_line3_callsign.setText(callSign)
-    }
-
 
     private fun setLineFiveCheckboxFunction() {
         explosive_value_line5_observed.setOnClickListener {
@@ -75,7 +68,6 @@ class ExplosiveReport : AppCompatActivity() {
     }
 
     private fun getReportData(): ReportData {
-
         val line1 = ReportLine("Line 1", explosive_value_line1.text.toString())
         val line2 = ReportLine("Line 2", getSecondLine())
         val line3 = ReportLine("Line 3", getThirdLine())

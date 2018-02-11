@@ -8,5 +8,6 @@ import org.koin.dsl.module.applicationContext
 val myModule : Module = applicationContext {
     provide { DateTimeServiceImpl() as DateTimeService }
     provide { LocationServiceImpl(androidApplication().baseContext) as LocationService }
+    provide { PreferencesServiceImpl(androidApplication().baseContext) as PreferencesService}
     provide { ReportFormServiceImpl() as ReportFormService}
 }

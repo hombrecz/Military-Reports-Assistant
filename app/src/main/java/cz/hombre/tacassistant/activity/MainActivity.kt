@@ -19,6 +19,7 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.activity.reports.*
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
+import cz.hombre.tacassistant.services.PreferencesService
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private val dateTimeService: DateTimeService by inject()
     private val locationService: LocationService by inject()
+    private val preferencesService: PreferencesService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,27 +75,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun setHeaderValues() {
-        setUserData()
-        setLocationData()
-        setTimeData()
-    }
+        status_callname.text = preferencesService.getCallSign()
+        status_frequency.text = preferencesService.getFrequency()
 
-    private fun setUserData() {
-        val prefs = PreferenceManager.getDefaultSharedPreferences(this)
-
-        val frequency = prefs.getString("preference_frequency", "")
-        status_frequency.text = frequency
-
-        val callSign = prefs.getString("preference_callsign", "")
-        status_callname.text = callSign
-    }
-
-    private fun setLocationData() {
         status_gps.text = locationService.getCurrentGPSLocation()
         status_mgrs.text = locationService.getCurrentMGRSLocation()
-    }
 
-    private fun setTimeData() {
         status_local_date.text = dateTimeService.getLocalDate()
         status_local_time.text = dateTimeService.getLocalTime()
         status_dtg_zulu_time.text = dateTimeService.getZuluDateTimeGroup()
@@ -108,15 +95,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         return when (item.itemId) {
             R.id.action_settings -> {
                 startActivity(Intent(this, SettingsActivity::class.java))
@@ -159,7 +142,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>,
                                             grantResults: IntArray) {
-
         when (requestCode) {
             PERMISSION_REQUEST_LOCATION -> {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {

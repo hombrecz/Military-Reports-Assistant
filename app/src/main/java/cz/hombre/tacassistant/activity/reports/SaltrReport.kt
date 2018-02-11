@@ -3,14 +3,12 @@ package cz.hombre.tacassistant.activity.reports
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
 import cz.hombre.tacassistant.services.ReportFormService
-
 import kotlinx.android.synthetic.main.activity_saltr_report.*
 import kotlinx.android.synthetic.main.content_saltr_report.*
 import org.koin.android.ext.android.inject
