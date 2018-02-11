@@ -7,7 +7,7 @@ import android.os.Bundle
 
 class LocationListener : LocationListener {
 
-    private var gpsLocation : Location = Location(LocationManager.GPS_PROVIDER)
+    var gpsLocation : Location = Location(LocationManager.GPS_PROVIDER)
 
     override fun onLocationChanged(location: Location) {
         this.gpsLocation = location
@@ -16,8 +16,4 @@ class LocationListener : LocationListener {
     override fun onStatusChanged(provider: String, status: Int, extras: Bundle) {}
     override fun onProviderEnabled(provider: String) {}
     override fun onProviderDisabled(provider: String) {}
-
-    fun getGpsLocation() : String {
-        return "${this.gpsLocation.longitude}:${this.gpsLocation.latitude}"
-    }
 }

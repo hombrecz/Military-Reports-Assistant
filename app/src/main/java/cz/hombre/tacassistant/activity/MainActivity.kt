@@ -80,6 +80,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         status_gps.text = locationService.getCurrentGPSLocation()
         status_mgrs.text = locationService.getCurrentMGRSLocation()
+        status_precision.text = locationService.getLocationPrecision()
+        status_time_position_retrieved.text = locationService.getLocationTime()
+        status_duration_position_retrieved.text = locationService.getLocationTimeAgo()
 
         status_local_date.text = dateTimeService.getLocalDate()
         status_local_time.text = dateTimeService.getLocalTime()
