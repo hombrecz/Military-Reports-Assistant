@@ -62,6 +62,8 @@
     <string name="report_location_hint">Location of the enemy</string>
     <string name="report_frequency">Frequency</string>
     <string name="report_call_sign">Call sign</string>
+    <string name="report_line">Line</string>
+    <string name="report_negative">Negative</string>
 
     <!--Medevac-->
     <string name="title_activity_medevac_report">Medevac 9-line request</string>
@@ -119,10 +121,14 @@
     <!--Situation report-->
     <string name="title_activity_situation_report">SITREP</string>
     <string name="report_situation_status">Unit status</string>
-    <string name="report_situation_status_green">Green (100-90%)</string>
-    <string name="report_situation_status_amber">Amber (90-75%)</string>
-    <string name="report_situation_status_red">Red (75-60%)</string>
-    <string name="report_situation_status_black">Black (60-0%)</string>
+    <string name="report_situation_status_green_label">Green (100-90%)</string>
+    <string name="report_situation_status_green">Green</string>
+    <string name="report_situation_status_amber_label">Amber (90-75%)</string>
+    <string name="report_situation_status_amber">Amber</string>
+    <string name="report_situation_status_red_label">Red (75-60%)</string>
+    <string name="report_situation_status_red">Red</string>
+    <string name="report_situation_status_black_label">Black (60-0%)</string>
+    <string name="report_situation_status_black">Black</string>
     <string name="report_situation_enemy">Enemy situation</string>
     <string name="report_situation_enemy_hint">What is enemy doing</string>
     <string name="report_situation_own">Own situation</string>
@@ -131,7 +137,7 @@
     <string name="report_situation_following_hint">Actions that would be taken</string>
 
     <!--IED/UXO report-->
-    <string name="title_activity_explosive_report">IED/UXO Report</string>
+    <string name="title_activity_explosive_report">IED/UXO 9-line Report</string>
     <string name="explosive_report_line_1">Line 1 - Date time group</string>
     <string name="explosive_report_line_2">Line 2 - Unit, call sign and location</string>
     <string name="explosive_report_unit">Unit identifier</string>
@@ -161,4 +167,13 @@
     <string name="title_activity_report_preview">Report Preview</string>
     <string name="title_activity_report_preview_hint">Prepared report text</string>
 
+    <!--Location-->
+    <string name="symbol_north">N</string>
+    <string name="symbol_south">S</string>
+    <string name="symbol_west">W</string>
+    <string name="symbol_east">E</string>
+
+    <!--Application messages-->
+    <string name="navigation_permission_granted">Navigation permission was granted.</string>
+    <string name="navigation_permission_denied">Navigation permission request was denied.</string>
 </resources>

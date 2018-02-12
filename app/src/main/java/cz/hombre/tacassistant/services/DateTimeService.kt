@@ -28,8 +28,10 @@ class DateTimeServiceImpl : DateTimeService {
     private val MILLI_PER_MINUTE = 60 * MILLI_PER_SECOND
     private val MILLI_PER_HOUR = 60 * MILLI_PER_MINUTE
 
+    val UTC_ZONE = "UTC"
+
     override fun getZuluDateTimeGroup(): String {
-        val date = Calendar.getInstance(TimeZone.getTimeZone("UTC")).time
+        val date = Calendar.getInstance(TimeZone.getTimeZone(UTC_ZONE)).time
 
         return getFormattedUTCDateTime(date, ZULU_FORMAT)
     }
@@ -44,7 +46,7 @@ class DateTimeServiceImpl : DateTimeService {
 
     private fun getFormattedUTCDateTime(date: Date, formatString: String): String {
         val format = SimpleDateFormat(formatString, Locale.getDefault())
-        format.timeZone = TimeZone.getTimeZone("UTC")
+        format.timeZone = TimeZone.getTimeZone(UTC_ZONE)
 
         return format.format(date).toUpperCase()
     }

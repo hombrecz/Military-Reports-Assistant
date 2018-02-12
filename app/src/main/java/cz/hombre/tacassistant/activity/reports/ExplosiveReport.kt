@@ -8,10 +8,7 @@ import android.widget.RadioButton
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
-import cz.hombre.tacassistant.services.DateTimeService
-import cz.hombre.tacassistant.services.LocationService
-import cz.hombre.tacassistant.services.PreferencesService
-import cz.hombre.tacassistant.services.ReportFormService
+import cz.hombre.tacassistant.services.*
 import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
 import org.koin.android.ext.android.inject
@@ -30,7 +27,7 @@ class ExplosiveReport : AppCompatActivity() {
         fab.setOnClickListener {
             val report = getReportData()
             val previewIntent = Intent(this, ReportPreviewActivity::class.java)
-            previewIntent.putExtra("report", report)
+            previewIntent.putExtra(REPORT_PROPERTY, report)
             startActivity(previewIntent)
         }
 
@@ -68,24 +65,24 @@ class ExplosiveReport : AppCompatActivity() {
     }
 
     private fun getReportData(): ReportData {
-        val line1 = ReportLine("Line 1", explosive_value_line1.text.toString())
-        val line2 = ReportLine("Line 2", getSecondLine())
-        val line3 = ReportLine("Line 3", getThirdLine())
-        val line4 = ReportLine("Line 4", getFourthLine())
-        val line5 = ReportLine("Line 5", getFifthLine())
-        val line6 = ReportLine("Line 6", explosive_value_line6.text.toString())
-        val line7 = ReportLine("Line 7", explosive_value_line7.text.toString())
-        val line8 = ReportLine("Line 8", explosive_value_line8.text.toString())
-        val line9 = ReportLine("Line 9", getNinthLineValue())
+        val line1 = ReportLine(getString(R.string.report_line) + " 1", explosive_value_line1.text.toString())
+        val line2 = ReportLine(getString(R.string.report_line) + " 2", getSecondLine())
+        val line3 = ReportLine(getString(R.string.report_line) + " 3", getThirdLine())
+        val line4 = ReportLine(getString(R.string.report_line) + " 4", getFourthLine())
+        val line5 = ReportLine(getString(R.string.report_line) + " 5", getFifthLine())
+        val line6 = ReportLine(getString(R.string.report_line) + " 6", explosive_value_line6.text.toString())
+        val line7 = ReportLine(getString(R.string.report_line) + " 7", explosive_value_line7.text.toString())
+        val line8 = ReportLine(getString(R.string.report_line) + " 8", explosive_value_line8.text.toString())
+        val line9 = ReportLine(getString(R.string.report_line) + " 9", getNinthLineValue())
 
-        return ReportData("UXO/IED 9-liner", arrayOf(line1, line2, line3, line4, line5, line6, line7, line8, line9))
+        return ReportData(getString(R.string.title_activity_explosive_report), arrayOf(line1, line2, line3, line4, line5, line6, line7, line8, line9))
     }
 
     private fun getSecondLine(): String {
         val sb = StringBuilder()
         sb.append(explosive_value_line2_unit.text.toString())
         if (explosive_value_line2_unit.text.toString().isNotBlank()) {
-            sb.append(", ")
+            sb.append(COMMA)
         }
         sb.appendln(explosive_value_line2_callsign.text.toString())
         sb.appendln(explosive_content_line2_location.text.toString())
@@ -97,7 +94,7 @@ class ExplosiveReport : AppCompatActivity() {
         val sb = StringBuilder()
         sb.append(explosive_value_line3_frequency.text.toString())
         if (explosive_value_line3_frequency.text.toString().isNotBlank()) {
-            sb.append(", ")
+            sb.append(COMMA)
         }
         sb.append(explosive_value_line3_callsign.text.toString())
 
@@ -113,7 +110,7 @@ class ExplosiveReport : AppCompatActivity() {
     }
 
     private fun getFifthLine(): String {
-        var result = "Negative"
+        var result = getString(R.string.report_negative)
         if (explosive_value_line5_observed.isChecked) {
             result = explosive_value_line5_details.text.toString()
         }

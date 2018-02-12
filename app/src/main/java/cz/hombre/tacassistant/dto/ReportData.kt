@@ -1,11 +1,10 @@
 package cz.hombre.tacassistant.dto
 
+import cz.hombre.tacassistant.services.SEPARATOR_DASH
 import java.io.Serializable
 import java.util.*
 
 data class ReportData(val name: String, private val lines: Array<ReportLine>) : Serializable {
-
-    private val SEPARATOR_DASH = " - "
 
     fun formattedReport(): String {
         val sb = StringBuilder()

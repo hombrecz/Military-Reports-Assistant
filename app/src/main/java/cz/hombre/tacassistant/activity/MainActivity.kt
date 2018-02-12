@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                             Manifest.permission.ACCESS_FINE_LOCATION)) {
-                Snackbar.make(this.currentFocus, "Navigation permission was granted.",
+                Snackbar.make(this.currentFocus, getString(R.string.navigation_permission_granted),
                         Snackbar.LENGTH_SHORT)
                         .show()
             } else {
@@ -148,11 +148,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (requestCode) {
             PERMISSION_REQUEST_LOCATION -> {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                    Snackbar.make(this.currentFocus, "Navigation permission was granted.",
+                    Snackbar.make(this.currentFocus, getString(R.string.navigation_permission_granted),
                             Snackbar.LENGTH_SHORT)
                             .show()
                 } else {
-                    Snackbar.make(this.currentFocus, "Camera permission request was denied.",
+                    Snackbar.make(this.currentFocus, getString(R.string.navigation_permission_denied),
                             Snackbar.LENGTH_SHORT)
                             .show()
                 }

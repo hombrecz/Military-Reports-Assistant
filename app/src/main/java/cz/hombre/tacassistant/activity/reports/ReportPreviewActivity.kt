@@ -5,6 +5,7 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
+import cz.hombre.tacassistant.services.REPORT_PROPERTY
 
 import kotlinx.android.synthetic.main.activity_report_preview.*
 import kotlinx.android.synthetic.main.content_report_preview.*
@@ -25,7 +26,7 @@ class ReportPreviewActivity : AppCompatActivity() {
                     .setAction("Action", null).show()
         }
 
-        val report = intent?.getSerializableExtra("report") as ReportData
+        val report = intent?.getSerializableExtra(REPORT_PROPERTY) as ReportData
 
         title = report.name
         setReportPreview(report)

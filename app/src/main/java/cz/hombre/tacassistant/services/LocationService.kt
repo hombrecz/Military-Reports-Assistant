@@ -5,6 +5,7 @@ import android.location.Location
 import android.location.LocationManager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.listener.LocationListener
 import java.util.*
 import kotlin.math.absoluteValue
@@ -23,6 +24,14 @@ interface LocationService {
 }
 
 class LocationServiceImpl(applicationContext: Context, private val dateTimeService: DateTimeService) : LocationService {
+
+    private val SEMICOLON = ":"
+    private val DEGREES = "°"
+    private val MINUTES = "'"
+    private val SECONDS = "\""
+
+    private val ACCURACY_BEGIN = "(+-"
+    private val ACCURACY_END = " m)"
 
     private val locationListener: LocationListener = LocationListener()
     private val locationManager: LocationManager = applicationContext.getSystemService(AppCompatActivity.LOCATION_SERVICE) as LocationManager
@@ -43,9 +52,9 @@ class LocationServiceImpl(applicationContext: Context, private val dateTimeServi
 
     override fun getLocationPrecision(): String {
         if (this.locationListener.gpsLocation.accuracy > 0) {
-            return "(+- ${this.locationListener.gpsLocation.accuracy} m)"
+            return "${ACCURACY_BEGIN}${this.locationListener.gpsLocation.accuracy}${ACCURACY_END}"
         } else {
-            return ""
+            return String()
         }
     }
 
@@ -56,27 +65,27 @@ class LocationServiceImpl(applicationContext: Context, private val dateTimeServi
     private fun getGPSFromLocation(location: Location): String {
         val latitudeSymbol: String
         if (location.latitude < 0) {
-            latitudeSymbol = "S"
+            latitudeSymbol = R.string.symbol_south.toString()
         } else {
-            latitudeSymbol = "N"
+            latitudeSymbol = R.string.symbol_north.toString()
         }
 
         val longitudeSymbol: String
         if (location.longitude < 0) {
-            longitudeSymbol = "W"
+            longitudeSymbol = R.string.symbol_west.toString()
         } else {
-            longitudeSymbol = "E"
+            longitudeSymbol = R.string.symbol_east.toString()
         }
 
         var longitude = Location.convert(location.longitude.absoluteValue, Location.FORMAT_SECONDS)
-                .replaceFirst(":", "°")
-                .replaceFirst(":", "'")
-                .plus("\"")
+                .replaceFirst(SEMICOLON, DEGREES)
+                .replaceFirst(SEMICOLON, MINUTES)
+                .plus(SECONDS)
 
         var latitude = Location.convert(location.latitude.absoluteValue, Location.FORMAT_SECONDS)
-                .replaceFirst(":", "°")
-                .replaceFirst(":", "'")
-                .plus("\"")
+                .replaceFirst(SEMICOLON, DEGREES)
+                .replaceFirst(SEMICOLON, MINUTES)
+                .plus(SECONDS)
 
         return " ${latitudeSymbol}${latitude} ${longitudeSymbol}${longitude}"
     }

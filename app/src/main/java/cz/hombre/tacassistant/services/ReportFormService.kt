@@ -6,7 +6,11 @@ interface ReportFormService {
     fun setHideableItem(trigger: View, content: View)
 }
 
-class ReportFormServiceImpl() : ReportFormService {
+val SEPARATOR_DASH = " - "
+val REPORT_PROPERTY = "report"
+val COMMA = ", "
+
+class ReportFormServiceImpl : ReportFormService {
 
     override fun setHideableItem(trigger: View, content: View) {
         trigger.setOnClickListener {

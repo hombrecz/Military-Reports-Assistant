@@ -8,6 +8,7 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.DateTimeService
+import cz.hombre.tacassistant.services.REPORT_PROPERTY
 import cz.hombre.tacassistant.services.ReportFormService
 import kotlinx.android.synthetic.main.activity_situation_report.*
 import kotlinx.android.synthetic.main.content_situation_report.*
@@ -25,7 +26,7 @@ class SituationReport : AppCompatActivity() {
         fab.setOnClickListener {
             val report = getReportData()
             val previewIntent = Intent(this, ReportPreviewActivity::class.java)
-            previewIntent.putExtra("report", report)
+            previewIntent.putExtra(REPORT_PROPERTY, report)
             startActivity(previewIntent)
         }
         sitrep_value_time.setText(dateTimeService.getZuluDateTimeGroup())
@@ -49,7 +50,7 @@ class SituationReport : AppCompatActivity() {
         val own = ReportLine(sitrep_value_own.text.toString())
         val follow = ReportLine(sitrep_value_follow.text.toString())
 
-        return ReportData("Situation report", arrayOf(time, status, enemy, own, follow))
+        return ReportData(getString(R.string.title_activity_situation_report), arrayOf(time, status, enemy, own, follow))
     }
 
     private fun getStatusValue(): String {
@@ -57,16 +58,16 @@ class SituationReport : AppCompatActivity() {
 
         when (sitrep_content_status.checkedRadioButtonId) {
             sitrep_value_status_green.id -> {
-                status = "Green"
+                status = getString(R.string.report_situation_status_green)
             }
             sitrep_value_status_amber.id -> {
-                status = "Amber"
+                status = getString(R.string.report_situation_status_amber)
             }
             sitrep_value_status_red.id -> {
-                status = "Red"
+                status = getString(R.string.report_situation_status_red)
             }
             sitrep_value_status_black.id -> {
-                status = "Black"
+                status = getString(R.string.report_situation_status_black)
             }
             else -> {
                 status = ""

@@ -8,6 +8,7 @@ import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
+import cz.hombre.tacassistant.services.REPORT_PROPERTY
 import cz.hombre.tacassistant.services.ReportFormService
 import kotlinx.android.synthetic.main.activity_salute_report.*
 import kotlinx.android.synthetic.main.content_salute_report.*
@@ -26,7 +27,7 @@ class SaluteReport : AppCompatActivity() {
         fab.setOnClickListener {
             val report = getReportData()
             val previewIntent = Intent(this, ReportPreviewActivity::class.java)
-            previewIntent.putExtra("report", report)
+            previewIntent.putExtra(REPORT_PROPERTY, report)
             startActivity(previewIntent)
         }
         salute_value_time.setText(dateTimeService.getZuluDateTimeGroup())
@@ -52,6 +53,6 @@ class SaluteReport : AppCompatActivity() {
         val time = ReportLine(salute_value_time.text.toString())
         val equipment = ReportLine(salute_value_equipment.text.toString())
 
-        return ReportData("SALTR report", arrayOf(size, activity, location, uniform, time, equipment))
+        return ReportData(getString(R.string.title_activity_salute_report), arrayOf(size, activity, location, uniform, time, equipment))
     }
 }
