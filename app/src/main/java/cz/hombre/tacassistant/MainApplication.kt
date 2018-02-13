@@ -1,7 +1,7 @@
 package cz.hombre.tacassistant
 
 import android.app.Application
-import cz.hombre.tacassistant.di.myModule
+import cz.hombre.tacassistant.modules.myModule
 import org.koin.android.ext.android.startKoin
 
 class MainApplication : Application() {

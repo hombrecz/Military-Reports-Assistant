@@ -1,29 +1,9 @@
 package cz.hombre.tacassistant.dto
 
-import cz.hombre.tacassistant.services.SEPARATOR_DASH
 import java.io.Serializable
 import java.util.*
 
-data class ReportData(val name: String, private val lines: Array<ReportLine>) : Serializable {
-
-    fun formattedReport(): String {
-        val sb = StringBuilder()
-
-        for (line in lines) {
-            if (line.description.isNotEmpty()) {
-                sb.append(line.description)
-                sb.append(SEPARATOR_DASH)
-            }
-            if (line.value.isNotEmpty()) {
-                sb.append(line.value)
-            }
-            if ((line.description.isNotEmpty() || line.value.isNotEmpty()) && (line != lines[lines.lastIndex])) {
-                sb.appendln()
-            }
-        }
-
-        return sb.toString()
-    }
+data class ReportData(val name: String, val lines: Array<ReportLine>) : Serializable {
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true

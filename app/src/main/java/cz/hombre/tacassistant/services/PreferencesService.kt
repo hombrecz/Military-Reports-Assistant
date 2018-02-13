@@ -3,6 +3,9 @@ package cz.hombre.tacassistant.services
 import android.content.Context
 import android.preference.PreferenceManager
 
+val NATO_ALPHABET_VALUE = 0
+val CZECH_ALPHABET_VALUE = 1
+
 interface PreferencesService {
 
     fun getFrequency(): String
@@ -12,13 +15,14 @@ interface PreferencesService {
     fun getRamrod(): String
 
     fun getPhoneticAlphabet(): Int
+
 }
 
 class PreferencesServiceImpl(context: Context) : PreferencesService {
-
     private val CALL_SIGN = "preference_callsign"
     private val FREQUENCY = "preference_frequency"
     private val RAMROD = "preference_ramrod"
+
     private val PHONETIC_ALPHABET = "preference_phonetic_alphabet"
 
     private val preferences = PreferenceManager.getDefaultSharedPreferences(context)
@@ -38,6 +42,7 @@ class PreferencesServiceImpl(context: Context) : PreferencesService {
     }
 
     override fun getPhoneticAlphabet(): Int {
-        return preferences.getInt(PHONETIC_ALPHABET, 0)
+
+        return preferences.getInt(PHONETIC_ALPHABET, NATO_ALPHABET_VALUE)
     }
 }

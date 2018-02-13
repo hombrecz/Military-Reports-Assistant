@@ -13,6 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/title_activity_report_preview_hint"
+        android:hint="@string/report_preview_hint"
         android:inputType="textMultiLine" />
 </android.support.constraint.ConstraintLayout>

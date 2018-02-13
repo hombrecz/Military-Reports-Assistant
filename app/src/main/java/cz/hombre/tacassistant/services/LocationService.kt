@@ -90,7 +90,7 @@ class LocationServiceImpl(applicationContext: Context, private val dateTimeServi
         return " ${latitudeSymbol}${latitude} ${longitudeSymbol}${longitude}"
     }
 
-    private fun getMGRSFromLocation(location : Location): String {
+    private fun getMGRSFromLocation(location: Location): String {
         //TODO OD - implement MGRS
         return "MGRS TODO"
     }
