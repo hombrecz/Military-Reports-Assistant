@@ -2,21 +2,14 @@ package cz.hombre.tacassistant.activity.reports
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
-import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.REPORT_PROPERTY
-import cz.hombre.tacassistant.services.ReportFormService
 import kotlinx.android.synthetic.main.activity_situation_report.*
 import kotlinx.android.synthetic.main.content_situation_report.*
-import org.koin.android.ext.android.inject
 
 class SituationReport : AbstractReport() {
-
-    private val dateTimeService: DateTimeService by inject()
-    private val reportFormService: ReportFormService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

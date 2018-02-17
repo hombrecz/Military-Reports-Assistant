@@ -6,17 +6,12 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.layout.report.SaltrReportUI
-import cz.hombre.tacassistant.services.DateTimeService
-import cz.hombre.tacassistant.services.LocationService
 import cz.hombre.tacassistant.services.REPORT_PROPERTY
 import org.jetbrains.anko.setContentView
-import org.koin.android.ext.android.inject
 
 class SaltrReport : AbstractReport() {
 
     private var saltrReportUI = SaltrReportUI()
-    private val dateTimeService: DateTimeService by inject()
-    private val locationService: LocationService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
