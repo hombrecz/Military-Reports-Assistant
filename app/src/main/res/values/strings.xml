@@ -115,7 +115,7 @@
 
     <!-- SALTR -->
     <string name="title_activity_saltr_report">SALTR Report</string>
-    <string name="report_saltr_requets">Request / Remarks</string>
+    <string name="report_saltr_request">Request / Remarks</string>
     <string name="report_saltr_request_hint">Another requests or remarks to be added to the report</string>
 
     <!--Situation report-->

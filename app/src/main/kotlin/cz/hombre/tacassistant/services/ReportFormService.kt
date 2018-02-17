@@ -10,8 +10,10 @@ val SEPARATOR_DASH = " - "
 val REPORT_PROPERTY = "report"
 val COMMA = ", "
 
+//TODO OD - remove this?
 class ReportFormServiceImpl : ReportFormService {
 
+    //TODO OD - remove this
     override fun setHideableItem(trigger: View, content: View) {
         trigger.setOnClickListener {
             if (content.visibility == View.VISIBLE) {

@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="report_preview" type="id" />
     <item name="spelling_fab" type="id" />
+
+    <item name="saltr_report" type="id" />
 </resources>

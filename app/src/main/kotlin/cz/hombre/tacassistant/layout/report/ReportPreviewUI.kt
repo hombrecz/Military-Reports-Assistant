@@ -20,6 +20,7 @@ class ReportPreviewUI : AnkoComponent<ReportPreviewActivity> {
 
     override fun createView(ui: AnkoContext<ReportPreviewActivity>) = with(ui) {
         coordinatorLayout {
+            id = R.id.report_preview
             constraintLayout {
                 editText {
                     textContent = this

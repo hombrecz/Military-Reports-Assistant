@@ -13,24 +13,24 @@ import org.koin.android.ext.android.inject
 
 class ReportPreviewActivity : AppCompatActivity() {
 
+    private var reportPreviewUI = ReportPreviewUI()
     private var ramrod = false
     private var spelling = false
     private lateinit var report: ReportData
-    private var previewView = ReportPreviewUI()
 
     private val encodingService: EncodingService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        previewView.setContentView(this)
+        reportPreviewUI.setContentView(this)
 
-        previewView.spellingButton.setOnClickListener { view ->
+        reportPreviewUI.spellingButton.setOnClickListener { view ->
             Snackbar.make(view, getString(R.string.report_preview_ramrod_message), Snackbar.LENGTH_LONG)
                     .show()
             switchRamrod()
         }
 
-        previewView.ramrodButton.setOnClickListener { view ->
+        reportPreviewUI.ramrodButton.setOnClickListener { view ->
             Snackbar.make(view, getString(R.string.report_preview_spelling_message), Snackbar.LENGTH_LONG)
                     .show()
             switchSpelling()
@@ -40,7 +40,7 @@ class ReportPreviewActivity : AppCompatActivity() {
 
         title = report.name
 
-        previewView.setContent(encodingService.formatReportText(report))
+        reportPreviewUI.setContent(encodingService.formatReportText(report))
     }
 
     private fun switchRamrod() {
@@ -61,7 +61,7 @@ class ReportPreviewActivity : AppCompatActivity() {
         if (spelling) {
             encodedReport = encodingService.encodeLettersWithSpellingAlphabet(encodedReport)
         }
-        previewView.setContent(encodingService.formatReportText(encodedReport))
+        reportPreviewUI.setContent(encodingService.formatReportText(encodedReport))
     }
 
 }
