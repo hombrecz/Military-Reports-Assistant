@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
 import org.koin.android.ext.android.inject
 
-class ExplosiveReport : AppCompatActivity() {
+class ExplosiveReport : AbstractReport() {
 
     private val dateTimeService: DateTimeService by inject()
     private val locationService: LocationService by inject()
@@ -64,7 +64,7 @@ class ExplosiveReport : AppCompatActivity() {
         reportFormService.setHideableItem(explosive_label_line9, explosive_content_line9)
     }
 
-    private fun getReportData(): ReportData {
+    override fun getReportData(): ReportData {
         val line1 = ReportLine(getString(R.string.report_line) + " 1", explosive_value_line1.text.toString())
         val line2 = ReportLine(getString(R.string.report_line) + " 2", getSecondLine())
         val line3 = ReportLine(getString(R.string.report_line) + " 3", getThirdLine())

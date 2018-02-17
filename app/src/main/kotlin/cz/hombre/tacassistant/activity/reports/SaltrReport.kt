@@ -2,7 +2,6 @@ package cz.hombre.tacassistant.activity.reports
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
@@ -13,7 +12,7 @@ import cz.hombre.tacassistant.services.REPORT_PROPERTY
 import org.jetbrains.anko.setContentView
 import org.koin.android.ext.android.inject
 
-class SaltrReport : AppCompatActivity() {
+class SaltrReport : AbstractReport() {
 
     private var saltrReportUI = SaltrReportUI()
     private val dateTimeService: DateTimeService by inject()
@@ -33,7 +32,7 @@ class SaltrReport : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    private fun getReportData(): ReportData {
+    override fun getReportData(): ReportData {
         val size = ReportLine(saltrReportUI.size.getValue())
         val activity = ReportLine(saltrReportUI.activity.getValue())
         val location = ReportLine(saltrReportUI.location.getValue())

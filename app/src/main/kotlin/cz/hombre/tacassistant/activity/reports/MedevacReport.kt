@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.content_medevac_report.*
 import org.koin.android.ext.android.inject
 
 
-class MedevacReport : AppCompatActivity() {
+class MedevacReport : AbstractReport() {
 
     private val locationService: LocationService by inject()
     private val reportFormService: ReportFormService by inject()
@@ -49,7 +49,7 @@ class MedevacReport : AppCompatActivity() {
         reportFormService.setHideableItem(medevac_label_line9, medevac_content_line9)
     }
 
-    private fun getReportData(): ReportData {
+    override fun getReportData(): ReportData {
 
         val line1 = ReportLine(getString(R.string.report_line) + " 1", medevac_value_line1.text.toString())
         val line2 = ReportLine(getString(R.string.report_line) + " 2", getSecondLine())

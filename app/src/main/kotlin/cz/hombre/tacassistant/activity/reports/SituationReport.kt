@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_situation_report.*
 import kotlinx.android.synthetic.main.content_situation_report.*
 import org.koin.android.ext.android.inject
 
-class SituationReport : AppCompatActivity() {
+class SituationReport : AbstractReport() {
 
     private val dateTimeService: DateTimeService by inject()
     private val reportFormService: ReportFormService by inject()
@@ -41,7 +41,7 @@ class SituationReport : AppCompatActivity() {
         reportFormService.setHideableItem(sitrep_label_follow, sitrep_content_follow)
     }
 
-    private fun getReportData(): ReportData {
+    override fun getReportData(): ReportData {
 
         val time = ReportLine(sitrep_value_time.text.toString())
         val status = ReportLine(getStatusValue())

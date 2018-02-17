@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_salute_report.*
 import kotlinx.android.synthetic.main.content_salute_report.*
 import org.koin.android.ext.android.inject
 
-class SaluteReport : AppCompatActivity() {
+class SaluteReport : AbstractReport() {
 
     private val dateTimeService: DateTimeService by inject()
     private val locationService: LocationService by inject()
@@ -45,7 +45,7 @@ class SaluteReport : AppCompatActivity() {
         reportFormService.setHideableItem(salute_label_equipment, salute_content_equipment)
     }
 
-    private fun getReportData(): ReportData {
+    override fun getReportData(): ReportData {
         val size = ReportLine(salute_value_size.text.toString())
         val activity = ReportLine(salute_value_activity.text.toString())
         val location = ReportLine(salute_value_location.text.toString())
