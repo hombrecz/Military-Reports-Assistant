@@ -33,10 +33,9 @@ class SaltrReportUI : AnkoComponent<SaltrReport> {
                 }
             }
 
-            floatingActionButton {
+            previewButton = floatingActionButton {
                 imageResource = android.R.drawable.ic_dialog_email
                 useCompatPadding = true
-                previewButton = this
             }.lparams {
                 gravity = Gravity.BOTTOM or Gravity.END
                 margin = dip(16)

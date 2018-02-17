@@ -1,10 +1,8 @@
 package cz.hombre.tacassistant.layout.report
 
-import android.support.compat.R.id.normal
 import android.support.design.widget.FloatingActionButton
 import android.view.Gravity
 import android.widget.EditText
-import android.widget.ImageView
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.activity.reports.ReportPreviewActivity
 import org.jetbrains.anko.*
@@ -28,25 +26,19 @@ class ReportPreviewUI : AnkoComponent<ReportPreviewActivity> {
                 }
             }
 
-            floatingActionButton {
+            spellingButton = floatingActionButton {
                 id = R.id.spelling_fab
                 imageResource = android.R.drawable.ic_dialog_email
-                size = normal
-                scaleType = ImageView.ScaleType.CENTER
                 useCompatPadding = true
-                spellingButton = this
             }.lparams {
                 gravity = Gravity.BOTTOM or Gravity.END
                 anchorGravity = Gravity.TOP or Gravity.END
                 margin = dip(16)
             }
 
-            floatingActionButton {
+            ramrodButton = floatingActionButton {
                 imageResource = android.R.drawable.ic_media_play
-                size = normal
-                scaleType = ImageView.ScaleType.CENTER
                 useCompatPadding = true
-                ramrodButton = this
             }.lparams {
                 gravity = Gravity.TOP or Gravity.END
                 anchorId = spellingButton.id
