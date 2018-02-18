@@ -23,6 +23,7 @@ import cz.hombre.tacassistant.services.PreferencesService
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
+import org.jetbrains.anko.design.longSnackbar
 import org.koin.android.ext.android.inject
 
 
@@ -62,9 +63,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                             Manifest.permission.ACCESS_FINE_LOCATION)) {
-                Snackbar.make(this.currentFocus, getString(R.string.navigation_permission_granted),
-                        Snackbar.LENGTH_SHORT)
-                        .show()
+                longSnackbar(this.currentFocus, R.string.report_preview_ramrod_message)
             } else {
                 ActivityCompat.requestPermissions(this,
                         arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
@@ -148,13 +147,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (requestCode) {
             PERMISSION_REQUEST_LOCATION -> {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
-                    Snackbar.make(this.currentFocus, getString(R.string.navigation_permission_granted),
-                            Snackbar.LENGTH_SHORT)
-                            .show()
+                    longSnackbar(this.currentFocus, R.string.navigation_permission_granted)
                 } else {
-                    Snackbar.make(this.currentFocus, getString(R.string.navigation_permission_denied),
-                            Snackbar.LENGTH_SHORT)
-                            .show()
+                    longSnackbar(this.currentFocus, R.string.navigation_permission_denied)
                 }
                 return
             }

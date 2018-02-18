@@ -8,6 +8,7 @@ import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.layout.report.ReportPreviewUI
 import cz.hombre.tacassistant.services.EncodingService
 import cz.hombre.tacassistant.services.REPORT_PROPERTY
+import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.setContentView
 import org.koin.android.ext.android.inject
 
@@ -25,14 +26,12 @@ class ReportPreviewActivity : AppCompatActivity() {
         reportPreviewUI.setContentView(this)
 
         reportPreviewUI.spellingButton.setOnClickListener { view ->
-            Snackbar.make(view, getString(R.string.report_preview_ramrod_message), Snackbar.LENGTH_LONG)
-                    .show()
+            longSnackbar(view, R.string.report_preview_ramrod_message)
             switchRamrod()
         }
 
         reportPreviewUI.ramrodButton.setOnClickListener { view ->
-            Snackbar.make(view, getString(R.string.report_preview_spelling_message), Snackbar.LENGTH_LONG)
-                    .show()
+            longSnackbar(view, R.string.report_preview_spelling_message)
             switchSpelling()
         }
 
@@ -42,7 +41,6 @@ class ReportPreviewActivity : AppCompatActivity() {
 
         reportPreviewUI.setContent(encodingService.formatReportText(report))
     }
-
     private fun switchRamrod() {
         ramrod = !ramrod
         encode()
