@@ -5,8 +5,7 @@ import android.view.Gravity
 import cz.hombre.tacassistant.R.id.salute_report
 import cz.hombre.tacassistant.R.string.*
 import cz.hombre.tacassistant.activity.reports.SaluteReport
-import cz.hombre.tacassistant.layout.component.TextInput
-import cz.hombre.tacassistant.layout.component.textInput
+import cz.hombre.tacassistant.layout.component.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton
@@ -16,9 +15,9 @@ class SaluteReportUI : AnkoComponent<SaluteReport> {
     lateinit var previewButton: FloatingActionButton
     lateinit var size: TextInput
     lateinit var activity: TextInput
-    lateinit var location: TextInput
+    lateinit var location: LocationInput
     lateinit var uniform: TextInput
-    lateinit var time: TextInput
+    lateinit var time: TimeInput
     lateinit var enemy: TextInput
 
     override fun createView(ui: AnkoContext<SaluteReport>) = with(ui) {
@@ -28,9 +27,9 @@ class SaluteReportUI : AnkoComponent<SaluteReport> {
                 verticalLayout {
                     size = textInput(report_size, report_size_hint)
                     activity = textInput(report_activity, report_activity_hint)
-                    location = textInput(report_location, report_location_hint)
+                    location = locationInput(report_location, report_location_hint)
                     uniform = textInput(report_salute_uniform, report_salute_uniform_hint)
-                    time = textInput(report_time, report_time_hint)
+                    time = timeInput(report_time, report_time_hint)
                     enemy = textInput(report_salute_equipment, report_salute_equipment_hint)
                 }
             }.lparams(

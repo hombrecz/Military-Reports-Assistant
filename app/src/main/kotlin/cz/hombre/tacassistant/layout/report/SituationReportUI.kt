@@ -5,10 +5,7 @@ import android.view.Gravity
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.R.string.*
 import cz.hombre.tacassistant.activity.reports.SituationReport
-import cz.hombre.tacassistant.layout.component.RadioInput
-import cz.hombre.tacassistant.layout.component.TextInput
-import cz.hombre.tacassistant.layout.component.radioInput
-import cz.hombre.tacassistant.layout.component.textInput
+import cz.hombre.tacassistant.layout.component.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton
@@ -16,7 +13,7 @@ import org.jetbrains.anko.design.floatingActionButton
 class SituationReportUI : AnkoComponent<SituationReport> {
 
     lateinit var previewButton: FloatingActionButton
-    lateinit var time: TextInput
+    lateinit var time: TimeInput
     lateinit var status: RadioInput
     lateinit var enemy: TextInput
     lateinit var own: TextInput
@@ -27,7 +24,7 @@ class SituationReportUI : AnkoComponent<SituationReport> {
             id = R.id.situation_report
             scrollView {
                 verticalLayout {
-                    time = textInput(R.string.report_time, R.string.report_time_hint)
+                    time = timeInput(R.string.report_time, R.string.report_time_hint)
                     status = radioInput(R.string.report_situation_status, statusOptions())
                     enemy = textInput(R.string.report_situation_enemy, R.string.report_situation_enemy_hint)
                     own = textInput(R.string.report_situation_own, R.string.report_situation_own_hint)
