@@ -1,6 +1,7 @@
 package cz.hombre.tacassistant.layout.component
 
 import android.content.Context
+import android.view.View
 import android.view.ViewManager
 import android.widget.LinearLayout
 import android.widget.RadioGroup
@@ -16,10 +17,16 @@ class RadioInput(val c: Context, val groupLabel: Int, val options: Map<Int, Int>
 
     init {
         verticalLayout {
-            textView(groupLabel)
+            textView(groupLabel).setOnClickListener {
+                if (radioGroup.visibility == View.VISIBLE) {
+                    radioGroup.visibility = View.GONE
+                } else {
+                    radioGroup.visibility = View.VISIBLE
+                }
+            }
             radioGroup = radioGroup {
-                options.forEach{entry ->
-                    radioButton{
+                options.forEach { entry ->
+                    radioButton {
                         id = entry.key
                         textResource = entry.value
                     }

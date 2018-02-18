@@ -19,14 +19,13 @@ class TimeInput(c: Context, val label: Int, val valueHint: Int) : LinearLayout(c
         verticalLayout {
             textView(label) {
                 textResource = label
+            }.setOnClickListener {
+                if (hideableContent.visibility == View.VISIBLE) {
+                    hideableContent.visibility = View.GONE
+                } else {
+                    hideableContent.visibility = View.VISIBLE
+                }
             }
-                    .setOnClickListener {
-                        if (hideableContent.visibility == View.VISIBLE) {
-                            hideableContent.visibility = View.GONE
-                        } else {
-                            hideableContent.visibility = View.VISIBLE
-                        }
-                    }
             linearLayout {
                 hideableContent = this
                 valueEdit = editText {
@@ -40,7 +39,7 @@ class TimeInput(c: Context, val label: Int, val valueHint: Int) : LinearLayout(c
         return this.valueEdit.text.toString()
     }
 
-    fun setValue(value: String){
+    fun setValue(value: String) {
         return valueEdit.setText(value)
     }
 }

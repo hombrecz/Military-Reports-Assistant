@@ -12,6 +12,7 @@ inline fun ViewManager.textInput(label: Int, valueHint: Int) = textInput(label, 
 inline fun ViewManager.textInput(label: Int, valueHint: Int, init: TextInput.() -> Unit) = ankoView({ TextInput(it, label, valueHint) }, 0, init)
 
 class TextInput(c: Context, val label: Int, val valueHint: Int) : LinearLayout(c) {
+
     private lateinit var hideableContent: LinearLayout
     private lateinit var valueEdit: EditText
 
@@ -19,16 +20,14 @@ class TextInput(c: Context, val label: Int, val valueHint: Int) : LinearLayout(c
         verticalLayout {
             textView(label) {
                 textResource = label
+            }.setOnClickListener {
+                if (hideableContent.visibility == View.VISIBLE) {
+                    hideableContent.visibility = View.GONE
+                } else {
+                    hideableContent.visibility = View.VISIBLE
+                }
             }
-                    .setOnClickListener {
-                        if (hideableContent.visibility == View.VISIBLE) {
-                            hideableContent.visibility = View.GONE
-                        } else {
-                            hideableContent.visibility = View.VISIBLE
-                        }
-                    }
-            linearLayout {
-                hideableContent = this
+            hideableContent = linearLayout {
                 valueEdit = editText {
                     hintResource = valueHint
                 }
@@ -40,7 +39,7 @@ class TextInput(c: Context, val label: Int, val valueHint: Int) : LinearLayout(c
         return this.valueEdit.text.toString()
     }
 
-    fun setValue(value: String){
-        return valueEdit.setText(value)
+    fun setValue(value: String) {
+        valueEdit.setText(value)
     }
 }
