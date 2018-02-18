@@ -1,12 +1,10 @@
 package cz.hombre.tacassistant.activity.reports
 
-import android.content.Intent
 import android.os.Bundle
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.layout.report.SaluteReportUI
-import cz.hombre.tacassistant.services.REPORT_PROPERTY
 import org.jetbrains.anko.setContentView
 
 class SaluteReport : AbstractReport() {
@@ -17,10 +15,7 @@ class SaluteReport : AbstractReport() {
         super.onCreate(savedInstanceState)
         saluteReportUI.setContentView(this)
         saluteReportUI.previewButton.setOnClickListener {
-            val report = getReportData()
-            val previewIntent = Intent(this, ReportPreviewActivity::class.java)
-            previewIntent.putExtra(REPORT_PROPERTY, report)
-            startActivity(previewIntent)
+            translateReport()
         }
         saluteReportUI.time.setValue(dateTimeService.getZuluDateTimeGroup())
         saluteReportUI.location.setValue(locationService.getCurrentMGRSLocation())

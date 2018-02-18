@@ -1,6 +1,5 @@
 package cz.hombre.tacassistant.activity.reports
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
@@ -8,7 +7,6 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 import cz.hombre.tacassistant.services.COMMA
-import cz.hombre.tacassistant.services.REPORT_PROPERTY
 import kotlinx.android.synthetic.main.activity_explosive_report.*
 import kotlinx.android.synthetic.main.content_explosive_report.*
 
@@ -19,10 +17,7 @@ class ExplosiveReport : AbstractReport() {
         setContentView(R.layout.activity_explosive_report)
 
         fab.setOnClickListener {
-            val report = getReportData()
-            val previewIntent = Intent(this, ReportPreviewActivity::class.java)
-            previewIntent.putExtra(REPORT_PROPERTY, report)
-            startActivity(previewIntent)
+            translateReport()
         }
 
         explosive_value_line3_frequency.setText(preferencesService.getFrequency())
