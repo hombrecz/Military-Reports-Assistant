@@ -1,11 +1,11 @@
-package cz.hombre.tacassistant.layout.report
+package cz.hombre.tacassistant.layout.reports
 
 import android.support.design.widget.FloatingActionButton
 import android.view.Gravity
 import cz.hombre.tacassistant.R.id.salute_report
 import cz.hombre.tacassistant.R.string.*
 import cz.hombre.tacassistant.activity.reports.SaluteReport
-import cz.hombre.tacassistant.layout.component.*
+import cz.hombre.tacassistant.layout.components.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton

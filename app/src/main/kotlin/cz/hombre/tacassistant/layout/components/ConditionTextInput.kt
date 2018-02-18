@@ -1,4 +1,4 @@
-package cz.hombre.tacassistant.layout.component
+package cz.hombre.tacassistant.layout.components
 
 import android.content.Context
 import android.view.View
@@ -13,7 +13,7 @@ import org.jetbrains.anko.custom.ankoView
 inline fun ViewManager.conditionTextInput(label: Int, conditionLabel: Int, hint: Int) = conditionTextInput(label, conditionLabel, hint) {}
 inline fun ViewManager.conditionTextInput(label: Int, conditionLabel: Int, hint: Int, init: ConditionTextInput.() -> Unit) = ankoView({ ConditionTextInput(it, label, conditionLabel, hint) }, 0, init)
 
-class ConditionTextInput(val c: Context, val label: Int, val conditionLabel: Int, val hint: Int) : LinearLayout(c) {
+class ConditionTextInput(val c: Context, val label: Int, val conditionLabel: Int, val editHint: Int) : LinearLayout(c) {
 
     private lateinit var hideableContent: LinearLayout
     private lateinit var checkBox: CheckBox
@@ -38,7 +38,8 @@ class ConditionTextInput(val c: Context, val label: Int, val conditionLabel: Int
                         valueEdit.visibility = View.VISIBLE
                     }
                 }
-                valueEdit = editText(hint) {
+                valueEdit = editText {
+                    hintResource = editHint
                     visibility = View.GONE
                 }
             }

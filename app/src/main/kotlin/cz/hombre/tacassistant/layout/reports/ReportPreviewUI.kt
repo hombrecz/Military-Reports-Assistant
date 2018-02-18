@@ -1,4 +1,4 @@
-package cz.hombre.tacassistant.layout.report
+package cz.hombre.tacassistant.layout.reports
 
 import android.support.design.widget.FloatingActionButton
 import android.view.Gravity

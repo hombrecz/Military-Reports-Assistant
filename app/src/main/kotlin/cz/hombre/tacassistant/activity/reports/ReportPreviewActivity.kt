@@ -1,13 +1,12 @@
 package cz.hombre.tacassistant.activity.reports
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import cz.hombre.tacassistant.R
+import cz.hombre.tacassistant.REPORT_PROPERTY
 import cz.hombre.tacassistant.dto.ReportData
-import cz.hombre.tacassistant.layout.report.ReportPreviewUI
+import cz.hombre.tacassistant.layout.reports.ReportPreviewUI
 import cz.hombre.tacassistant.services.EncodingService
-import cz.hombre.tacassistant.services.REPORT_PROPERTY
 import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.setContentView
 import org.koin.android.ext.android.inject
@@ -41,6 +40,7 @@ class ReportPreviewActivity : AppCompatActivity() {
 
         reportPreviewUI.setContent(encodingService.formatReportText(report))
     }
+
     private fun switchRamrod() {
         ramrod = !ramrod
         encode()

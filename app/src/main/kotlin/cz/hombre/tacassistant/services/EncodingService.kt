@@ -1,6 +1,7 @@
 package cz.hombre.tacassistant.services
 
 import android.content.Context
+import cz.hombre.tacassistant.SEPARATOR_DASH
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
 
@@ -70,7 +71,7 @@ class EncodingServiceImpl(applicationContext: Context, private val preferencesSe
 
     private fun encodeStringWithSpelling(text: String): String {
         //TODO - jak budu kódovat
-            return text
+        return text
     }
 
 }

@@ -1,11 +1,11 @@
-package cz.hombre.tacassistant.layout.report
+package cz.hombre.tacassistant.layout.reports
 
 import android.support.design.widget.FloatingActionButton
 import android.view.Gravity
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.R.string.*
 import cz.hombre.tacassistant.activity.reports.ExplosiveReport
-import cz.hombre.tacassistant.layout.component.*
+import cz.hombre.tacassistant.layout.components.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton
@@ -53,17 +53,15 @@ class ExplosiveReportUI : AnkoComponent<ExplosiveReport> {
         }
     }
 
-    private fun ammunitionTypeOptions(): Map<Int, Int> {
-        return hashMapOf(explosive_report_line_4_dropped to explosive_report_line_4_dropped,
-                explosive_report_line_4_projected to explosive_report_line_4_projected,
-                explosive_report_line_4_placed to explosive_report_line_4_placed,
-                explosive_report_line_4_thrown to explosive_report_line_4_thrown)
-    }
+    private fun ammunitionTypeOptions() = linkedMapOf(
+            explosive_report_line_4_dropped to explosive_report_line_4_dropped,
+            explosive_report_line_4_projected to explosive_report_line_4_projected,
+            explosive_report_line_4_placed to explosive_report_line_4_placed,
+            explosive_report_line_4_thrown to explosive_report_line_4_thrown)
 
-    private fun threatOptions(): Map<Int, Int> {
-        return hashMapOf(explosive_report_line_9_immediate to explosive_report_line_9_immediate,
-                explosive_report_line_9_indirect to explosive_report_line_9_indirect,
-                explosive_report_line_9_minor to explosive_report_line_9_minor,
-                explosive_report_line_9_no_threat to explosive_report_line_9_no_threat)
-    }
+    private fun threatOptions() = linkedMapOf(
+            explosive_report_line_9_immediate to explosive_report_line_9_immediate,
+            explosive_report_line_9_indirect to explosive_report_line_9_indirect,
+            explosive_report_line_9_minor to explosive_report_line_9_minor,
+            explosive_report_line_9_no_threat to explosive_report_line_9_no_threat)
 }

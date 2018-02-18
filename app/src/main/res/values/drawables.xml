@@ -1,7 +1,8 @@
-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+<resources>
     <item name="ic_status_person" type="drawable">@drawable/ic_person_white_24dp</item>
     <item name="ic_status_location" type="drawable">@drawable/ic_satellite_white_24dp</item>
     <item name="ic_status_time" type="drawable">@drawable/ic_access_time_white_24dp</item>
     <item name="ic_menu_report" type="drawable">@drawable/ic_description_white_24dp</item>
-    <item name="ic_menu_glossary" type="drawable">@drawable/ic_format_list_bulleted_white_24dp</item>
+    <item name="ic_menu_glossary" type="drawable">@drawable/ic_format_list_bulleted_white_24dp
+    </item>
 </resources>

@@ -4,7 +4,7 @@ import android.os.Bundle
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
-import cz.hombre.tacassistant.layout.report.SaluteReportUI
+import cz.hombre.tacassistant.layout.reports.SaluteReportUI
 import org.jetbrains.anko.setContentView
 
 class SaluteReport : AbstractReport() {

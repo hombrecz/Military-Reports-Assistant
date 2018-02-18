@@ -1,11 +1,11 @@
-package cz.hombre.tacassistant.layout.report
+package cz.hombre.tacassistant.layout.reports
 
 import android.support.design.widget.FloatingActionButton
 import android.view.Gravity
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.R.string.*
 import cz.hombre.tacassistant.activity.reports.SituationReport
-import cz.hombre.tacassistant.layout.component.*
+import cz.hombre.tacassistant.layout.components.*
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton
@@ -45,11 +45,9 @@ class SituationReportUI : AnkoComponent<SituationReport> {
         }
     }
 
-    private fun statusOptions(): Map<Int, Int> {
-        return hashMapOf(report_situation_status_green to report_situation_status_green_label,
-                report_situation_status_amber to report_situation_status_amber_label,
-                report_situation_status_red to report_situation_status_red_label,
-                report_situation_status_black to report_situation_status_black_label)
-    }
-
+    private fun statusOptions() = linkedMapOf(
+            report_situation_status_green to report_situation_status_green_label,
+            report_situation_status_amber to report_situation_status_amber_label,
+            report_situation_status_red to report_situation_status_red_label,
+            report_situation_status_black to report_situation_status_black_label)
 }

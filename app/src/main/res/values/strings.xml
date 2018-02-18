@@ -180,6 +180,16 @@
     <string name="navigation_permission_granted">Navigation permission was granted.</string>
     <string name="navigation_permission_denied">Navigation permission request was denied.</string>
 
+    <!--Letters-->
+    <string name="letter_a">A</string>
+    <string name="letter_b">B</string>
+    <string name="letter_c">C</string>
+    <string name="letter_d">D</string>
+    <string name="letter_e">E</string>
+    <string name="letter_l">L</string>
+    <string name="letter_n">N</string>
+
+    <!--NATO alphabet-->
     <string name="alphabet_nato_a">Alpha</string>
     <string name="alphabet_nato_b">Bravo</string>
     <string name="alphabet_nato_c">Charlie</string>
@@ -207,6 +217,7 @@
     <string name="alphabet_nato_y">Yankee</string>
     <string name="alphabet_nato_z">Zulu</string>
 
+    <!--Czech alphabet-->
     <string name="alphabet_czech_a">Adam</string>
     <string name="alphabet_czech_b">Božena</string>
     <string name="alphabet_czech_c">Cyril</string>

@@ -4,7 +4,7 @@ import android.os.Bundle
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.dto.ReportLine
-import cz.hombre.tacassistant.layout.report.ExplosiveReportUI
+import cz.hombre.tacassistant.layout.reports.ExplosiveReportUI
 import org.jetbrains.anko.setContentView
 
 class ExplosiveReport : AbstractReport() {

@@ -7,4 +7,5 @@
     <item name="salute_report" type="id" />
     <item name="situation_report" type="id" />
     <item name="explosive_report" type="id" />
+    <item name="medevac_report" type="id" />
 </resources>

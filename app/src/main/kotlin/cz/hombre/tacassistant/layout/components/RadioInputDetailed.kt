@@ -1,4 +1,4 @@
-package cz.hombre.tacassistant.layout.component
+package cz.hombre.tacassistant.layout.components
 
 import android.content.Context
 import android.view.View
@@ -37,7 +37,7 @@ class RadioInputDetailed(val c: Context, val groupLabel: Int, val options: Map<I
                     }
                 }
                 radioGroup.check(options.keys.first())
-                detail = editText{
+                detail = editText {
                     hintResource = detailHint
                 }
             }

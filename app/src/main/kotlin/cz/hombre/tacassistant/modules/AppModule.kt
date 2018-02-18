@@ -9,6 +9,5 @@ val myModule: Module = applicationContext {
     provide { DateTimeServiceImpl() as DateTimeService }
     provide { LocationServiceImpl(androidApplication().baseContext, get()) as LocationService }
     provide { PreferencesServiceImpl(androidApplication().baseContext) as PreferencesService }
-    provide { ReportFormServiceImpl() as ReportFormService }
     provide { EncodingServiceImpl(androidApplication().baseContext, get()) as EncodingService }
 }
