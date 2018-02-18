@@ -15,18 +15,22 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import cz.hombre.tacassistant.R
+import cz.hombre.tacassistant.R.string.navigation_drawer_close
+import cz.hombre.tacassistant.R.string.navigation_drawer_open
 import cz.hombre.tacassistant.activity.reports.*
+import cz.hombre.tacassistant.layout.reports.MainUI
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
 import cz.hombre.tacassistant.services.PreferencesService
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
 import org.jetbrains.anko.design.longSnackbar
+import org.jetbrains.anko.setContentView
 import org.koin.android.ext.android.inject
 
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ActivityCompat.OnRequestPermissionsResultCallback {
+
+    private var mainUI = MainUI()
 
     private val PERMISSION_REQUEST_LOCATION = 0
 
@@ -36,20 +40,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mainUI.setContentView(this)
+        setSupportActionBar(mainUI.toolbar)
 
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
-
-        val toggle = object : ActionBarDrawerToggle(this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
+        val toggle = object : ActionBarDrawerToggle(this, mainUI.drawerLayout, mainUI.toolbar, navigation_drawer_open, navigation_drawer_close) {
             override fun onDrawerOpened(drawerView: View) {
                 super.onDrawerOpened(drawerView)
                 setHeaderValues()
             }
         }
-        drawer_layout.addDrawerListener(toggle)
+
+        mainUI.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        nav_view.setNavigationItemSelectedListener(this)
+        mainUI.navigationView.setNavigationItemSelectedListener(this)
 
         PreferenceManager.setDefaultValues(this, R.xml.pref_settings, false)
 
@@ -88,8 +92,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onBackPressed() {
-        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
-            drawer_layout.closeDrawer(GravityCompat.START)
+        if (mainUI.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            mainUI.drawerLayout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
         }
@@ -137,7 +141,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
 
-        drawer_layout.closeDrawer(GravityCompat.START)
+        mainUI.drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
 
