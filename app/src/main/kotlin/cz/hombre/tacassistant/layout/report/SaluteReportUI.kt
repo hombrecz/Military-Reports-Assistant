@@ -33,7 +33,10 @@ class SaluteReportUI : AnkoComponent<SaluteReport> {
                     time = textInput(report_time, report_time_hint)
                     enemy = textInput(report_salute_equipment, report_salute_equipment_hint)
                 }
-            }
+            }.lparams(
+                    width = matchParent,
+                    height = matchParent
+            )
 
             previewButton = floatingActionButton {
                 imageResource = android.R.drawable.ic_dialog_email

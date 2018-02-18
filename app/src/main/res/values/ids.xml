@@ -5,4 +5,5 @@
 
     <item name="saltr_report" type="id" />
     <item name="salute_report" type="id" />
+    <item name="situation_report" type="id" />
 </resources>

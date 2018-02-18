@@ -31,7 +31,10 @@ class SaltrReportUI : AnkoComponent<SaltrReport> {
                     time = textInput(report_time, report_time_hint)
                     request = textInput(report_saltr_request, report_saltr_request_hint)
                 }
-            }
+            }.lparams(
+                    width = matchParent,
+                    height = matchParent
+            )
 
             previewButton = floatingActionButton {
                 imageResource = android.R.drawable.ic_dialog_email
