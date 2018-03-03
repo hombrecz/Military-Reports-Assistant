@@ -46,6 +46,10 @@
     <string name="preference_callsign_default">Grunt 1</string>
     <string name="preference_frequency_default">0</string>
     <string-array name="preference_phonetic_alphabet_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="preference_phonetic_alphabet_labels">
         <item>NATO</item>
         <item>Czech</item>
     </string-array>
@@ -188,69 +192,5 @@
     <string name="letter_e">E</string>
     <string name="letter_l">L</string>
     <string name="letter_n">N</string>
-
-    <!--NATO alphabet-->
-    <string name="alphabet_nato_a">Alpha</string>
-    <string name="alphabet_nato_b">Bravo</string>
-    <string name="alphabet_nato_c">Charlie</string>
-    <string name="alphabet_nato_d">Delta</string>
-    <string name="alphabet_nato_e">Echo</string>
-    <string name="alphabet_nato_f">Foxtrot</string>
-    <string name="alphabet_nato_g">Golf</string>
-    <string name="alphabet_nato_h">Hotel</string>
-    <string name="alphabet_nato_i">India</string>
-    <string name="alphabet_nato_j">Juliet</string>
-    <string name="alphabet_nato_k">Kilo</string>
-    <string name="alphabet_nato_l">Lima</string>
-    <string name="alphabet_nato_m">Mike</string>
-    <string name="alphabet_nato_n">November</string>
-    <string name="alphabet_nato_o">Oscar</string>
-    <string name="alphabet_nato_p">Papa</string>
-    <string name="alphabet_nato_q">Quebec</string>
-    <string name="alphabet_nato_r">Romeo</string>
-    <string name="alphabet_nato_s">Sierra</string>
-    <string name="alphabet_nato_t">Tango</string>
-    <string name="alphabet_nato_u">Uniform</string>
-    <string name="alphabet_nato_v">Victor</string>
-    <string name="alphabet_nato_w">Whiskey</string>
-    <string name="alphabet_nato_x">X-ray</string>
-    <string name="alphabet_nato_y">Yankee</string>
-    <string name="alphabet_nato_z">Zulu</string>
-
-    <!--Czech alphabet-->
-    <string name="alphabet_czech_a">Adam</string>
-    <string name="alphabet_czech_b">Božena</string>
-    <string name="alphabet_czech_c">Cyril</string>
-    <string name="alphabet_czech_č">Čeněk</string>
-    <string name="alphabet_czech_d">David</string>
-    <string name="alphabet_czech_ď">Ďáblice</string>
-    <string name="alphabet_czech_e">Emil</string>
-    <string name="alphabet_czech_f">František</string>
-    <string name="alphabet_czech_g">Gustav</string>
-    <string name="alphabet_czech_h">Helena</string>
-    <string name="alphabet_czech_ch">Chrudim</string>
-    <string name="alphabet_czech_i">Ivan</string>
-    <string name="alphabet_czech_j">Josef</string>
-    <string name="alphabet_czech_k">Karel</string>
-    <string name="alphabet_czech_l">Ludvík</string>
-    <string name="alphabet_czech_m">Marie</string>
-    <string name="alphabet_czech_n">Norbert</string>
-    <string name="alphabet_czech_ň">Nina</string>
-    <string name="alphabet_czech_o">Otakar</string>
-    <string name="alphabet_czech_p">Petr</string>
-    <string name="alphabet_czech_q">Quido</string>
-    <string name="alphabet_czech_r">Rudolf</string>
-    <string name="alphabet_czech_ř">Řehoř</string>
-    <string name="alphabet_czech_s">Svatopluk</string>
-    <string name="alphabet_czech_š">Štěpán</string>
-    <string name="alphabet_czech_t">Tomáš</string>
-    <string name="alphabet_czech_ť">Těšnov</string>
-    <string name="alphabet_czech_u">Urban</string>
-    <string name="alphabet_czech_v">Václav</string>
-    <string name="alphabet_czech_w">Dvojité V</string>
-    <string name="alphabet_czech_x">Xaver</string>
-    <string name="alphabet_czech_y">Ypslon</string>
-    <string name="alphabet_czech_z">Zuzana</string>
-    <string name="alphabet_czech_ž">Žofie</string>
 
 </resources>

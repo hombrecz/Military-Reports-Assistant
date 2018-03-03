@@ -3,7 +3,7 @@ package cz.hombre.tacassistant.activity.reports
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import cz.hombre.tacassistant.R
-import cz.hombre.tacassistant.REPORT_PROPERTY
+import cz.hombre.tacassistant.Utilities.Companion.REPORT_PROPERTY
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.layout.reports.ReportPreviewUI
 import cz.hombre.tacassistant.services.EncodingService
@@ -49,7 +49,7 @@ class ReportPreviewActivity : AppCompatActivity() {
 
     private fun switchSpelling() {
         spelling = !spelling
-        encodingService
+        encode()
     }
 
     private fun encode() {

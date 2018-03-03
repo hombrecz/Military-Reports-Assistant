@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewManager
 import android.widget.EditText
 import android.widget.LinearLayout
-import cz.hombre.tacassistant.COMMA
+import cz.hombre.tacassistant.Utilities.Companion.COMMA
 import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.editText
 import org.jetbrains.anko.hintResource

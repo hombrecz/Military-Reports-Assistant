@@ -27,22 +27,11 @@ class PreferencesServiceImpl(context: Context) : PreferencesService {
 
     private val preferences = PreferenceManager.getDefaultSharedPreferences(context)
 
-    override fun getCallSign(): String {
+    override fun getCallSign() = preferences.getString(CALL_SIGN, "")
 
-        return preferences.getString(CALL_SIGN, "")
-    }
+    override fun getFrequency() = preferences.getString(FREQUENCY, "")
 
-    override fun getFrequency(): String {
+    override fun getRamrod() = preferences.getString(RAMROD, "")
 
-        return preferences.getString(FREQUENCY, "")
-    }
-
-    override fun getRamrod(): String {
-        return preferences.getString(RAMROD, "")
-    }
-
-    override fun getPhoneticAlphabet(): Int {
-
-        return preferences.getInt(PHONETIC_ALPHABET, NATO_ALPHABET_VALUE)
-    }
+    override fun getPhoneticAlphabet() = preferences.getString(PHONETIC_ALPHABET, NATO_ALPHABET_VALUE.toString()).toInt()
 }

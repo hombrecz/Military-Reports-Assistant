@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewManager
 import android.widget.CheckBox
 import android.widget.LinearLayout
-import cz.hombre.tacassistant.COMMA
+import cz.hombre.tacassistant.Utilities.Companion.COMMA
 import org.jetbrains.anko.checkBox
 import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.hintResource
@@ -15,7 +15,7 @@ import org.jetbrains.anko.verticalLayout
 inline fun ViewManager.checkBoxInput(groupLabel: Int, options: Map<Int, Int>) = checkBoxInput(groupLabel, options) {}
 inline fun ViewManager.checkBoxInput(groupLabel: Int, options: Map<Int, Int>, init: CheckBoxInput.() -> Unit) = ankoView({ CheckBoxInput(it, groupLabel, options) }, 0, init)
 
-class CheckBoxInput(val c: Context, val groupLabel: Int, val options: Map<Int, Int>) : LinearLayout(c) {
+class CheckBoxInput(val c: Context, private val groupLabel: Int, private val options: Map<Int, Int>) : LinearLayout(c) {
 
     private lateinit var hideableContent: LinearLayout
     private lateinit var value: CheckBox
@@ -48,7 +48,7 @@ class CheckBoxInput(val c: Context, val groupLabel: Int, val options: Map<Int, I
 
         this.values.forEach {
             if (it.isChecked) {
-                stringBuilder.append("${c.getString(it.id)}${COMMA}")
+                stringBuilder.append("${c.getString(it.id)}$COMMA")
             }
         }
 

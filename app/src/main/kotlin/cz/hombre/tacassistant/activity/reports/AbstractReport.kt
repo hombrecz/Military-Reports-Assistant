@@ -2,7 +2,7 @@ package cz.hombre.tacassistant.activity.reports
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
-import cz.hombre.tacassistant.REPORT_PROPERTY
+import cz.hombre.tacassistant.Utilities.Companion.REPORT_PROPERTY
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
