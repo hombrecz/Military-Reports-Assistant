@@ -23,15 +23,15 @@ interface LocationService {
     fun getLocationTimeAgo(): String
 }
 
-class LocationServiceImpl(applicationContext: Context, private val dateTimeService: DateTimeService) : LocationService {
+private const val SEMICOLON = ":"
+private const val DEGREES = "°"
+private const val MINUTES = "'"
+private const val SECONDS = "\""
 
-    private val SEMICOLON = ":"
-    private val DEGREES = "°"
-    private val MINUTES = "'"
-    private val SECONDS = "\""
+private const val ACCURACY_BEGIN = "(+-"
+private const val ACCURACY_END = " m)"
 
-    private val ACCURACY_BEGIN = "(+-"
-    private val ACCURACY_END = " m)"
+class LocationServiceImpl(private val applicationContext: Context, private val dateTimeService: DateTimeService) : LocationService {
 
     private val locationListener: LocationListener = LocationListener()
     private val locationManager: LocationManager = applicationContext.getSystemService(AppCompatActivity.LOCATION_SERVICE) as LocationManager
@@ -50,12 +50,10 @@ class LocationServiceImpl(applicationContext: Context, private val dateTimeServi
 
     override fun getLocationTimeAgo() = dateTimeService.getTimeDifference(Date(this.locationListener.gpsLocation.time))
 
-    override fun getLocationPrecision(): String {
-        if (this.locationListener.gpsLocation.accuracy > 0) {
-            return "${ACCURACY_BEGIN}${this.locationListener.gpsLocation.accuracy}${ACCURACY_END}"
-        } else {
-            return String()
-        }
+    override fun getLocationPrecision() = if (this.locationListener.gpsLocation.accuracy > 0) {
+        "$ACCURACY_BEGIN${this.locationListener.gpsLocation.accuracy}$ACCURACY_END"
+    } else {
+        String()
     }
 
     override fun getCurrentGPSLocation() = getGPSFromLocation(this.locationListener.gpsLocation)
@@ -63,31 +61,31 @@ class LocationServiceImpl(applicationContext: Context, private val dateTimeServi
     override fun getCurrentMGRSLocation() = getMGRSFromLocation(this.locationListener.gpsLocation)
 
     private fun getGPSFromLocation(location: Location): String {
-        val latitudeSymbol: String
-        if (location.latitude < 0) {
-            latitudeSymbol = R.string.symbol_south.toString()
-        } else {
-            latitudeSymbol = R.string.symbol_north.toString()
-        }
+        val latitudeSymbol = applicationContext.getString(
+                if (location.latitude < 0) {
+                    R.string.symbol_south
+                } else {
+                    R.string.symbol_north
+                })
 
-        val longitudeSymbol: String
-        if (location.longitude < 0) {
-            longitudeSymbol = R.string.symbol_west.toString()
-        } else {
-            longitudeSymbol = R.string.symbol_east.toString()
-        }
+        val longitudeSymbol = applicationContext.getString(
+                if (location.longitude < 0) {
+                    R.string.symbol_west
+                } else {
+                    R.string.symbol_east
+                })
 
-        var longitude = Location.convert(location.longitude.absoluteValue, Location.FORMAT_SECONDS)
+        val longitude = Location.convert(location.longitude.absoluteValue, Location.FORMAT_SECONDS)
                 .replaceFirst(SEMICOLON, DEGREES)
                 .replaceFirst(SEMICOLON, MINUTES)
                 .plus(SECONDS)
 
-        var latitude = Location.convert(location.latitude.absoluteValue, Location.FORMAT_SECONDS)
+        val latitude = Location.convert(location.latitude.absoluteValue, Location.FORMAT_SECONDS)
                 .replaceFirst(SEMICOLON, DEGREES)
                 .replaceFirst(SEMICOLON, MINUTES)
                 .plus(SECONDS)
 
-        return " ${latitudeSymbol}${latitude} ${longitudeSymbol}${longitude}"
+        return "$latitudeSymbol $latitude $longitudeSymbol $longitude"
     }
 
     private fun getMGRSFromLocation(location: Location): String {

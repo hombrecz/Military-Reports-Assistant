@@ -28,12 +28,12 @@ class MainUI : AnkoComponent<MainActivity> {
             drawerLayout = this
             id = R.id.main_activity
             lparams(width = matchParent, height = matchParent)
-            createAppBar(ui)
+            createAppBar()
             createNavigationView(ui)
         }
     }
 
-    fun _DrawerLayout.createAppBar(ui: AnkoContext<MainActivity>) {
+    private fun _DrawerLayout.createAppBar() {
         coordinatorLayout {
             fitsSystemWindows = false
 
@@ -59,7 +59,7 @@ class MainUI : AnkoComponent<MainActivity> {
         )
     }
 
-    fun _DrawerLayout.createNavigationView(ui: AnkoContext<MainActivity>) {
+    private fun _DrawerLayout.createNavigationView(ui: AnkoContext<MainActivity>) {
         navigationView = navigationView {
             fitsSystemWindows = true
             setNavigationItemSelectedListener(ui.owner)

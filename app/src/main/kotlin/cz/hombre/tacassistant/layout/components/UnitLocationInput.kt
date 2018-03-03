@@ -30,10 +30,10 @@ class UnitLocationInput(c: Context) : LinearLayout(c) {
             }
             hideableContent = verticalLayout {
                 linearLayout {
-                    unit = editText() {
+                    unit = editText {
                         hintResource = explosive_report_unit
                     }
-                    callSign = editText() {
+                    callSign = editText {
                         hintResource = report_call_sign
                     }
                 }
@@ -45,7 +45,7 @@ class UnitLocationInput(c: Context) : LinearLayout(c) {
     }
 
     fun getValue(): String {
-        return "${this.unit.text.toString()}, ${this.callSign.text.toString()}, ${this.location.getValue()}"
+        return "${this.unit.text}, ${this.callSign.text}, ${this.location.getValue()}"
     }
 
     fun setLocation(location: String) {

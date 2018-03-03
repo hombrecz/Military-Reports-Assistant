@@ -1,6 +1,5 @@
 package cz.hombre.tacassistant.services
 
-import android.content.Context
 import cz.hombre.tacassistant.SpellingAlphabets
 import cz.hombre.tacassistant.Utilities
 import cz.hombre.tacassistant.Utilities.Companion.NEW_LINE
@@ -16,7 +15,7 @@ interface EncodingService {
     fun encodeLettersWithSpellingAlphabet(report: ReportData): ReportData
 }
 
-class EncodingServiceImpl(private val applicationContext: Context, private val preferencesService: PreferencesService) : EncodingService {
+class EncodingServiceImpl(private val preferencesService: PreferencesService) : EncodingService {
 
     override fun formatReportText(report: ReportData): String {
         val sb = StringBuilder()
@@ -90,7 +89,7 @@ class EncodingServiceImpl(private val applicationContext: Context, private val p
                 else -> char.toLowerCase().toString()
             }
 
-            encoded += alphabet.getOrElse(symbol.toLowerCase()) {symbol}
+            encoded += alphabet.getOrElse(symbol.toLowerCase()) { symbol }
         }
 
         return encoded + NEW_LINE

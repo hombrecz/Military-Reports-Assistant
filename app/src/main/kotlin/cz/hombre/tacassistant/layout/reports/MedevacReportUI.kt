@@ -23,7 +23,6 @@ class MedevacReportUI : AnkoComponent<MedevacReport> {
     lateinit var line8: MultipleLineInput
     lateinit var line9: CheckBoxInput
 
-
     override fun createView(ui: AnkoContext<MedevacReport>) = with(ui) {
         coordinatorLayout {
             id = R.id.medevac_report

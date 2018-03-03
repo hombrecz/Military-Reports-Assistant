@@ -27,10 +27,10 @@ class DualTextInput(val c: Context, val label: Int, val firstHint: Int, val seco
                 }
             }
             hideableContent = linearLayout {
-                firstValue = editText() {
+                firstValue = editText {
                     hintResource = firstHint
                 }
-                secondValue = editText() {
+                secondValue = editText {
                     hintResource = secondHint
                 }
             }
@@ -38,7 +38,7 @@ class DualTextInput(val c: Context, val label: Int, val firstHint: Int, val seco
     }
 
     fun getValue(): String {
-        return "${this.firstValue.text.toString()}, ${this.secondValue.text.toString()}"
+        return "${this.firstValue.text}, ${this.secondValue.text}"
     }
 
     fun setFirstValue(value: String) {

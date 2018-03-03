@@ -27,12 +27,11 @@ import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.setContentView
 import org.koin.android.ext.android.inject
 
+const val PERMISSION_REQUEST_LOCATION = 0
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
     private var mainUI = MainUI()
-
-    private val PERMISSION_REQUEST_LOCATION = 0
 
     private val dateTimeService: DateTimeService by inject()
     private val locationService: LocationService by inject()

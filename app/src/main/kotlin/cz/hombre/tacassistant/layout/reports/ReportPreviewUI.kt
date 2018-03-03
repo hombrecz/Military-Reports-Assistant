@@ -12,9 +12,9 @@ import org.jetbrains.anko.design.floatingActionButton
 
 class ReportPreviewUI : AnkoComponent<ReportPreviewActivity> {
 
+    private lateinit var textContent: EditText
     lateinit var ramrodButton: FloatingActionButton
     lateinit var spellingButton: FloatingActionButton
-    lateinit var textContent: EditText
 
     override fun createView(ui: AnkoContext<ReportPreviewActivity>) = with(ui) {
         coordinatorLayout {
