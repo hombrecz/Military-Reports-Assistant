@@ -39,6 +39,7 @@ class ReportPreviewActivity : AppCompatActivity() {
         title = report.name
 
         reportPreviewUI.setContent(encodingService.formatReportText(report))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     private fun switchRamrod() {
@@ -60,6 +61,11 @@ class ReportPreviewActivity : AppCompatActivity() {
             encodedReport = encodingService.encodeLettersWithSpellingAlphabet(encodedReport)
         }
         reportPreviewUI.setContent(encodingService.formatReportText(encodedReport))
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
 }

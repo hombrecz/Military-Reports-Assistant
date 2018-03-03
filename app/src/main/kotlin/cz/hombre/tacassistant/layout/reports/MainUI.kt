@@ -10,9 +10,9 @@ import cz.hombre.tacassistant.activity.MainActivity
 import org.jetbrains.anko.*
 import org.jetbrains.anko.appcompat.v7.toolbar
 import org.jetbrains.anko.constraint.layout.constraintLayout
-import org.jetbrains.anko.design.appBarLayout
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.navigationView
+import org.jetbrains.anko.design.themedAppBarLayout
 import org.jetbrains.anko.support.v4._DrawerLayout
 import org.jetbrains.anko.support.v4.drawerLayout
 
@@ -24,9 +24,9 @@ class MainUI : AnkoComponent<MainActivity> {
 
     override fun createView(ui: AnkoContext<MainActivity>) = with(ui) {
         drawerLayout {
+            fitsSystemWindows = true
             drawerLayout = this
             id = R.id.main_activity
-            fitsSystemWindows = true
             lparams(width = matchParent, height = matchParent)
             createAppBar(ui)
             createNavigationView(ui)
@@ -37,7 +37,7 @@ class MainUI : AnkoComponent<MainActivity> {
         coordinatorLayout {
             fitsSystemWindows = false
 
-            appBarLayout {
+            themedAppBarLayout(R.style.AppTheme_AppBarOverlay) {
                 toolbar = toolbar {
                     popupTheme = R.style.AppTheme_PopupOverlay
                     backgroundResource = R.color.primaryColor
