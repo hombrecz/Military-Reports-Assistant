@@ -5,6 +5,7 @@ import android.location.Location
 import android.location.LocationManager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import com.berico.coords.Coordinates
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.listener.LocationListener
 import cz.hombre.tacassistant.services.DateTimeService
@@ -77,9 +78,6 @@ class LocationServiceImpl(private val applicationContext: Context, private val d
         return "$latitudeSymbol $latitude $longitudeSymbol $longitude"
     }
 
-    private fun getMGRSFromLocation(location: Location): String {
-        //TODO OD - implement MGRS
-        return "MGRS TODO"
-    }
+    private fun getMGRSFromLocation(location: Location) = Coordinates.mgrsFromLatLon(location.latitude, location.longitude)
 
 }

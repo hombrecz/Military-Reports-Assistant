@@ -1,4 +1,4 @@
-package cz.hombre.tacassistant.layout.reports
+package cz.hombre.tacassistant.layout
 
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat

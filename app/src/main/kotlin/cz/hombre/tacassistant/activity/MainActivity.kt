@@ -18,7 +18,7 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.R.string.navigation_drawer_close
 import cz.hombre.tacassistant.R.string.navigation_drawer_open
 import cz.hombre.tacassistant.activity.reports.*
-import cz.hombre.tacassistant.layout.reports.MainUI
+import cz.hombre.tacassistant.layout.MainUI
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocationService
 import cz.hombre.tacassistant.services.PreferencesService
