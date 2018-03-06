@@ -9,6 +9,7 @@ import cz.hombre.tacassistant.layout.reports.ReportPreviewUI
 import cz.hombre.tacassistant.services.EncodingService
 import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.setContentView
+import org.jetbrains.anko.share
 import org.koin.android.ext.android.inject
 
 class ReportPreviewActivity : AppCompatActivity() {
@@ -25,13 +26,17 @@ class ReportPreviewActivity : AppCompatActivity() {
         reportPreviewUI.setContentView(this)
 
         reportPreviewUI.spellingButton.setOnClickListener { view ->
+            longSnackbar(view, R.string.report_preview_spelling_message)
+            switchSpelling()
+        }
+
+        reportPreviewUI.ramrodButton.setOnClickListener { view ->
             longSnackbar(view, R.string.report_preview_ramrod_message)
             switchRamrod()
         }
 
-        reportPreviewUI.ramrodButton.setOnClickListener { view ->
-            longSnackbar(view, R.string.report_preview_spelling_message)
-            switchSpelling()
+        reportPreviewUI.shareButton.setOnClickListener { view ->
+            share(encodingService.formatReportText(report), report.name)
         }
 
         report = intent?.getSerializableExtra(REPORT_PROPERTY) as ReportData
