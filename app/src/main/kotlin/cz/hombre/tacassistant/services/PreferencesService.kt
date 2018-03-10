@@ -10,4 +10,6 @@ interface PreferencesService {
 
     fun getPhoneticAlphabet(): Int
 
+    fun getPreferredOffset(): Int
+
 }

@@ -1,6 +1,7 @@
 package cz.hombre.tacassistant.services.impl
 
 import cz.hombre.tacassistant.services.DateTimeService
+import cz.hombre.tacassistant.services.PreferencesService
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -17,12 +18,18 @@ private const val MILLI_PER_HOUR = 60 * MILLI_PER_MINUTE
 
 private const val UTC_ZONE = "UTC"
 
-class DateTimeServiceImpl : DateTimeService {
+private const val MILITARY_ZONE_OFFSET = "YXWVUTSRQPONZABCDEFGHIKLM"
 
-    override fun getZuluDateTimeGroup(): String {
-        val date = Calendar.getInstance(TimeZone.getTimeZone(UTC_ZONE)).time
+class DateTimeServiceImpl(private val preferencesService: PreferencesService) : DateTimeService {
 
-        return getFormattedUTCDateTime(date, ZULU_FORMAT)
+    override fun getMilitaryDateTimeGroup(): String {
+        val preferredOffset = preferencesService.getPreferredOffset()
+
+        val date = Calendar.getInstance(TimeZone.getTimeZone("GMT$preferredOffset:00")).time
+
+        val formatWithZoneOffset = ZULU_FORMAT.replace('Z', getMilitaryOffset(preferredOffset))
+
+        return getFormattedUTCDateTime(date, formatWithZoneOffset)
     }
 
     override fun getLocalTime() = getLocalTime(Calendar.getInstance().time)
@@ -33,8 +40,10 @@ class DateTimeServiceImpl : DateTimeService {
 
     private fun getFormattedDateTime(date: Date, formatString: String) = SimpleDateFormat(formatString, Locale.getDefault()).format(date).toUpperCase()
 
-    private fun getFormattedUTCDateTime(date: Date, formatString: String): String {
-        val format = SimpleDateFormat(formatString, Locale.getDefault())
+    private fun getFormattedUTCDateTime(date: Date, formatString: String) = getFormattedUTCDateTime(date, formatString, Locale.UK)
+
+    private fun getFormattedUTCDateTime(date: Date, formatString: String, locale: Locale): String {
+        val format = SimpleDateFormat(formatString, locale)
         format.timeZone = TimeZone.getTimeZone(UTC_ZONE)
 
         return format.format(date).toUpperCase()
@@ -52,4 +61,6 @@ class DateTimeServiceImpl : DateTimeService {
 
         return getFormattedUTCDateTime(Date(difference), selectedFormat)
     }
+
+    private fun getMilitaryOffset(offset: Int) = MILITARY_ZONE_OFFSET[offset + 12]
 }

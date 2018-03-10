@@ -41,10 +41,10 @@
     <string name="preference_frequency_title">Radio frequency</string>
     <string name="preference_ramrod_summary">RAMROD used to encode numbers.</string>
     <string name="preference_ramrod_title">RAMROD</string>
-    <string name="preference_phonetic_alphabet_title">Phonetic alphabet</string>
     <string name="preference_ramrod_default">ALGORITMUS</string>
     <string name="preference_callsign_default">Grunt 1</string>
     <string name="preference_frequency_default">0</string>
+    <string name="preference_phonetic_alphabet_title">Phonetic alphabet</string>
     <string-array name="preference_phonetic_alphabet_values">
         <item>0</item>
         <item>1</item>
@@ -52,6 +52,61 @@
     <string-array name="preference_phonetic_alphabet_labels">
         <item>NATO</item>
         <item>Czech</item>
+    </string-array>
+    <string name="preference_military_offset_title">Preferred time offset</string>
+    <string-array name="preference_military_offset_values">
+        <item>-12</item>
+        <item>-11</item>
+        <item>-10</item>
+        <item>-9</item>
+        <item>-8</item>
+        <item>-7</item>
+        <item>-6</item>
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="preference_military_offset_labels">
+        <item>UTC-12:00</item>
+        <item>UTC-11:00</item>
+        <item>UTC-10:00</item>
+        <item>UTC-09:00</item>
+        <item>UTC-08:00</item>
+        <item>UTC-07:00</item>
+        <item>UTC-06:00</item>
+        <item>UTC-05:00</item>
+        <item>UTC-04:00</item>
+        <item>UTC-03:00</item>
+        <item>UTC-02:00</item>
+        <item>UTC-01:00</item>
+        <item>UTC+00:00</item>
+        <item>UTC+01:00</item>
+        <item>UTC+02:00</item>
+        <item>UTC+03:00</item>
+        <item>UTC+04:00</item>
+        <item>UTC+05:00</item>
+        <item>UTC+06:00</item>
+        <item>UTC+07:00</item>
+        <item>UTC+08:00</item>
+        <item>UTC+09:00</item>
+        <item>UTC+10:00</item>
+        <item>UTC+11:00</item>
+        <item>UTC+12:00</item>
     </string-array>
 
     <!--Reports-->

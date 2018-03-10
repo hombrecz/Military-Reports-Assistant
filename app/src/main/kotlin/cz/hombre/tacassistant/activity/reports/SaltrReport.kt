@@ -17,7 +17,7 @@ class SaltrReport : AbstractReport() {
         saltrReportUI.previewButton.setOnClickListener {
             translateReport()
         }
-        saltrReportUI.time.setValue(dateTimeService.getZuluDateTimeGroup())
+        saltrReportUI.time.setValue(dateTimeService.getMilitaryDateTimeGroup())
         saltrReportUI.location.setValue(locationService.getCurrentMGRSLocation())
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }

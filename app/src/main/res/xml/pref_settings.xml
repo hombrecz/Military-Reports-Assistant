@@ -30,4 +30,10 @@
         android:entryValues="@array/preference_phonetic_alphabet_values"
         android:key="preference_phonetic_alphabet"
         android:title="@string/preference_phonetic_alphabet_title" />
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/preference_military_offset_labels"
+        android:entryValues="@array/preference_military_offset_values"
+        android:key="preference_preferred_offset"
+        android:title="@string/preference_military_offset_title" />
 </PreferenceScreen>

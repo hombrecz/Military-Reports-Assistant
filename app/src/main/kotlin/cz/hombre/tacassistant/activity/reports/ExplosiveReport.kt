@@ -20,7 +20,7 @@ class ExplosiveReport : AbstractReport() {
         explosiveReportUI.line3.setFirstValue(preferencesService.getFrequency())
         explosiveReportUI.line3.setSecondValue(preferencesService.getCallSign())
         explosiveReportUI.line2.setCallSign(preferencesService.getCallSign())
-        explosiveReportUI.line1.setValue(dateTimeService.getZuluDateTimeGroup())
+        explosiveReportUI.line1.setValue(dateTimeService.getMilitaryDateTimeGroup())
         explosiveReportUI.line2.setLocation(locationService.getCurrentMGRSLocation())
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

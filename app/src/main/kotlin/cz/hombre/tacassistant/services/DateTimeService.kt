@@ -4,7 +4,7 @@ import java.util.*
 
 interface DateTimeService {
 
-    fun getZuluDateTimeGroup(): String
+    fun getMilitaryDateTimeGroup(): String
 
     fun getLocalTime(): String
 

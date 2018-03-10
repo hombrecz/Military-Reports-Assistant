@@ -17,7 +17,7 @@ class SituationReport : AbstractReport() {
         situationReportUI.previewButton.setOnClickListener {
             translateReport()
         }
-        situationReportUI.time.setValue(dateTimeService.getZuluDateTimeGroup())
+        situationReportUI.time.setValue(dateTimeService.getMilitaryDateTimeGroup())
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 

@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         status_local_date.text = dateTimeService.getLocalDate()
         status_local_time.text = dateTimeService.getLocalTime()
-        status_dtg_zulu_time.text = dateTimeService.getZuluDateTimeGroup()
+        status_dtg_zulu_time.text = dateTimeService.getMilitaryDateTimeGroup()
     }
 
     override fun onBackPressed() {

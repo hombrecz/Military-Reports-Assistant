@@ -17,7 +17,7 @@ class SaluteReport : AbstractReport() {
         saluteReportUI.previewButton.setOnClickListener {
             translateReport()
         }
-        saluteReportUI.time.setValue(dateTimeService.getZuluDateTimeGroup())
+        saluteReportUI.time.setValue(dateTimeService.getMilitaryDateTimeGroup())
         saluteReportUI.location.setValue(locationService.getCurrentMGRSLocation())
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
