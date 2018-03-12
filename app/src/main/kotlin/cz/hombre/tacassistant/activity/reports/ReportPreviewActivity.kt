@@ -3,9 +3,11 @@ package cz.hombre.tacassistant.activity.reports
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import cz.hombre.tacassistant.R
+import cz.hombre.tacassistant.Utilities
 import cz.hombre.tacassistant.Utilities.Companion.REPORT_PROPERTY
 import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.layout.reports.ReportPreviewUI
+import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.EncodingService
 import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.setContentView
@@ -20,6 +22,7 @@ class ReportPreviewActivity : AppCompatActivity() {
     private lateinit var report: ReportData
 
     private val encodingService: EncodingService by inject()
+    private val dateTimeService: DateTimeService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +44,7 @@ class ReportPreviewActivity : AppCompatActivity() {
 
         report = intent?.getSerializableExtra(REPORT_PROPERTY) as ReportData
 
-        title = report.name
+        title = report.name + Utilities.SEPARATOR_DASH + dateTimeService.getLocalDateTime()
 
         reportPreviewUI.setContent(encodingService.formatReportText(report))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

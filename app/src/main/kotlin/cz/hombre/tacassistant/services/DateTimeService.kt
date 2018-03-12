@@ -12,5 +12,7 @@ interface DateTimeService {
 
     fun getLocalDate(): String
 
+    fun getLocalDateTime() : String
+
     fun getTimeDifference(from: Date): String
 }

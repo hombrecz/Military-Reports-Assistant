@@ -8,6 +8,7 @@ import java.util.*
 private const val ZULU_FORMAT = "ddHHmm'Z' MMM yy"
 private const val LOCAL_TIME_FORMAT = "HH:mm"
 private const val LOCAL_DATE_FORMAT = "MMMM dd, yyyy"
+private const val LOCAL_DATE_TIME_FORMAT = "HH:mm dd/MMM/yy"
 private const val DIFFERENCE_FORMAT_SECONDS = "ss's'"
 private const val DIFFERENCE_FORMAT_MINUTES = "mm'm' ss's'"
 private const val DIFFERENCE_FORMAT_HOURS = "HH'h' mm'm' ss's'"
@@ -37,6 +38,8 @@ class DateTimeServiceImpl(private val preferencesService: PreferencesService) : 
     override fun getLocalTime(date: Date) = getFormattedDateTime(date, LOCAL_TIME_FORMAT)
 
     override fun getLocalDate() = getFormattedDateTime(Calendar.getInstance().time, LOCAL_DATE_FORMAT)
+
+    override fun getLocalDateTime() = getFormattedDateTime(Calendar.getInstance().time, LOCAL_DATE_TIME_FORMAT)
 
     private fun getFormattedDateTime(date: Date, formatString: String) = SimpleDateFormat(formatString, Locale.getDefault()).format(date).toUpperCase()
 
