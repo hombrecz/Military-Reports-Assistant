@@ -35,6 +35,11 @@
 
     <!-- Settings -->
     <string name="title_activity_settings">Settings</string>
+    <string name="settings_tactical_category">Tactical stuff</string>
+    <string name="settings_application_category">Application</string>
+
+    <string name="settings_app_reloaded">Settings has been applied</string>
+
     <string name="preference_callsign_summary">Callsign used in reports.</string>
     <string name="preference_callsign_title">Callsign</string>
     <string name="preference_frequency_summary">Radio frequency of users radio.</string>
@@ -45,6 +50,7 @@
     <string name="preference_callsign_default">Grunt 1</string>
     <string name="preference_frequency_default">0</string>
     <string name="preference_phonetic_alphabet_title">Phonetic alphabet</string>
+    <string name="preference_phonetic_alphabet_summary">Phonetic alphabet that will be used for spelling</string>
     <string-array name="preference_phonetic_alphabet_values">
         <item>0</item>
         <item>1</item>
@@ -54,6 +60,7 @@
         <item>Czech</item>
     </string-array>
     <string name="preference_military_offset_title">Preferred time offset</string>
+    <string name="preference_military_offset_summary">Time offset (zone) used for date time group</string>
     <string-array name="preference_military_offset_values">
         <item>-12</item>
         <item>-11</item>
@@ -107,6 +114,18 @@
         <item>UTC+10:00</item>
         <item>UTC+11:00</item>
         <item>UTC+12:00</item>
+    </string-array>
+    <string name="preference_night_mode_summary">Choose application visual style</string>
+    <string name="preference_night_mode_title">Day/Night Mode</string>
+    <string-array name="preference_night_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="preference_night_mode_labels">
+        <item>Auto</item>
+        <item>Day</item>
+        <item>Night</item>
     </string-array>
 
     <!--Reports-->

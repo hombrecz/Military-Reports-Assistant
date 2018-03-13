@@ -1,39 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <EditTextPreference
-        android:defaultValue="@string/preference_callsign_default"
-        android:key="preference_callsign"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:summary="@string/preference_callsign_summary"
-        android:title="@string/preference_callsign_title" />
-    <EditTextPreference
-        android:defaultValue="@string/preference_frequency_default"
-        android:inputType="number"
-        android:key="preference_frequency"
-        android:numeric="integer"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:summary="@string/preference_frequency_summary"
-        android:title="@string/preference_frequency_title" />
-    <EditTextPreference
-        android:defaultValue="@string/preference_ramrod_default"
-        android:key="preference_ramrod"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:summary="@string/preference_ramrod_summary"
-        android:title="@string/preference_ramrod_title" />
-    <ListPreference
-        android:defaultValue="0"
-        android:entries="@array/preference_phonetic_alphabet_labels"
-        android:entryValues="@array/preference_phonetic_alphabet_values"
-        android:key="preference_phonetic_alphabet"
-        android:title="@string/preference_phonetic_alphabet_title" />
-    <ListPreference
-        android:defaultValue="0"
-        android:entries="@array/preference_military_offset_labels"
-        android:entryValues="@array/preference_military_offset_values"
-        android:key="preference_preferred_offset"
-        android:title="@string/preference_military_offset_title" />
+    <PreferenceCategory android:title="@string/settings_tactical_category">
+        <EditTextPreference
+            android:defaultValue="@string/preference_callsign_default"
+            android:key="preference_callsign"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/preference_callsign_summary"
+            android:title="@string/preference_callsign_title" />
+        <EditTextPreference
+            android:defaultValue="@string/preference_frequency_default"
+            android:inputType="number"
+            android:key="preference_frequency"
+            android:numeric="integer"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/preference_frequency_summary"
+            android:title="@string/preference_frequency_title" />
+        <EditTextPreference
+            android:defaultValue="@string/preference_ramrod_default"
+            android:key="preference_ramrod"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/preference_ramrod_summary"
+            android:title="@string/preference_ramrod_title" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/preference_phonetic_alphabet_labels"
+            android:entryValues="@array/preference_phonetic_alphabet_values"
+            android:key="preference_phonetic_alphabet"
+            android:summary="@string/preference_phonetic_alphabet_summary"
+            android:title="@string/preference_phonetic_alphabet_title" />
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/preference_military_offset_labels"
+            android:entryValues="@array/preference_military_offset_values"
+            android:key="preference_preferred_offset"
+            android:summary="@string/preference_military_offset_summary"
+            android:title="@string/preference_military_offset_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_application_category">
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/preference_night_mode_labels"
+            android:entryValues="@array/preference_night_mode_values"
+            android:key="preference_night_mode"
+            android:summary="@string/preference_night_mode_summary"
+            android:title="@string/preference_night_mode_title" />
+    </PreferenceCategory>
 </PreferenceScreen>

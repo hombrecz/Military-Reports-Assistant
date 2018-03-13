@@ -4,13 +4,13 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.support.design.widget.NavigationView
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.app.AppCompatDelegate
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         mainUI.setContentView(this)
         setSupportActionBar(mainUI.toolbar)
 
+        AppCompatDelegate.setDefaultNightMode(preferencesService.getNightMode())
+
         val toggle = object : ActionBarDrawerToggle(this, mainUI.drawerLayout, mainUI.toolbar, navigation_drawer_open, navigation_drawer_close) {
             override fun onDrawerOpened(drawerView: View) {
                 super.onDrawerOpened(drawerView)
@@ -53,8 +55,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         mainUI.navigationView.setNavigationItemSelectedListener(this)
-
-        PreferenceManager.setDefaultValues(this, R.xml.pref_settings, false)
 
         requestLocationDataPermission()
     }

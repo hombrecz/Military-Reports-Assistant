@@ -37,9 +37,8 @@ class MainUI : AnkoComponent<MainActivity> {
         coordinatorLayout {
             fitsSystemWindows = false
 
-            themedAppBarLayout(R.style.AppTheme_AppBarOverlay) {
+            themedAppBarLayout {
                 toolbar = toolbar {
-                    popupTheme = R.style.AppTheme_PopupOverlay
                     backgroundResource = R.color.primaryColor
                 }.lparams(
                         width = matchParent,
