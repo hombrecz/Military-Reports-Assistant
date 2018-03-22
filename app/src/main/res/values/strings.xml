@@ -7,7 +7,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_reports">Reports</string>
     <string name="navigation_drawer_reports_medevac">Medevac 9-liner</string>
-    <string name="navigation_drawer_reports_sitrep">Situation report</string>
+    <string name="navigation_drawer_reports_sitrep">Sitrep</string>
     <string name="navigation_drawer_reports_salute">SALUTE</string>
     <string name="navigation_drawer_reports_saltr">SALTR</string>
     <string name="navigation_drawer_reports_ied">IED/UXO</string>
@@ -19,15 +19,15 @@
     <string name="status_callname_default">Callname</string>
     <string name="status_frequency_default">0 MHz</string>
     <string name="status_gps_label">GPS</string>
-    <string name="status_gps_default">50.7697839N, 15.0584500E</string>
-    <string name="status_mgrs_label">MGRS</string>
+    <string name="status_gps_default">-GPS no location data-</string>
+    <string name="status_mgrs_label">-MGRS no location data-</string>
     <string name="status_mgrs_default">33UWS 0411 2423</string>
-    <string name="status_precision_default">(+-100m)</string>
-    <string name="status_time_position_retrieved_default">17:00</string>
-    <string name="status_duration_postion_retrieved_default">1 mins ago</string>
-    <string name="status_zulu_time_default">091700Z JUL 17</string>
-    <string name="status_local_date_default">July 7th, 2017</string>
-    <string name="status_local_time_default">17:00</string>
+    <string name="status_precision_default">-no precision data-</string>
+    <string name="status_time_position_retrieved_default">-no location aquired time-</string>
+    <string name="status_duration_postion_retrieved_default">-</string>
+    <string name="status_zulu_time_default">-no DTG-</string>
+    <string name="status_local_date_default">-no date-</string>
+    <string name="status_local_time_default">-no time-</string>
     <string name="status_person_image_description">Personal info</string>
     <string name="status_location_image_description">Location info</string>
     <string name="status_time_image_description">Time info</string>
@@ -49,6 +49,7 @@
     <string name="preference_ramrod_default">ALGORITMUS</string>
     <string name="preference_callsign_default">Grunt 1</string>
     <string name="preference_frequency_default">0</string>
+
     <string name="preference_phonetic_alphabet_title">Phonetic alphabet</string>
     <string name="preference_phonetic_alphabet_summary">Phonetic alphabet that will be used for spelling</string>
     <string-array name="preference_phonetic_alphabet_values">
@@ -59,7 +60,8 @@
         <item>NATO</item>
         <item>Czech</item>
     </string-array>
-    <string name="preference_military_offset_title">Preferred time offset</string>
+
+    <string name="preference_military_offset_title">Time offset</string>
     <string name="preference_military_offset_summary">Time offset (zone) used for date time group</string>
     <string-array name="preference_military_offset_values">
         <item>-12</item>
@@ -115,7 +117,8 @@
         <item>UTC+11:00</item>
         <item>UTC+12:00</item>
     </string-array>
-    <string name="preference_night_mode_summary">Choose application visual style</string>
+
+    <string name="preference_night_mode_summary">Application visual style</string>
     <string name="preference_night_mode_title">Day/Night Mode</string>
     <string-array name="preference_night_mode_values">
         <item>0</item>
@@ -126,6 +129,17 @@
         <item>Auto</item>
         <item>Day</item>
         <item>Night</item>
+    </string-array>
+
+    <string name="preference_locale_summary">Choose application language</string>
+    <string name="preference_locale_title">Language</string>
+    <string-array name="preference_locale_values">
+        <item>English</item>
+        <item>Czech</item>
+    </string-array>
+    <string-array name="preference_locale_labels">
+        <item>English</item>
+        <item>Czech</item>
     </string-array>
 
     <!--Reports-->
@@ -160,13 +174,13 @@
     <string name="report_medevac_line_4_charlie">C - Extraction equipment</string>
     <string name="report_medevac_line_4_delta">D - Ventilator</string>
     <string name="report_medevac_line_5">Line 5 - Number of patients</string>
-    <string name="report_medevac_line_5_alpha">A - Ambulatory.</string>
+    <string name="report_medevac_line_5_alpha">A - Ambulatory</string>
     <string name="report_medevac_line_5_lima">L -  Litter</string>
     <string name="report_medevac_line_6">Line 6 - Security at pick-up site</string>
-    <string name="report_medevac_line_6_alpha">A - No enemy troops in area</string>
-    <string name="report_medevac_line_6_bravo">B - Possible enemy troops in area (approach with caution)</string>
-    <string name="report_medevac_line_6_charlie">C - enemy troops in area (approach with caution)</string>
-    <string name="report_medevac_line_6_delta">D - enemy troops in area (armed escort required)</string>
+    <string name="report_medevac_line_6_alpha">N - No enemy troops in area</string>
+    <string name="report_medevac_line_6_bravo">P - Possible enemy troops in area (approach with caution)</string>
+    <string name="report_medevac_line_6_charlie">E - enemy troops in area (approach with caution)</string>
+    <string name="report_medevac_line_6_delta">X - enemy troops in area (armed escort required)</string>
     <string name="report_medevac_line_7">Line 7 - Method of pick-up site marking</string>
     <string name="report_medevac_line_7_alpha">A - Panel</string>
     <string name="report_medevac_line_7_bravo">B - Pyrotechnic signal</string>
@@ -185,7 +199,7 @@
     <string name="report_medevac_line_9_chemical">C - Chemical</string>
 
     <!--SALUTE-->
-    <string name="title_activity_salute_report">Salute report</string>
+    <string name="title_activity_salute_report">SALUTE report</string>
     <string name="report_salute_uniform">Uniform</string>
     <string name="report_salute_uniform_hint">Unit identification - by markings, unforms etc</string>
     <string name="report_salute_equipment">Equipment</string>
@@ -193,7 +207,7 @@
 
     <!-- SALTR -->
     <string name="title_activity_saltr_report">SALTR Report</string>
-    <string name="report_saltr_request">Request / Remarks</string>
+    <string name="report_saltr_request">Request / remarks</string>
     <string name="report_saltr_request_hint">Another requests or remarks to be added to the report</string>
 
     <!--Situation report-->
@@ -266,5 +280,7 @@
     <string name="letter_e">E</string>
     <string name="letter_l">L</string>
     <string name="letter_n">N</string>
+    <string name="letter_p">P</string>
+    <string name="letter_x">X</string>
 
 </resources>
