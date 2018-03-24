@@ -14,6 +14,8 @@ class SaluteReport : AbstractReport() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         saluteReportUI.setContentView(this)
+        setTitle(R.string.title_activity_salute_report)
+
         saluteReportUI.previewButton.setOnClickListener {
             translateReport()
         }

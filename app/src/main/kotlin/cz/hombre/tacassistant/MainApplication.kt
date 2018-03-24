@@ -1,6 +1,7 @@
 package cz.hombre.tacassistant
 
 import android.app.Application
+import android.content.Context
 import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatDelegate
 import cz.hombre.tacassistant.modules.myModule

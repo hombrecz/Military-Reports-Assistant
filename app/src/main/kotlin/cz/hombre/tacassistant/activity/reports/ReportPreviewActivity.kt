@@ -9,6 +9,7 @@ import cz.hombre.tacassistant.dto.ReportData
 import cz.hombre.tacassistant.layout.reports.ReportPreviewUI
 import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.EncodingService
+import cz.hombre.tacassistant.services.LocaleService
 import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.setContentView
 import org.jetbrains.anko.share
@@ -23,18 +24,22 @@ class ReportPreviewActivity : AppCompatActivity() {
 
     private val encodingService: EncodingService by inject()
     private val dateTimeService: DateTimeService by inject()
+    private val localeService: LocaleService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         reportPreviewUI.setContentView(this)
+        setTitle(R.string.title_activity_report_preview)
+
 
         reportPreviewUI.spellingButton.setOnClickListener { view ->
-            longSnackbar(view, R.string.report_preview_spelling_message)
+            longSnackbar(view, localeService.getStringForActualLocale(baseContext, R.string.report_preview_spelling_message))
             switchSpelling()
         }
 
         reportPreviewUI.ramrodButton.setOnClickListener { view ->
             longSnackbar(view, R.string.report_preview_ramrod_message)
+            longSnackbar(view, localeService.getStringForActualLocale(baseContext, R.string.report_preview_ramrod_message))
             switchRamrod()
         }
 

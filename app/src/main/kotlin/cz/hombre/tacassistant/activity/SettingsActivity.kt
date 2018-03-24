@@ -2,6 +2,7 @@ package cz.hombre.tacassistant.activity
 
 
 import android.annotation.TargetApi
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Build
@@ -12,18 +13,22 @@ import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatDelegate
 import android.view.MenuItem
 import cz.hombre.tacassistant.R
+import cz.hombre.tacassistant.services.LocaleService
 import cz.hombre.tacassistant.services.PreferencesService
 import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
 
-private const val PREFERENCE_NIGHT_MODE = "preference_night_mode"
+private const val NIGHT_MODE = "preference_night_mode"
+private const val LOCALE = "preference_locale"
 
 class SettingsActivity : PreferenceActivity(), SharedPreferences.OnSharedPreferenceChangeListener {
 
     private val preferencesService: PreferencesService by inject()
+    private val localeService: LocaleService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTitle(R.string.title_activity_settings)
 
         fragmentManager.beginTransaction()
                 .replace(android.R.id.content, SettingsPreferenceFragment())
@@ -35,16 +40,21 @@ class SettingsActivity : PreferenceActivity(), SharedPreferences.OnSharedPrefere
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
         when (key) {
-            PREFERENCE_NIGHT_MODE -> {
+            NIGHT_MODE -> {
                 AppCompatDelegate.setDefaultNightMode(preferencesService.getNightMode())
                 finish()
+
+            }
+            LOCALE -> {
+                localeService.setPreferredLocale(baseContext)
+                recreate()
             }
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        toast(getText(R.string.settings_app_reloaded))
+        toast(localeService.getStringForActualLocale(baseContext, R.string.settings_app_reloaded))
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
@@ -62,5 +72,9 @@ class SettingsActivity : PreferenceActivity(), SharedPreferences.OnSharedPrefere
             }
             return super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(localeService.setPreferredLocale(base))
     }
 }

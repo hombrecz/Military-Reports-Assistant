@@ -13,4 +13,6 @@ interface PreferencesService {
     fun getPreferredOffset(): Int
 
     fun getNightMode(): Int
+
+    fun getLanguage(): String
 }

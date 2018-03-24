@@ -14,6 +14,8 @@ class ExplosiveReport : AbstractReport() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         explosiveReportUI.setContentView(this)
+        setTitle(R.string.title_activity_explosive_report)
+
         explosiveReportUI.previewButton.setOnClickListener {
             translateReport()
         }

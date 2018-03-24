@@ -14,6 +14,8 @@ class SaltrReport : AbstractReport() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         saltrReportUI.setContentView(this)
+        setTitle(R.string.title_activity_saltr_report)
+
         saltrReportUI.previewButton.setOnClickListener {
             translateReport()
         }

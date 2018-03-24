@@ -1,6 +1,7 @@
 package cz.hombre.tacassistant.activity
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -20,6 +21,7 @@ import cz.hombre.tacassistant.R.string.navigation_drawer_open
 import cz.hombre.tacassistant.activity.reports.*
 import cz.hombre.tacassistant.layout.MainUI
 import cz.hombre.tacassistant.services.DateTimeService
+import cz.hombre.tacassistant.services.LocaleService
 import cz.hombre.tacassistant.services.LocationService
 import cz.hombre.tacassistant.services.PreferencesService
 import kotlinx.android.synthetic.main.nav_header_main.*
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private val dateTimeService: DateTimeService by inject()
     private val locationService: LocationService by inject()
     private val preferencesService: PreferencesService by inject()
+    private val localeService: LocaleService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +46,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(mainUI.toolbar)
 
         AppCompatDelegate.setDefaultNightMode(preferencesService.getNightMode())
+        localeService.setPreferredLocale(baseContext)
 
         val toggle = object : ActionBarDrawerToggle(this, mainUI.drawerLayout, mainUI.toolbar, navigation_drawer_open, navigation_drawer_close) {
             override fun onDrawerOpened(drawerView: View) {
@@ -157,5 +161,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
 
+    }
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(localeService.setPreferredLocale(base))
     }
 }

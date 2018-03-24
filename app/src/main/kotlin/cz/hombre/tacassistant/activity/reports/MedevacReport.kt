@@ -15,6 +15,8 @@ class MedevacReport : AbstractReport() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         medevacReportUI.setContentView(this)
+        setTitle(R.string.title_activity_medevac_report)
+
         medevacReportUI.previewButton.setOnClickListener {
             translateReport()
         }

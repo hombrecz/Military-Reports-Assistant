@@ -132,7 +132,7 @@
     <string name="status_callname_default">Callname</string>
     <string name="letter_c">C</string>
     <string name="report_medevac_line_8_bravo">B - US civilian</string>
-    <string name="report_medevac_line_3_bravo">B - Urgent surgica</string>
+    <string name="report_medevac_line_3_bravo">B - Urgent surgical</string>
     <string name="report_medevac_line_7_bravo">B - Pyrotechnic signal</string>
     <string name="report_medevac_line_6_bravo">P - Possible enemy troops in area (approach with caution)</string>
     <string name="report_situation_status_black_label">Black (60–0%)</string>

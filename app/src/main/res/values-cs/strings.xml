@@ -10,7 +10,7 @@
     <string name="navigation_drawer_reports_salute">SALUTE</string>
     <string name="navigation_drawer_reports_saltr">SALTR</string>
     <string name="navigation_drawer_reports_ied">IED/UXO</string>
-    <string name="navigation_drawer_glossary">Slovníčk</string>
+    <string name="navigation_drawer_glossary">Slovníček</string>
     <string name="action_settings">Nastavení</string>
     <string name="status_callname_default">Volací znak</string>
     <string name="status_frequency_default">0 MHz</string>
