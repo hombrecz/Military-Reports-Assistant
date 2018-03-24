@@ -38,8 +38,8 @@ class ReportPreviewActivity : AppCompatActivity() {
             switchRamrod()
         }
 
-        reportPreviewUI.shareButton.setOnClickListener { view ->
-            share(encodingService.formatReportText(report), report.name)
+        reportPreviewUI.shareButton.setOnClickListener {
+            share(encodingService.formatReportText(report), this.title.toString())
         }
 
         report = intent?.getSerializableExtra(REPORT_PROPERTY) as ReportData

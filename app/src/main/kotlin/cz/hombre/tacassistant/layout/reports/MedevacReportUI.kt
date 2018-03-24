@@ -70,11 +70,11 @@ class MedevacReportUI : AnkoComponent<MedevacReport> {
             letter_a to report_medevac_line_5_alpha,
             letter_l to report_medevac_line_5_lima)
 
-    private fun pickupSiteSecurityOptions() = sortedMapOf(
-            letter_a to report_medevac_line_6_alpha,
-            letter_b to report_medevac_line_6_bravo,
-            letter_c to report_medevac_line_6_charlie,
-            letter_d to report_medevac_line_6_delta)
+    private fun pickupSiteSecurityOptions() = linkedMapOf(
+            letter_n to report_medevac_line_6_alpha,
+            letter_p to report_medevac_line_6_bravo,
+            letter_e to report_medevac_line_6_charlie,
+            letter_x to report_medevac_line_6_delta)
 
     private fun pickupSiteMarkingOptions() = sortedMapOf(
             letter_a to report_medevac_line_7_alpha,
