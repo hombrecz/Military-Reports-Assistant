@@ -20,10 +20,10 @@
     <string name="status_frequency_default">0 MHz</string>
     <string name="status_gps_label">GPS</string>
     <string name="status_gps_default">-GPS no location data-</string>
-    <string name="status_mgrs_label">-MGRS no location data-</string>
-    <string name="status_mgrs_default">33UWS 0411 2423</string>
+    <string name="status_mgrs_label">MGRS</string>
+    <string name="status_mgrs_default">-MGRS no location data-</string>
     <string name="status_precision_default">-no precision data-</string>
-    <string name="status_time_position_retrieved_default">-no location aquired time-</string>
+    <string name="status_time_position_retrieved_default">-no location acquired time-</string>
     <string name="status_duration_postion_retrieved_default">-</string>
     <string name="status_zulu_time_default">-no DTG-</string>
     <string name="status_local_date_default">-no date-</string>
@@ -134,8 +134,8 @@
     <string name="preference_locale_summary">Choose application language</string>
     <string name="preference_locale_title">Language</string>
     <string-array name="preference_locale_values">
-        <item>English</item>
-        <item>Czech</item>
+        <item>en</item>
+        <item>cs</item>
     </string-array>
     <string-array name="preference_locale_labels">
         <item>English</item>
@@ -213,13 +213,13 @@
     <!--Situation report-->
     <string name="title_activity_situation_report">SITREP</string>
     <string name="report_situation_status">Unit status</string>
-    <string name="report_situation_status_green_label">Green (100-90%)</string>
+    <string name="report_situation_status_green_label">Green (100–90%)</string>
     <string name="report_situation_status_green">Green</string>
-    <string name="report_situation_status_amber_label">Amber (90-75%)</string>
+    <string name="report_situation_status_amber_label">Amber (90–75%)</string>
     <string name="report_situation_status_amber">Amber</string>
-    <string name="report_situation_status_red_label">Red (75-60%)</string>
+    <string name="report_situation_status_red_label">Red (75–60%)</string>
     <string name="report_situation_status_red">Red</string>
-    <string name="report_situation_status_black_label">Black (60-0%)</string>
+    <string name="report_situation_status_black_label">Black (60–0%)</string>
     <string name="report_situation_status_black">Black</string>
     <string name="report_situation_enemy">Enemy situation</string>
     <string name="report_situation_enemy_hint">What is enemy doing</string>

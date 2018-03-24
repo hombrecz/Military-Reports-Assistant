@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="explosive_report_line_6_hint">What resource is threatened? Is it a critical asset?</string>
+    <string name="report_situation_enemy_hint">What is enemy doing</string>
+    <string name="main_welcome">Welcome in Tactical Assistant!</string>
+    <string name="symbol_west">W</string>
+    <string name="report_situation_status">Unit status</string>
+    <string name="explosive_report_unit">Unit identifier</string>
+    <string name="report_salute_uniform_hint">Unit identification - by markings, unforms etc</string>
+    <string name="report_salute_uniform">Uniform</string>
+    <string name="explosive_report_line_5_description_hint">Type of agent, if identified</string>
+    <string name="preference_military_offset_summary">Time offset (zone) used for date time group</string>
+    <string name="status_time_image_description">Time info</string>
+    <string name="report_time_hint">Time and date</string>
+    <string name="report_time">Time</string>
+    <string name="explosive_report_line_4_thrown">Thrown</string>
+    <string name="settings_tactical_category">Tactical stuff</string>
+    <string name="app_name">TacAssistant</string>
+    <string name="report_size">Size</string>
+    <string name="navigation_drawer_reports_sitrep">Sitrep</string>
+    <string name="title_activity_situation_report">SITREP</string>
+    <string name="settings_app_reloaded">Settings has been applied</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_salute_report">SALUTE report</string>
+    <string name="navigation_drawer_reports_salute">SALUTE</string>
+    <string name="title_activity_saltr_report">SALTR Report</string>
+    <string name="navigation_drawer_reports_saltr">SALTR</string>
+    <string name="symbol_south">S</string>
+    <string name="report_saltr_request">Request / remarks</string>
+    <string name="navigation_drawer_reports">Reports</string>
+    <string name="title_activity_report_preview">Report Preview</string>
+    <string name="report_preview_ramrod_message">Report numbers de/encoded with RAMROD</string>
+    <string name="report_preview_spelling_message">Report letters were un/spelled</string>
+    <string name="report_situation_status_red_label">Red (75–60%)</string>
+    <string name="report_situation_status_red">Red</string>
+    <string name="preference_ramrod_summary">RAMROD used to encode numbers.</string>
+    <string name="preference_ramrod_title">RAMROD</string>
+    <string name="preference_frequency_summary">Radio frequency of users radio.</string>
+    <string name="preference_frequency_title">Radio frequency</string>
+    <string name="explosive_report_line_4_projected">Projected</string>
+    <string name="report_preview_hint">Prepared report text</string>
+    <string name="preference_military_offset_title">Time offset</string>
+    <string name="explosive_report_line_4_placed">Placed</string>
+    <string name="preference_phonetic_alphabet_summary">Phonetic alphabet that will be used for spelling</string>
+    <string name="preference_phonetic_alphabet_title">Phonetic alphabet</string>
+    <string name="status_person_image_description">Personal info</string>
+    <string name="report_situation_own">Own situation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="report_size_hint">Number of personnel, vehicles and equipment</string>
+    <string name="explosive_report_line_9_no_threat">No Threat</string>
+    <string name="report_medevac_line_9_november">N - Nuclear</string>
+    <string name="report_negative">Negative</string>
+    <string name="explosive_report_line_5_checkbox">NBC observed</string>
+    <string name="navigation_permission_granted">Navigation permission was granted.</string>
+    <string name="navigation_permission_denied">Navigation permission request was denied.</string>
+    <string name="symbol_north">N</string>
+    <string name="letter_n">N</string>
+    <string name="explosive_report_line_9_minor">Minor</string>
+    <string name="title_activity_medevac_report">Medevac 9-line request</string>
+    <string name="navigation_drawer_reports_medevac">Medevac 9-liner</string>
+    <string name="report_location_hint">Location of the enemy</string>
+    <string name="status_location_image_description">Location info</string>
+    <string name="report_location">Location</string>
+    <string name="report_medevac_line_5_lima">L -  Litter</string>
+    <string name="explosive_report_line_9">Line 9 - Recommended priority</string>
+    <string name="report_medevac_line_9">Line 9 - NBC contamination</string>
+    <string name="explosive_report_line_8">Line 8 - Protective measures</string>
+    <string name="report_medevac_line_8">Line 8 - Patient nationality and status</string>
+    <string name="report_medevac_line_7">Line 7 - Method of pick-up site marking</string>
+    <string name="explosive_report_line_7">Line 7 - Impact on mission</string>
+    <string name="report_medevac_line_6">Line 6 - Security at pick-up site</string>
+    <string name="explosive_report_line_6">Line 6 - Resources threatened</string>
+    <string name="report_medevac_line_5">Line 5 - Number of patients</string>
+    <string name="explosive_report_line_5">Line 5 - NBC contamination</string>
+    <string name="explosive_report_line_4">Line 4 - Type of ammunition</string>
+    <string name="report_medevac_line_4">Line 4 - Special equipment required</string>
+    <string name="report_medevac_line_3">Line 3 - Number of patients of precedence</string>
+    <string name="explosive_report_line_3">Line 3 - Call sign and frequency</string>
+    <string name="explosive_report_line_2">Line 2 - Unit, call sign and location</string>
+    <string name="report_medevac_line_2">Line 2 - Radio frequency and call sign</string>
+    <string name="report_medevac_line_1">Line 1 - Location of the pick-up site</string>
+    <string name="explosive_report_line_1">Line 1 - Date time group</string>
+    <string name="report_line">Line</string>
+    <string name="preference_locale_title">Language</string>
+    <string name="letter_l">L</string>
+    <string name="status_local_date_default">-no date-</string>
+    <string name="explosive_report_line_9_indirect">Indirect</string>
+    <string name="explosive_report_line_9_immediate">Immediate</string>
+    <string name="title_activity_explosive_report">IED/UXO 9-line Report</string>
+    <string name="navigation_drawer_reports_ied">IED/UXO</string>
+    <string name="explosive_report_line_7_hint">How the IED/UXO is affecting the assigned mission?</string>
+    <string name="preference_callsign_default">Grunt 1</string>
+    <string name="report_situation_status_green_label">Green (100–90%)</string>
+    <string name="report_situation_status_green">Green</string>
+    <string name="status_gps_label">GPS</string>
+    <string name="navigation_drawer_glossary">Glossary</string>
+    <string name="report_location_button">Get location</string>
+    <string name="report_frequency">Frequency</string>
+    <string name="report_situation_following">Following actions</string>
+    <string name="report_salute_equipment_hint">Equipment and weapons observed</string>
+    <string name="report_salute_equipment">Equipment</string>
+    <string name="report_medevac_line_7_echo">E - Other</string>
+    <string name="report_situation_enemy">Enemy situation</string>
+    <string name="report_medevac_line_8_echo">"E - Enemy POW "</string>
+    <string name="report_medevac_line_3_echo">E - Convenience</string>
+    <string name="symbol_east">E</string>
+    <string name="letter_e">E</string>
+    <string name="report_medevac_line_4_delta">D - Ventilator</string>
+    <string name="report_medevac_line_3_delta">D - Routine</string>
+    <string name="explosive_report_line_4_dropped">Dropped</string>
+    <string name="report_medevac_line_8_delta">D - Non-US civilian</string>
+    <string name="report_medevac_line_7_delta">D - None</string>
+    <string name="explosive_report_line_8_hint">Describe measures taken to protect personal/equiment</string>
+    <string name="explosive_report_line_4_description">Describe all possible details</string>
+    <string name="report_medevac_line_6_delta">X - enemy troops in area (armed escort required)</string>
+    <string name="preference_night_mode_title">Day/Night Mode</string>
+    <string name="letter_d">D</string>
+    <string name="report_medevac_line_7_charlie">C - Smoke signal</string>
+    <string name="report_medevac_line_3_charlie">C - Priority</string>
+    <string name="report_medevac_line_1_coordinates">Coordinates</string>
+    <string name="report_medevac_line_8_charlie">C - Non-US military</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="preference_night_mode_summary">Application visual style</string>
+    <string name="preference_locale_summary">Choose application language</string>
+    <string name="report_medevac_line_4_charlie">C - Extraction equipment</string>
+    <string name="report_medevac_line_6_charlie">E - enemy troops in area (approach with caution)</string>
+    <string name="report_medevac_line_9_chemical">C - Chemical</string>
+    <string name="preference_callsign_summary">Callsign used in reports.</string>
+    <string name="report_call_sign">Call sign</string>
+    <string name="preference_callsign_title">Callsign</string>
+    <string name="status_callname_default">Callname</string>
+    <string name="letter_c">C</string>
+    <string name="report_medevac_line_8_bravo">B - US civilian</string>
+    <string name="report_medevac_line_3_bravo">B - Urgent surgica</string>
+    <string name="report_medevac_line_7_bravo">B - Pyrotechnic signal</string>
+    <string name="report_medevac_line_6_bravo">P - Possible enemy troops in area (approach with caution)</string>
+    <string name="report_situation_status_black_label">Black (60–0%)</string>
+    <string name="report_situation_status_black">Black</string>
+    <string name="report_medevac_line_4_bravo">B - Hoist</string>
+    <string name="report_medevac_line_9_biological">B - Biological</string>
+    <string name="letter_b">B</string>
+    <string name="report_medevac_line_8_alpha">A - US military</string>
+    <string name="report_medevac_line_3_alpha">A - Urgent</string>
+    <string name="settings_application_category">Application</string>
+    <string name="report_medevac_line_7_alpha">A - Panel</string>
+    <string name="report_saltr_request_hint">Another requests or remarks to be added to the report</string>
+    <string name="report_medevac_line_4_alpha">A - None</string>
+    <string name="report_medevac_line_6_alpha">N - No enemy troops in area</string>
+    <string name="report_situation_status_amber_label">Amber (90–75%)</string>
+    <string name="report_situation_status_amber">Amber</string>
+    <string name="preference_ramrod_default">ALGORITMUS</string>
+    <string name="report_situation_own_hint">Actual situation of my unit</string>
+    <string name="report_activity">Activity</string>
+    <string name="report_situation_following_hint">Actions that would be taken</string>
+    <string name="report_activity_hint">Actions or activity of the enemy</string>
+    <string name="report_medevac_line_5_alpha">A - Ambulatory</string>
+    <string name="letter_a">A</string>
+    <string name="status_gps_default">-GPS no location data-</string>
+    <string name="status_mgrs_default">-MGRS no location data-</string>
+    <string name="status_duration_postion_retrieved_default">-</string>
+    <string name="status_time_position_retrieved_default">-no location acquired time-</string>
+    <string name="status_local_time_default">-no time-</string>
+    <string name="status_frequency_default">0 MHz</string>
+    <string name="status_zulu_time_default">-no DTG-</string>
+    <string name="preference_frequency_default">0</string>
+    <string name="status_precision_default">-no precision data-</string>
+    <string name="letter_p">P</string>
+    <string name="letter_x">X</string>
+    <string name="status_mgrs_label">MGRS</string>
+    <string-array name="preference_phonetic_alphabet_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="preference_phonetic_alphabet_labels">
+        <item>NATO</item>
+        <item>Czech</item>
+    </string-array>
+    <string-array name="preference_military_offset_values">
+        <item>-12</item>
+        <item>-11</item>
+        <item>-10</item>
+        <item>-9</item>
+        <item>-8</item>
+        <item>-7</item>
+        <item>-6</item>
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="preference_military_offset_labels">
+        <item>UTC-12:00</item>
+        <item>UTC-11:00</item>
+        <item>UTC-10:00</item>
+        <item>UTC-09:00</item>
+        <item>UTC-08:00</item>
+        <item>UTC-07:00</item>
+        <item>UTC-06:00</item>
+        <item>UTC-05:00</item>
+        <item>UTC-04:00</item>
+        <item>UTC-03:00</item>
+        <item>UTC-02:00</item>
+        <item>UTC-01:00</item>
+        <item>UTC+00:00</item>
+        <item>UTC+01:00</item>
+        <item>UTC+02:00</item>
+        <item>UTC+03:00</item>
+        <item>UTC+04:00</item>
+        <item>UTC+05:00</item>
+        <item>UTC+06:00</item>
+        <item>UTC+07:00</item>
+        <item>UTC+08:00</item>
+        <item>UTC+09:00</item>
+        <item>UTC+10:00</item>
+        <item>UTC+11:00</item>
+        <item>UTC+12:00</item>
+    </string-array>
+    <string-array name="preference_night_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="preference_night_mode_labels">
+        <item>Auto</item>
+        <item>Day</item>
+        <item>Night</item>
+    </string-array>
+    <string-array name="preference_locale_values">
+        <item>en</item>
+        <item>cs</item>
+    </string-array>
+    <string-array name="preference_locale_labels">
+        <item>English</item>
+        <item>Czech</item>
+    </string-array>
+</resources>

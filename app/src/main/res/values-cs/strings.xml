@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TacAssistant</string>
+    <string name="main_welcome">Vítejte v aplikaci Tactical Assistant!</string>
+    <string name="navigation_drawer_open">Otevřít menu</string>
+    <string name="navigation_drawer_close">Zavřít menu</string>
+    <string name="navigation_drawer_reports">Hlášení</string>
+    <string name="navigation_drawer_reports_medevac">Medevac 9-liner</string>
+    <string name="navigation_drawer_reports_sitrep">Sitrep</string>
+    <string name="navigation_drawer_reports_salute">SALUTE</string>
+    <string name="navigation_drawer_reports_saltr">SALTR</string>
+    <string name="navigation_drawer_reports_ied">IED/UXO</string>
+    <string name="navigation_drawer_glossary">Slovníčk</string>
+    <string name="action_settings">Nastavení</string>
+    <string name="status_callname_default">Volací znak</string>
+    <string name="status_frequency_default">0 MHz</string>
+    <string name="status_gps_label">GPS</string>
+    <string name="status_gps_default">-chybí údaje o pozici GPS-</string>
+    <string name="status_mgrs_label">MGRS</string>
+    <string name="status_mgrs_default">-chybí údaje o pozici MGRS-</string>
+    <string name="status_precision_default">-chybí data o přesnosti-</string>
+    <string name="status_time_position_retrieved_default">-chybí data o času určení pozice-</string>
+    <string name="status_duration_postion_retrieved_default">-</string>
+    <string name="status_zulu_time_default">-chybí DTG-</string>
+    <string name="status_local_date_default">-chybí datum-</string>
+    <string name="status_local_time_default">-chybí čas-</string>
+    <string name="status_location_image_description">Pozice</string>
+    <string name="status_person_image_description">Osobní informace</string>
+    <string name="status_time_image_description">Datum a čas</string>
+    <string name="title_activity_settings">Nastavení</string>
+    <string name="settings_tactical_category">Taktická nastavení</string>
+    <string name="settings_application_category">Aplikace</string>
+    <string name="settings_app_reloaded">Nastavení bylo změněno</string>
+    <string name="preference_callsign_summary">Tvůj volací znak používaný v hlášeních</string>
+    <string name="preference_callsign_title">Volací znak</string>
+    <string name="preference_frequency_summary">Vysílací frekvence tvojí stanice</string>
+    <string name="preference_frequency_title">Vysílací frekvence</string>
+    <string name="preference_ramrod_title">RAMROD</string>
+    <string name="preference_ramrod_summary">RAMROD používaný pro kódování čísel.</string>
+    <string name="preference_ramrod_default">ALGORITMUS</string>
+    <string name="preference_callsign_default">Grunt 1</string>
+    <string name="preference_frequency_default">0</string>
+    <string name="preference_phonetic_alphabet_title">Hláskovací tabulka</string>
+    <string name="preference_phonetic_alphabet_summary">Hláskovací tabulka používaná při hláskování hlášení.</string>
+    <string name="preference_military_offset_title">Časové pásmo</string>
+    <string name="preference_military_offset_summary">Časové pásmo, ve kterém bude udáváno DTG datum</string>
+    <string name="preference_night_mode_summary">Použitý vzhled aplikace</string>
+    <string name="preference_night_mode_title">Denní/noční mód</string>
+    <string name="report_location_button">Získej pozici</string>
+    <string name="report_time">Čas</string>
+    <string name="report_time_hint">Čas a datum</string>
+    <string name="report_size">Velikost</string>
+    <string name="report_size_hint">Počet osob, vozidel a vybavení</string>
+    <string name="report_activity">Činnost</string>
+    <string name="report_activity_hint">Činnost prováděná protivníkem</string>
+    <string name="report_location">Pozice</string>
+    <string name="report_location_hint">Pozice protivníka</string>
+    <string name="report_frequency">Frekvence</string>
+    <string name="report_call_sign">Volací znak</string>
+    <string name="report_line">Řádek</string>
+    <string name="report_negative">Není</string>
+    <string name="title_activity_medevac_report">Medevac 9-ti bodové hlášení</string>
+    <string name="report_medevac_line_1">Řádek 1 - Místo vyzvednutí</string>
+    <string name="report_medevac_line_1_coordinates">Souřadnice</string>
+    <string name="report_medevac_line_2">Řádek 2 - Frekvence a volací znak</string>
+    <string name="report_medevac_line_3">Řádek 3 - Počet pacientů podle priority</string>
+    <string name="report_medevac_line_3_alpha">A - Urgentní</string>
+    <string name="report_medevac_line_3_bravo">B - Urgentní chirurgické</string>
+    <string name="report_medevac_line_3_charlie">C - Přednostní</string>
+    <string name="report_medevac_line_3_delta">D - Běžné, nedokáži transportovat</string>
+    <string name="report_medevac_line_3_echo">E - Běžné ošeření</string>
+    <string name="report_medevac_line_4">Řádek 4 - Potřebné vybavení</string>
+    <string name="report_medevac_line_4_alpha">A - žádné</string>
+    <string name="report_medevac_line_4_bravo">B - Naviják</string>
+    <string name="report_medevac_line_4_charlie">C - Vyprošťovací vybavení</string>
+    <string name="report_medevac_line_4_delta">D - Dýchací přístroj</string>
+    <string name="report_medevac_line_5">Řádek 5 - Počet pacientů</string>
+    <string name="report_medevac_line_5_alpha">A - samostatně pohyblivých</string>
+    <string name="report_medevac_line_5_lima">L - na nosítkách</string>
+    <string name="report_medevac_line_6">Řádek 6 - Bezpečnost v místě vyzvednutí</string>
+    <string name="report_medevac_line_6_alpha">N - žádný protivník v okolí</string>
+    <string name="report_medevac_line_6_bravo">P - možný výskyt protivníka (postupujte obezřetně)</string>
+    <string name="report_medevac_line_6_charlie">E - protivník v okolí (postupujte obezřetně)</string>
+    <string name="report_medevac_line_6_delta">X - protivník v okolí (nutný ozbrojený doprovod)</string>
+    <string name="report_medevac_line_7">Řádek 7 - Způsob označení místa vyzvednutí</string>
+    <string name="letter_a">A</string>
+    <string name="letter_b">B</string>
+    <string name="letter_c">C</string>
+    <string name="letter_d">D</string>
+    <string name="letter_e">E</string>
+    <string name="letter_l">L</string>
+    <string name="letter_n">N</string>
+    <string name="letter_p">P</string>
+    <string name="letter_x">X</string>
+    <string name="symbol_north">S</string>
+    <string name="symbol_south">J</string>
+    <string name="symbol_west">Z</string>
+    <string name="symbol_east">V</string>
+    <string name="report_medevac_line_7_alpha">A - signalizační panel</string>
+    <string name="report_medevac_line_7_bravo">B - pyrotechnický signál</string>
+    <string name="report_medevac_line_7_charlie">C - kouřový signál</string>
+    <string name="report_medevac_line_7_delta">D - žádný</string>
+    <string name="report_medevac_line_7_echo">E - jiný</string>
+    <string name="report_medevac_line_8">Řádek 8 - Pacienti podle národnosti a statutu</string>
+    <string name="report_medevac_line_8_alpha">A - vojáci USA</string>
+    <string name="report_medevac_line_8_bravo">B - civilisté USA</string>
+    <string name="report_medevac_line_8_charlie">C - spojenečtí vojáci</string>
+    <string name="report_medevac_line_8_delta">D - ostatní civilisté</string>
+    <string name="report_medevac_line_8_echo">E - nepřátelští zajatci</string>
+    <string name="report_medevac_line_9">Řádek 9 - Zbraně hromadného ničení</string>
+    <string name="report_medevac_line_9_november">N - jaderné</string>
+    <string name="report_medevac_line_9_biological">B - biologické</string>
+    <string name="report_medevac_line_9_chemical">C - chemické</string>
+    <string name="title_activity_salute_report">SALUTE hlášení</string>
+    <string name="report_salute_uniform">Uniforma</string>
+    <string name="report_salute_uniform_hint">Identifikace jednotky - podle uniformy, označení, nášivek</string>
+    <string name="report_salute_equipment">Vybavení</string>
+    <string name="report_salute_equipment_hint">Pozorované vybavení a zbraně</string>
+    <string name="title_activity_saltr_report">SALTR hlášení</string>
+    <string name="report_saltr_request">Požadavky / poznámky</string>
+    <string name="report_saltr_request_hint">Další požadavky nebo poznámky</string>
+    <string name="title_activity_situation_report">SITREP</string>
+    <string name="report_situation_status">Stav jednotky</string>
+    <string name="report_situation_status_green_label">Zelená (100–90%)</string>
+    <string name="report_situation_status_green">Green</string>
+    <string name="report_situation_status_amber_label">Jantarová (90–75%) (90–75%)</string>
+    <string name="report_situation_status_amber">Amber</string>
+    <string name="report_situation_status_red_label">Červená (75–60%)</string>
+    <string name="report_situation_status_red">Červená</string>
+    <string name="report_situation_status_black_label">Černá (60–0%)</string>
+    <string name="report_situation_status_black">Černá</string>
+    <string name="report_situation_enemy">Protivníkova situace</string>
+    <string name="report_situation_enemy_hint">Co protívník provádí</string>
+    <string name="report_situation_own">Vlastní situace</string>
+    <string name="report_situation_own_hint">Aktuální situace mojí jednotky</string>
+    <string name="report_situation_following">Následující akce</string>
+    <string name="report_situation_following_hint">Co budu dělat dále</string>
+    <string name="title_activity_explosive_report">IED/UXO 9-ti bodové hlášení</string>
+    <string name="navigation_permission_granted">Oprávnění pro navigaci uděleno.</string>
+    <string name="navigation_permission_denied">Oprávnění pro navigaci zamítnuto.</string>
+    <string name="explosive_report_line_9_immediate">Okamžitá</string>
+    <string name="explosive_report_line_9_indirect">Nepřímá</string>
+    <string name="explosive_report_line_9_minor">Nízká</string>
+    <string name="explosive_report_line_9_no_threat">Žádná hrozba</string>
+    <string name="title_activity_report_preview">Náhled hlášení</string>
+    <string name="report_preview_hint">Připravené hlášení</string>
+    <string name="report_preview_ramrod_message">Čísla v hlášení byla de/zakodována pomocí RAMROD</string>
+    <string name="report_preview_spelling_message">Hlášení bylo od/vyhláskováno</string>
+    <string name="explosive_report_line_1">Řádek 1 - Datum a čas ve formátu DTG</string>
+    <string name="explosive_report_line_2">Řádek 2 - Jednotka, volací znak a pozice</string>
+    <string name="explosive_report_unit">Označení jednotky</string>
+    <string name="explosive_report_line_3">Řádek 3 - Volací znak a frekvence</string>
+    <string name="explosive_report_line_4">Řádek 4 - Druh munice/výbušniny</string>
+    <string name="explosive_report_line_4_placed">Umístěná</string>
+    <string name="explosive_report_line_4_projected">Vystřelená</string>
+    <string name="explosive_report_line_4_thrown">Vržená</string>
+    <string name="explosive_report_line_4_dropped">Shozená</string>
+    <string name="explosive_report_line_4_description">Popiš všechny možné detaily</string>
+    <string name="explosive_report_line_5">Řádek 5 - Ohrožení zbraněmi hromadného ničení</string>
+    <string name="explosive_report_line_5_checkbox">Zbraně hromadného ničení zpozorovány</string>
+    <string name="explosive_report_line_5_description_hint">Druh látky/ohrožení, pokud identifikováno</string>
+    <string name="explosive_report_line_6">Řádek 6 - Ohrožené zdroje</string>
+    <string name="explosive_report_line_6_hint">Jaké zdroje a prostředky jsou ohrožené? Jedá se o kritické prostředky?</string>
+    <string name="explosive_report_line_7">Řádek 7 - Dopad na můj úkol</string>
+    <string name="explosive_report_line_7_hint">Jak IED/UXO ohrožuje můj úkol?</string>
+    <string name="explosive_report_line_8">Řádek 8 - Ochranná opatření</string>
+    <string name="explosive_report_line_8_hint">Jaká ochranná opatření byla provedena k ochraně osob a vybavení?</string>
+    <string name="explosive_report_line_9">Řádek 9 - Doporučená priorita</string>
+    <string name="preference_locale_title">Jazyk</string>
+    <string name="preference_locale_summary">Zvol preferovaný jazyk</string>
+    <string-array name="preference_phonetic_alphabet_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="preference_phonetic_alphabet_labels">
+        <item>NATO</item>
+        <item>Česká</item>
+    </string-array>
+    <string-array name="preference_military_offset_values">
+        <item>-12</item>
+        <item>-11</item>
+        <item>-10</item>
+        <item>-9</item>
+        <item>-8</item>
+        <item>-7</item>
+        <item>-6</item>
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="preference_military_offset_labels">
+        <item>UTC-12:00</item>
+        <item>UTC-11:00</item>
+        <item>UTC-10:00</item>
+        <item>UTC-09:00</item>
+        <item>UTC-08:00</item>
+        <item>UTC-07:00</item>
+        <item>UTC-06:00</item>
+        <item>UTC-05:00</item>
+        <item>UTC-04:00</item>
+        <item>UTC-03:00</item>
+        <item>UTC-02:00</item>
+        <item>UTC-01:00</item>
+        <item>UTC+00:00</item>
+        <item>UTC+01:00</item>
+        <item>UTC+02:00</item>
+        <item>UTC+03:00</item>
+        <item>UTC+04:00</item>
+        <item>UTC+05:00</item>
+        <item>UTC+06:00</item>
+        <item>UTC+07:00</item>
+        <item>UTC+08:00</item>
+        <item>UTC+09:00</item>
+        <item>UTC+10:00</item>
+        <item>UTC+11:00</item>
+        <item>UTC+12:00</item>
+    </string-array>
+    <string-array name="preference_night_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="preference_night_mode_labels">
+        <item>Auto</item>
+        <item>Den</item>
+        <item>Noc</item>
+    </string-array>
+    <string-array name="preference_locale_values">
+        <item>en</item>
+        <item>cs</item>
+    </string-array>
+    <string-array name="preference_locale_labels">
+        <item>Angličtina</item>
+        <item>Čeština</item>
+    </string-array>
+</resources>
