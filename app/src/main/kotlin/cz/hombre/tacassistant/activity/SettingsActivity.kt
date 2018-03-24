@@ -2,6 +2,7 @@ package cz.hombre.tacassistant.activity
 
 
 import android.annotation.TargetApi
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -15,6 +16,7 @@ import android.view.MenuItem
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.services.LocaleService
 import cz.hombre.tacassistant.services.PreferencesService
+import cz.hombre.tacassistant.services.impl.LOCALE_CHANGED
 import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
 
@@ -47,7 +49,9 @@ class SettingsActivity : PreferenceActivity(), SharedPreferences.OnSharedPrefere
             }
             LOCALE -> {
                 localeService.setPreferredLocale(baseContext)
+                setResult(LOCALE_CHANGED)
                 recreate()
+                finish()
             }
         }
     }

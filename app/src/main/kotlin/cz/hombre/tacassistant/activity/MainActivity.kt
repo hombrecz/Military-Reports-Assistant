@@ -1,6 +1,7 @@
 package cz.hombre.tacassistant.activity
 
 import android.Manifest
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -24,6 +25,7 @@ import cz.hombre.tacassistant.services.DateTimeService
 import cz.hombre.tacassistant.services.LocaleService
 import cz.hombre.tacassistant.services.LocationService
 import cz.hombre.tacassistant.services.PreferencesService
+import cz.hombre.tacassistant.services.impl.LOCALE_CHANGED
 import kotlinx.android.synthetic.main.nav_header_main.*
 import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.setContentView
@@ -110,10 +112,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_settings -> {
-                startActivity(Intent(this, SettingsActivity::class.java))
+                startActivityForResult(Intent(this, SettingsActivity::class.java), 0)
                 true
             }
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        when (resultCode) {
+            LOCALE_CHANGED -> recreate()
         }
     }
 

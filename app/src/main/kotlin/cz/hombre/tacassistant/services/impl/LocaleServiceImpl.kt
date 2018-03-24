@@ -6,6 +6,7 @@ import cz.hombre.tacassistant.services.LocaleService
 import cz.hombre.tacassistant.services.PreferencesService
 import java.util.*
 
+const val LOCALE_CHANGED = 3
 
 class LocaleServiceImpl(private val preferencesService: PreferencesService) : LocaleService {
 
