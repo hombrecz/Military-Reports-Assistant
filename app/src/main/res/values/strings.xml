@@ -263,6 +263,19 @@
     <string name="report_preview_spelling_message">Report letters were un/spelled</string>
 
 
+    <!--Glossary-->
+    <string name="title_activity_glossary">Glossary</string>
+    <string name="glossary_hint">Add new entry by clicking on plus button</string>
+    <string name="glossary_entry_options">Entry Options</string>
+    <string name="glossary_entry_options_delete">Delete</string>
+    <string name="glossary_entry_deleted">Entry has been deleted</string>
+    <string name="glossary_add_entry_dialog_title">Add new entry</string>
+    <string name="glossary_add_entry_dialog_name">Entry name</string>
+    <string name="glossary_add_entry_dialog_value">Entry value</string>
+    <string name="glossary_add_entry_dialog_add_button">Add</string>
+    <string name="glossary_add_entry_dialog_name_missing">Fill in name of entry</string>
+    <string name="glossary_add_entry_dialog_value_missing">Fill in value of entry</string>
+
     <!--Location-->
     <string name="symbol_north">N</string>
     <string name="symbol_south">S</string>

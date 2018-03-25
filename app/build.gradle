@@ -50,6 +50,7 @@ dependencies {
     implementation "org.jetbrains.anko:anko-design:$anko_version"
     implementation "org.jetbrains.anko:anko-constraint-layout:$anko_version"
     implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    implementation "org.jetbrains.anko:anko-sqlite:$anko_version"
 
     implementation "com.rgi-corp:ww-geo-coords:1.0"
 }

@@ -159,7 +159,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 return true
             }
             R.id.nav_glossary -> {
-
+                startActivity(Intent(this, Glossary::class.java))
+                return true
             }
         }
 

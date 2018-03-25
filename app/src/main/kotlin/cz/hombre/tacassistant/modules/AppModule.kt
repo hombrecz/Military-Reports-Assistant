@@ -7,9 +7,10 @@ import org.koin.dsl.module.Module
 import org.koin.dsl.module.applicationContext
 
 val myModule: Module = applicationContext {
-    provide { PreferencesServiceImpl(androidApplication().baseContext) as PreferencesService }
-    provide { DateTimeServiceImpl(get()) as DateTimeService }
-    provide { LocationServiceImpl(androidApplication().baseContext, get()) as LocationService }
-    provide { EncodingServiceImpl(get()) as EncodingService }
-    provide { LocaleServiceImpl(get()) as LocaleService }
+    bean { PreferencesServiceImpl(androidApplication().baseContext) as PreferencesService }
+    bean { DateTimeServiceImpl(get()) as DateTimeService }
+    bean { LocationServiceImpl(androidApplication().baseContext, get()) as LocationService }
+    bean { EncodingServiceImpl(get()) as EncodingService }
+    bean { LocaleServiceImpl(get()) as LocaleService }
+    bean {DatabaseServiceImpl(androidApplication().baseContext) as DatabaseService}
 }

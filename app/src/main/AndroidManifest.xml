@@ -73,6 +73,14 @@
             android:name=".activity.reports.ReportPreviewActivity"
             android:label="@string/title_activity_report_preview">
         </activity>
+        <activity
+            android:name="cz.hombre.tacassistant.activity.Glossary"
+            android:label="@string/title_activity_glossary"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cz.hombre.tacassistant.activity.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
