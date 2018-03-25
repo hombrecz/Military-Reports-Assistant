@@ -249,4 +249,15 @@
         <item>Čeština</item>
     </string-array>
     <string name="action_about">O aplikaci</string>
+    <string name="title_activity_glossary">Slovníček</string>
+    <string name="glossary_hint">Přidat nový záznam</string>
+    <string name="glossary_entry_options">Možnosti záznamu</string>
+    <string name="glossary_entry_options_delete">Smazat</string>
+    <string name="glossary_entry_deleted">Záznam byl smazán</string>
+    <string name="glossary_add_entry_dialog_title">Přidat nový záznam</string>
+    <string name="glossary_add_entry_dialog_name">Název</string>
+    <string name="glossary_add_entry_dialog_value">Popis</string>
+    <string name="glossary_add_entry_dialog_add_button">Přidat</string>
+    <string name="glossary_add_entry_dialog_name_missing">Vyplň název</string>
+    <string name="glossary_add_entry_dialog_value_missing">Vyplň hodnotu</string>
 </resources>
