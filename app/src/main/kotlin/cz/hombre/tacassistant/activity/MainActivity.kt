@@ -1,7 +1,6 @@
 package cz.hombre.tacassistant.activity
 
 import android.Manifest
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -27,6 +26,8 @@ import cz.hombre.tacassistant.services.LocationService
 import cz.hombre.tacassistant.services.PreferencesService
 import cz.hombre.tacassistant.services.impl.LOCALE_CHANGED
 import kotlinx.android.synthetic.main.nav_header_main.*
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.appcompat.v7.Appcompat
 import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.setContentView
 import org.koin.android.ext.android.inject
@@ -115,8 +116,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivityForResult(Intent(this, SettingsActivity::class.java), 0)
                 true
             }
+            R.id.action_about -> {
+                showLicensesAlert()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun showLicensesAlert() {
+        val licenses = applicationContext.assets.open("licenses.txt")
+
+        alert(Appcompat, licenses.bufferedReader().use { it.readText() }).show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -29,7 +29,7 @@ For now it is available only from it's original author (see section Author for c
 * [Gradle](https://gradle.org/) - Dependency Management - licensed under [Apache License 2.0](https://github.com/gradle/gradle/blob/master/LICENSE)
 * [KOIN](https://github.com/Ekito/koin) - Used for dependency injection - licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 * [Anko](https://github.com/Kotlin/anko) - Used for dynamically created layout - licensed under [Apache License 2.0](https://github.com/Kotlin/anko/blob/master/LICENSE)
-* [Geo-Coordinate-Conversion-Java](https://github.com/Berico-Technologies/Geo-Coordinate-Conversion-Java) - latitude/longitude to MGRS  - licensed under [NASA OPEN SOURCE AGREEMENT VERSION 1.3](https://github.com/Berico-Technologies/Geo-Coordinate-Conversion-Java/blob/master/NASA_Open_Source_Agreement_1.3.txt)
+* [Geo-Coordinate-Conversion-Java](https://github.com/Berico-Technologies/Geo-Coordinate-Conversion-Java) - latitude/longitude to MGRS  - licensed under [NASA Open Source Agreement Version 1.3](https://github.com/Berico-Technologies/Geo-Coordinate-Conversion-Java/blob/master/NASA_Open_Source_Agreement_1.3.txt)
 
 ## Author
 
@@ -37,5 +37,7 @@ For now it is available only from it's original author (see section Author for c
 
 ## Licences of 3rd party
 
+This software uses some third party libraries, technologies etc., that are aunder following licenses:
+
 * Apache License 2.0 - Kotlin, Gradle, KOIN, Anko - see Apache_License_2.0.txt or [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-* NASA OPEN SOURCE AGREEMENT VERSION 1.3 - Geo-Coordinate-Conversion-Java - see NASA_Open_Source_Agreement_1.3.txt or [NASA OPEN SOURCE AGREEMENT VERSION 1.3](https://github.com/Berico-Technologies/Geo-Coordinate-Conversion-Java/blob/master/NASA_Open_Source_Agreement_1.3.txt)
+* NASA Open Source Agreement Version 1.3 - Geo-Coordinate-Conversion-Java - see NASA_Open_Source_Agreement_1.3.txt or [NASA Open Source Agreement Version 1.3](https://github.com/Berico-Technologies/Geo-Coordinate-Conversion-Java/blob/master/NASA_Open_Source_Agreement_1.3.txt)

@@ -248,4 +248,5 @@
         <item>English</item>
         <item>Czech</item>
     </string-array>
+    <string name="action_about">About application</string>
 </resources>
