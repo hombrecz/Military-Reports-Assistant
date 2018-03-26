@@ -58,4 +58,14 @@ class GlossaryAdapter(private val glossary: ArrayList<GlossaryEntry> = ArrayList
         glossary.removeAt(position)
         notifyDataSetChanged()
     }
+
+    fun addAll(entries: List<GlossaryEntry>) {
+        glossary.addAll(entries)
+        notifyDataSetChanged()
+    }
+
+    fun deleteAll() {
+        glossary.clear()
+        notifyDataSetChanged()
+    }
 }

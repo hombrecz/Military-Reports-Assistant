@@ -12,7 +12,9 @@ import android.preference.PreferenceFragment
 import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatDelegate
 import android.view.MenuItem
+import cz.hombre.tacassistant.GlossaryDefault
 import cz.hombre.tacassistant.R
+import cz.hombre.tacassistant.services.DatabaseService
 import cz.hombre.tacassistant.services.LocaleService
 import cz.hombre.tacassistant.services.PreferencesService
 import cz.hombre.tacassistant.services.impl.LOCALE_CHANGED
@@ -26,6 +28,7 @@ class SettingsActivity : PreferenceActivity(), SharedPreferences.OnSharedPrefere
 
     private val preferencesService: PreferencesService by inject()
     private val localeService: LocaleService by inject()
+    private val databaseService: DatabaseService by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +52,11 @@ class SettingsActivity : PreferenceActivity(), SharedPreferences.OnSharedPrefere
             LOCALE -> {
                 localeService.setPreferredLocale(baseContext)
                 setResult(LOCALE_CHANGED)
+                databaseService.getAllGlossaryEntries()
+                        .filter { e -> GlossaryDefault.ENTRIES.containsKey(e.name) }
+                        .forEach(databaseService::deleteGlossaryEntry)
+                databaseService.addDefaultGlossaryEntries()
+//                preferencesService.setGlossaryInitialised(false)
                 recreate()
                 finish()
             }

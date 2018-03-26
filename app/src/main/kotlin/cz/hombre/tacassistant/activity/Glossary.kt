@@ -43,13 +43,25 @@ class Glossary : AppCompatActivity() {
             addEntry(adapter)
         }
         glossaryUI.glossaryList.setOnItemLongClickListener { _, _, i, _ ->
-            val options = listOf(getString(R.string.glossary_entry_options_delete))
+            val options = listOf(getString(R.string.glossary_entry_options_delete), getString(R.string.glossary_entry_options_delete_all), getString(R.string.glossary_entry_options_add_all_default))
             selector(getString(R.string.glossary_entry_options), options) { _, position ->
-                if (position == 0) {
-                    databaseService.deleteGlossaryEntry(adapter.getItem(i))
-                    adapter.delete(i)
-                    toggleHintView()
-                    longToast(getString(R.string.glossary_entry_deleted))
+                when (position) {
+                    0 -> {
+                        databaseService.deleteGlossaryEntry(adapter.getItem(i))
+                        adapter.delete(i)
+                        toggleHintView()
+                        longToast(getString(R.string.glossary_entry_deleted))
+                    }
+                    1 -> {
+                        databaseService.getAllGlossaryEntries().forEach(databaseService::deleteGlossaryEntry)
+                        adapter.deleteAll()
+                        longToast(getString(R.string.glossary_entry_deleted_all))
+                    }
+                    2 -> {
+                        val addedEntries = databaseService.addDefaultGlossaryEntries()
+                        adapter.addAll(addedEntries)
+                        longToast(getString(R.string.glossary_entry_added_all_default))
+                    }
                 }
             }
             true

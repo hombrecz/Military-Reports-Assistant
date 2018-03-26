@@ -10,5 +10,5 @@ interface DatabaseService {
 
     fun getAllGlossaryEntries(): List<GlossaryEntry>
 
-    fun addDefaultGlossaryEntries()
+    fun addDefaultGlossaryEntries(): List<GlossaryEntry>
 }

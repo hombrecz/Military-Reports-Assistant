@@ -268,7 +268,11 @@
     <string name="glossary_hint">Add new entry by clicking on plus button</string>
     <string name="glossary_entry_options">Entry Options</string>
     <string name="glossary_entry_options_delete">Delete</string>
+    <string name="glossary_entry_options_delete_all">Delete all entries</string>
+    <string name="glossary_entry_options_add_all_default">Add all default entries</string>
     <string name="glossary_entry_deleted">Entry has been deleted</string>
+    <string name="glossary_entry_deleted_all">All entries has been deleted</string>
+    <string name="glossary_entry_added_all_default">Added all default entries</string>
     <string name="glossary_add_entry_dialog_title">Add new entry</string>
     <string name="glossary_add_entry_dialog_name">Entry name</string>
     <string name="glossary_add_entry_dialog_value">Entry value</string>
