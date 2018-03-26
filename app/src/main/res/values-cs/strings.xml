@@ -260,4 +260,19 @@
     <string name="glossary_add_entry_dialog_add_button">Přidat</string>
     <string name="glossary_add_entry_dialog_name_missing">Vyplň název</string>
     <string name="glossary_add_entry_dialog_value_missing">Vyplň hodnotu</string>
+    <string name="default_glossary_slls">Zastav se, pozoruj, poslouchej, čichej - zkratka označující činnosti př krátké zastávce</string>
+    <string name="default_glossary_lace">Tekutiny, munice, zranění, vybavení - čtyřbodové hlášení při kontrole stavu jednotky</string>
+    <string name="default_glossary_prewar">Příprava, reakce na ohrožující nepřátelskou palbu, určení protivníkovi pozice, výhra v přestřelce, útok, přeskupení - způsob reakce na nepřátelské nastřelení</string>
+    <string name="default_glossary_pawperso">Ochrana, munice, zbraně, osobní kamufláž, vybavení, radio, speciální vybavení, povely - vše, co je třeba připravit a zajistit před bojem</string>
+    <string name="default_glossary_metttc">Mise, nepřítel, terén a počasí, jednotky a podpora, časový rámec, civilní faktor - faktory, které je třeba zvážit při přípravě operace</string>
+    <string name="default_glossary_ocoka">Pozorování, kryt a skryt, překážky, klíčový terén, přístupové cesty - faktory analyzované při rekognoskaci terénu</string>
+    <string name="default_glossary_gotwa">Kam jdu, kdo jde se mnou, kdy se vrátím, co dělat, když se nevrátím a co dělat při napadení (mě nebo jednotky) - rozkaz vydávaný velitelem při opuštění jednotky</string>
+    <string name="default_glossary_salute">Velikost, činnost, lokace, uniforma, čas, vybavení - hlášení o pozorování nepřátelské jednotky</string>
+    <string name="default_glossary_saltr">Velikost, činnost, lokace, čas, požadavky/další poznámky - (doplňkové) hlášení o pozorování nepřátelské jednotky</string>
+    <string name="default_glossary_sitrep">Situační hlášení - hlášení s informacemi o aktuálním stavu jednotky</string>
+    <string name="default_glossary_uxo">Nevybuchlá munice</string>
+    <string name="default_glossary_ied">Improvizované nástražné zařízení (výbušné)</string>
+    <string name="default_glossary_nbc">Jaderné, biologické, chemické - označení pro zbraně hromadného ničení</string>
+    <string name="default_glossary_mgrs">Vojenský souřadnicový systém</string>
+    <string name="default_glossary_dtg">Formát času a datumu</string>
 </resources>

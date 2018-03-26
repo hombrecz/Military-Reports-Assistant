@@ -260,4 +260,19 @@
     <string name="glossary_add_entry_dialog_add_button">Add</string>
     <string name="glossary_add_entry_dialog_name_missing">Fill in name of entry</string>
     <string name="glossary_add_entry_dialog_value_missing">Fill in value of entry</string>
+    <string name="default_glossary_slls">Stop, Look, Listen, Smell - activities practiced during short stop</string>
+    <string name="default_glossary_lace">Liquid, Ammunition, Casualties, Equipment - short four point report issued to check the unit status</string>
+    <string name="default_glossary_prewar">Preparation, Reaction to effective enemy fire, Establish enemy location, Winning the firefight, Attack, Reorganize - proper reaction on enemy fire</string>
+    <string name="default_glossary_pawperso">Protection, Ammunition, Weapons, Personal Camouflage, Equipment, Radios, Specialist Equipment, Orders - issues that shold be checked before battle</string>
+    <string name="default_glossary_metttc">Mission, Enemy, Terrain and weather, Troops and support available, Time available, Civil considerations - factors that should be assessed during operation preparation</string>
+    <string name="default_glossary_ocoka">Observation, Cover and Concealment, Obstacles, Key Terrain, Avenues of Approach - factors observed in military terrain analyze</string>
+    <string name="default_glossary_gotwa">Going, Others, Time, What to do if I don\'t return, Actions to take if I (or you) are hit - contingency plan issued on leader leaving it\'s unit</string>
+    <string name="default_glossary_salute">Size, Activity, Location, Uniform, Time, Equipment - intelligence report with assessment of observed enemy force</string>
+    <string name="default_glossary_saltr">Size, Activity, Location, Time, Request/Remarks - (incremental) intelligence report with assessment of observed enemy force</string>
+    <string name="default_glossary_sitrep">Situation report - report with information about current unit\'s status</string>
+    <string name="default_glossary_uxo">Unexploded ordnance</string>
+    <string name="default_glossary_ied">Improvised explosive device</string>
+    <string name="default_glossary_nbc">Nuclear, Biologial, Chemical</string>
+    <string name="default_glossary_mgrs">Military Grid Reference System</string>
+    <string name="default_glossary_dtg">Date time group</string>
 </resources>
