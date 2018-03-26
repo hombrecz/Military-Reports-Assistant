@@ -9,7 +9,7 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.database.model.GlossaryEntry
 import org.jetbrains.anko.*
 
-class GlossaryAdapter(private val glossary: ArrayList<GlossaryEntry> = ArrayList()) : BaseAdapter() {
+class GlossaryAdapter(private var glossary: ArrayList<GlossaryEntry> = ArrayList()) : BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         return with(parent!!.context) {
@@ -51,21 +51,29 @@ class GlossaryAdapter(private val glossary: ArrayList<GlossaryEntry> = ArrayList
 
     fun add(entry: GlossaryEntry) {
         glossary.add(entry)
+        sort()
         notifyDataSetChanged()
     }
 
     fun delete(position: Int) {
         glossary.removeAt(position)
+        sort()
         notifyDataSetChanged()
     }
 
     fun addAll(entries: List<GlossaryEntry>) {
         glossary.addAll(entries)
+        sort()
         notifyDataSetChanged()
     }
 
     fun deleteAll() {
         glossary.clear()
+        sort()
         notifyDataSetChanged()
+    }
+
+    private fun sort() {
+        glossary = ArrayList(glossary.sortedBy { it.name })
     }
 }

@@ -55,6 +55,7 @@ class Glossary : AppCompatActivity() {
                     1 -> {
                         databaseService.getAllGlossaryEntries().forEach(databaseService::deleteGlossaryEntry)
                         adapter.deleteAll()
+                        toggleHintView()
                         longToast(getString(R.string.glossary_entry_deleted_all))
                     }
                     2 -> {

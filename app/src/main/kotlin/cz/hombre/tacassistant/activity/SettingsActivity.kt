@@ -56,7 +56,6 @@ class SettingsActivity : PreferenceActivity(), SharedPreferences.OnSharedPrefere
                         .filter { e -> GlossaryDefault.ENTRIES.containsKey(e.name) }
                         .forEach(databaseService::deleteGlossaryEntry)
                 databaseService.addDefaultGlossaryEntries()
-//                preferencesService.setGlossaryInitialised(false)
                 recreate()
                 finish()
             }
