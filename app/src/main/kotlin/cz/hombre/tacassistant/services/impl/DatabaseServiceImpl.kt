@@ -1,6 +1,7 @@
 package cz.hombre.tacassistant.services.impl
 
 import android.content.Context
+import cz.hombre.tacassistant.GlossaryDefault
 import cz.hombre.tacassistant.database.DatabaseHelper
 import cz.hombre.tacassistant.database.model.GlossaryEntry
 import cz.hombre.tacassistant.services.DatabaseService
@@ -9,7 +10,7 @@ import org.jetbrains.anko.db.delete
 import org.jetbrains.anko.db.insert
 import org.jetbrains.anko.db.select
 
-class DatabaseServiceImpl(applicationContext: Context) : DatabaseService {
+class DatabaseServiceImpl(private val applicationContext: Context) : DatabaseService {
 
     private val database = DatabaseHelper.getInstance(applicationContext)
 
@@ -33,4 +34,13 @@ class DatabaseServiceImpl(applicationContext: Context) : DatabaseService {
                     .parseList(classParser<GlossaryEntry>())
         }
     }
+
+    override fun addDefaultGlossaryEntries() {
+        var i = 0
+        GlossaryDefault.ENTRIES.keys.forEach {key ->
+            val description = applicationContext.getString(GlossaryDefault.ENTRIES.get(key)!!)
+            addGlossaryEntry(GlossaryEntry(i++, key, description))
+        }
+    }
+
 }

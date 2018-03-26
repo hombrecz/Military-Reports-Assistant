@@ -3,7 +3,12 @@ package cz.hombre.tacassistant.database
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import cz.hombre.tacassistant.database.model.GlossaryEntry
-import org.jetbrains.anko.db.*
+import org.jetbrains.anko.db.INTEGER
+import org.jetbrains.anko.db.ManagedSQLiteOpenHelper
+import org.jetbrains.anko.db.PRIMARY_KEY
+import org.jetbrains.anko.db.TEXT
+import org.jetbrains.anko.db.createTable
+import org.jetbrains.anko.db.dropTable
 
 class DatabaseHelper(ctx: Context) : ManagedSQLiteOpenHelper(ctx, "TacAssistantDatabase", null, 1) {
     companion object {

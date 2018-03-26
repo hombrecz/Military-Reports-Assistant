@@ -10,6 +10,7 @@ import cz.hombre.tacassistant.database.model.GlossaryEntry
 import cz.hombre.tacassistant.layout.GlossaryUI
 import cz.hombre.tacassistant.layout.adapter.GlossaryAdapter
 import cz.hombre.tacassistant.services.DatabaseService
+import cz.hombre.tacassistant.services.PreferencesService
 import org.jetbrains.anko.*
 import org.jetbrains.anko.appcompat.v7.toolbar
 import org.koin.android.ext.android.inject
@@ -17,12 +18,18 @@ import org.koin.android.ext.android.inject
 class Glossary : AppCompatActivity() {
 
     private val databaseService: DatabaseService by inject()
+    private val preferencesService: PreferencesService by inject()
     private val glossary = ArrayList<GlossaryEntry>()
 
     private lateinit var glossaryUI: GlossaryUI
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        if (preferencesService.isGlossaryInitialised() == 0) {
+            databaseService.addDefaultGlossaryEntries()
+            preferencesService.setGlossaryInitialised(true)
+        }
 
         glossary.addAll(databaseService.getAllGlossaryEntries())
 

@@ -15,4 +15,8 @@ interface PreferencesService {
     fun getNightMode(): Int
 
     fun getLanguage(): String
+
+    fun isGlossaryInitialised(): Int
+
+    fun setGlossaryInitialised(flag: Boolean)
 }

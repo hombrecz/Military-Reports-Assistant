@@ -276,6 +276,23 @@
     <string name="glossary_add_entry_dialog_name_missing">Fill in name of entry</string>
     <string name="glossary_add_entry_dialog_value_missing">Fill in value of entry</string>
 
+    <!--Default glossary entries-->
+    <string name="default_glossary_slls"></string>
+    <string name="default_glossary_lace"></string>
+    <string name="default_glossary_prewar"></string>
+    <string name="default_glossary_pawperso"></string>
+    <string name="default_glossary_metttc"></string>
+    <string name="default_glossary_ocoka"></string>
+    <string name="default_glossary_gotwa"></string>
+    <string name="default_glossary_salute"></string>
+    <string name="default_glossary_saltr"></string>
+    <string name="default_glossary_sitrep"></string>
+    <string name="default_glossary_uxo"></string>
+    <string name="default_glossary_ied"></string>
+    <string name="default_glossary_nbc"></string>
+    <string name="default_glossary_mgrs"></string>
+    <string name="default_glossary_dtg"></string>
+
     <!--Location-->
     <string name="symbol_north">N</string>
     <string name="symbol_south">S</string>

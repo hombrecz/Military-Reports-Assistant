@@ -9,4 +9,6 @@ interface DatabaseService {
     fun deleteGlossaryEntry(entry : GlossaryEntry)
 
     fun getAllGlossaryEntries(): List<GlossaryEntry>
+
+    fun addDefaultGlossaryEntries()
 }
