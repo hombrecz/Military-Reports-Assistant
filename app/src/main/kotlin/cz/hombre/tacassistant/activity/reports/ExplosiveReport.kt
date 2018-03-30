@@ -9,7 +9,7 @@ import org.jetbrains.anko.setContentView
 
 class ExplosiveReport : AbstractReport() {
 
-    private var explosiveReportUI = ExplosiveReportUI()
+    private var explosiveReportUI = ExplosiveReportUI(dateTimeService)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -6,11 +6,12 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.R.string.*
 import cz.hombre.tacassistant.activity.reports.SituationReport
 import cz.hombre.tacassistant.layout.components.*
+import cz.hombre.tacassistant.services.DateTimeService
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton
 
-class SituationReportUI : AnkoComponent<SituationReport> {
+class SituationReportUI(private val dateTimeService: DateTimeService) : AnkoComponent<SituationReport> {
 
     lateinit var previewButton: FloatingActionButton
     lateinit var time: TimeInput
@@ -24,7 +25,7 @@ class SituationReportUI : AnkoComponent<SituationReport> {
             id = R.id.situation_report
             scrollView {
                 verticalLayout {
-                    time = timeInput(R.string.report_time, R.string.report_time_hint)
+                    time = timeInput(R.string.report_time, R.string.report_time_hint, dateTimeService)
                     status = radioInput(R.string.report_situation_status, statusOptions())
                     enemy = textInput(R.string.report_situation_enemy, R.string.report_situation_enemy_hint)
                     own = textInput(R.string.report_situation_own, R.string.report_situation_own_hint)

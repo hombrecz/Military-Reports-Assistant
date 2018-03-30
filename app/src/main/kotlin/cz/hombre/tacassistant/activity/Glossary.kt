@@ -4,15 +4,27 @@ import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.ListView
 import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.database.model.GlossaryEntry
 import cz.hombre.tacassistant.layout.GlossaryUI
 import cz.hombre.tacassistant.layout.adapter.GlossaryAdapter
 import cz.hombre.tacassistant.services.DatabaseService
 import cz.hombre.tacassistant.services.PreferencesService
-import org.jetbrains.anko.*
+import org.jetbrains.anko.alert
 import org.jetbrains.anko.appcompat.v7.toolbar
+import org.jetbrains.anko.backgroundColor
+import org.jetbrains.anko.customView
+import org.jetbrains.anko.dip
+import org.jetbrains.anko.editText
+import org.jetbrains.anko.hintResource
+import org.jetbrains.anko.longToast
+import org.jetbrains.anko.matchParent
+import org.jetbrains.anko.padding
+import org.jetbrains.anko.selector
+import org.jetbrains.anko.setContentView
+import org.jetbrains.anko.toast
+import org.jetbrains.anko.verticalLayout
+import org.jetbrains.anko.wrapContent
 import org.koin.android.ext.android.inject
 
 class Glossary : AppCompatActivity() {

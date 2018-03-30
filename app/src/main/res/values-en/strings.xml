@@ -275,4 +275,10 @@
     <string name="default_glossary_nbc">Nuclear, Biologial, Chemical</string>
     <string name="default_glossary_mgrs">Military Grid Reference System</string>
     <string name="default_glossary_dtg">Date time group</string>
+    <string name="glossary_entry_options_delete_all">Delete all entries</string>
+    <string name="glossary_entry_options_add_all_default">Add all default entries</string>
+    <string name="glossary_entry_deleted_all">All entries has been deleted</string>
+    <string name="glossary_entry_added_all_default">Added all default entries</string>
+    <string name="report_datetime_button">Choose time</string>
+    <string name="report_datetime_dialog">Select date and time</string>
 </resources>

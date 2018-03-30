@@ -6,11 +6,12 @@ import cz.hombre.tacassistant.R
 import cz.hombre.tacassistant.R.string.*
 import cz.hombre.tacassistant.activity.reports.ExplosiveReport
 import cz.hombre.tacassistant.layout.components.*
+import cz.hombre.tacassistant.services.DateTimeService
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton
 
-class ExplosiveReportUI : AnkoComponent<ExplosiveReport> {
+class ExplosiveReportUI(private val dateTimeService: DateTimeService) : AnkoComponent<ExplosiveReport> {
 
     lateinit var previewButton: FloatingActionButton
     lateinit var line1: TimeInput
@@ -28,7 +29,7 @@ class ExplosiveReportUI : AnkoComponent<ExplosiveReport> {
             id = R.id.explosive_report
             scrollView {
                 verticalLayout {
-                    line1 = timeInput(explosive_report_line_1, report_time_hint)
+                    line1 = timeInput(explosive_report_line_1, report_time_hint, dateTimeService)
                     line2 = unitLocationInput()
                     line3 = dualTextInput(explosive_report_line_3, report_frequency, report_call_sign)
                     line4 = radioInputDetailed(explosive_report_line_4, ammunitionTypeOptions(), explosive_report_line_4_description)

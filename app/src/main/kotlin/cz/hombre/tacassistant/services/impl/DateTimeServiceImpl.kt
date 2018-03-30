@@ -28,6 +28,12 @@ class DateTimeServiceImpl(private val preferencesService: PreferencesService) : 
 
         val date = Calendar.getInstance(TimeZone.getTimeZone("GMT$preferredOffset:00")).time
 
+        return getMilitaryDateTimeGroup(date)
+    }
+
+    override fun getMilitaryDateTimeGroup(date: Date): String {
+        val preferredOffset = preferencesService.getPreferredOffset()
+
         val formatWithZoneOffset = ZULU_FORMAT.replace('Z', getMilitaryOffset(preferredOffset))
 
         return getFormattedUTCDateTime(date, formatWithZoneOffset)

@@ -275,4 +275,10 @@
     <string name="default_glossary_nbc">Jaderné, biologické, chemické - označení pro zbraně hromadného ničení</string>
     <string name="default_glossary_mgrs">Vojenský souřadnicový systém</string>
     <string name="default_glossary_dtg">Formát času a datumu</string>
+    <string name="report_datetime_button">Zvol čas</string>
+    <string name="glossary_entry_options_delete_all">Smazat všechny záznamy</string>
+    <string name="glossary_entry_options_add_all_default">Přidat všechny základní záznamy</string>
+    <string name="glossary_entry_deleted_all">Všechny záznamy byly smazány</string>
+    <string name="glossary_entry_added_all_default">Defaultní záznamy byly přidány</string>
+    <string name="report_datetime_dialog">Vyber čas a datum</string>
 </resources>

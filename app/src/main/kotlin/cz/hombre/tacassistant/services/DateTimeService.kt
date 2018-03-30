@@ -6,6 +6,8 @@ interface DateTimeService {
 
     fun getMilitaryDateTimeGroup(): String
 
+    fun getMilitaryDateTimeGroup(date: Date): String
+
     fun getLocalTime(): String
 
     fun getLocalTime(date: Date): String

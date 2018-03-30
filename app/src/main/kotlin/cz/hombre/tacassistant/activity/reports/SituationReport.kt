@@ -9,7 +9,7 @@ import org.jetbrains.anko.setContentView
 
 class SituationReport : AbstractReport() {
 
-    private var situationReportUI = SituationReportUI()
+    private var situationReportUI = SituationReportUI(dateTimeService)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

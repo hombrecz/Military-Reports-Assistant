@@ -53,4 +53,6 @@ dependencies {
     implementation "org.jetbrains.anko:anko-sqlite:$anko_version"
 
     implementation "com.rgi-corp:ww-geo-coords:1.0"
+
+    implementation "com.github.florent37:singledateandtimepicker:2.0.0"
 }

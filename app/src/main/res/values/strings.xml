@@ -157,6 +157,8 @@
     <string name="report_call_sign">Call sign</string>
     <string name="report_line">Line</string>
     <string name="report_negative">Negative</string>
+    <string name="report_datetime_button">Choose time</string>
+    <string name="report_datetime_dialog">Select date and time</string>
 
     <!--Medevac-->
     <string name="title_activity_medevac_report">Medevac 9-line request</string>
