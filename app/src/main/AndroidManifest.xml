@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cz.hombre.tacassistant">
+    package="cz.hombre.militaryReportsAssistant">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
@@ -27,59 +27,59 @@
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.activity.MainActivity" />
+                android:value="cz.hombre.militaryReportsAssistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.reports.MedevacReport"
+            android:name="cz.hombre.militaryReportsAssistant.activity.reports.MedevacReport"
             android:label="@string/title_activity_medevac_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.activity.MainActivity" />
+                android:value="cz.hombre.militaryReportsAssistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.reports.SaluteReport"
+            android:name="cz.hombre.militaryReportsAssistant.activity.reports.SaluteReport"
             android:label="@string/title_activity_salute_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.activity.MainActivity" />
+                android:value="cz.hombre.militaryReportsAssistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.reports.SaltrReport"
+            android:name="cz.hombre.militaryReportsAssistant.activity.reports.SaltrReport"
             android:label="@string/title_activity_saltr_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.activity.MainActivity" />
+                android:value="cz.hombre.militaryReportsAssistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.reports.SituationReport"
+            android:name="cz.hombre.militaryReportsAssistant.activity.reports.SituationReport"
             android:label="@string/title_activity_situation_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.activity.MainActivity" />
+                android:value="cz.hombre.militaryReportsAssistant.activity.MainActivity" />
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.reports.ExplosiveReport"
+            android:name="cz.hombre.militaryReportsAssistant.activity.reports.ExplosiveReport"
             android:label="@string/title_activity_explosive_report"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.activity.MainActivity" />
+                android:value="cz.hombre.militaryReportsAssistant.activity.MainActivity" />
         </activity>
         <activity
             android:name=".activity.reports.ReportPreviewActivity"
             android:label="@string/title_activity_report_preview">
         </activity>
         <activity
-            android:name="cz.hombre.tacassistant.activity.Glossary"
+            android:name="cz.hombre.militaryReportsAssistant.activity.Glossary"
             android:label="@string/title_activity_glossary"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="cz.hombre.tacassistant.activity.MainActivity" />
+                android:value="cz.hombre.militaryReportsAssistant.activity.MainActivity" />
         </activity>
     </application>
 

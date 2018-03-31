@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "cz.hombre.tacassistant"
+        applicationId "cz.hombre.militaryReportsAssistant"
         minSdkVersion 19
         targetSdkVersion 26
         vectorDrawables.useSupportLibrary = true

@@ -2,7 +2,7 @@
 <resources>
     <string name="explosive_report_line_6_hint">What resource is threatened? Is it a critical asset?</string>
     <string name="report_situation_enemy_hint">What is enemy doing</string>
-    <string name="main_welcome">Welcome in Tactical Assistant!</string>
+    <string name="main_welcome">Welcome in Military Reports Assistant!</string>
     <string name="symbol_west">W</string>
     <string name="report_situation_status">Unit status</string>
     <string name="explosive_report_unit">Unit identifier</string>
@@ -15,7 +15,7 @@
     <string name="report_time">Time</string>
     <string name="explosive_report_line_4_thrown">Thrown</string>
     <string name="settings_tactical_category">Tactical stuff</string>
-    <string name="app_name">TacAssistant</string>
+    <string name="app_name">Military Reports Assistant</string>
     <string name="report_size">Size</string>
     <string name="navigation_drawer_reports_sitrep">Sitrep</string>
     <string name="title_activity_situation_report">SITREP</string>

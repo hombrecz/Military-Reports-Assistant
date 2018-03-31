@@ -1,6 +1,6 @@
-# TacAssistant
+# Military Reports Assistant
 
-TacAssistant is application, that helps it's user to prepare standard military reports on his Android smartphone. It enables user to fill in reports in form of preformatted formswith filled in basic information. Application can prepare the MGRS location, DTG date and some static user data, that he prefilled in.
+Military Reports Assistant is application, that helps it's user to prepare standard military reports on his Android smartphone. It enables user to fill in reports in form of preformatted formswith filled in basic information. Application can prepare the MGRS location, DTG date and some static user data, that he prefilled in.
 
 ## Reports
 

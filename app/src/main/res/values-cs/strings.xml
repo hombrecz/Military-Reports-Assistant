@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TacAssistant</string>
-    <string name="main_welcome">Vítejte v aplikaci Tactical Assistant!</string>
+    <string name="app_name">Military Reports Assistant</string>
+    <string name="main_welcome">Vítejte v aplikaci Military Reports Assistant!</string>
     <string name="navigation_drawer_open">Otevřít menu</string>
     <string name="navigation_drawer_close">Zavřít menu</string>
     <string name="navigation_drawer_reports">Hlášení</string>
