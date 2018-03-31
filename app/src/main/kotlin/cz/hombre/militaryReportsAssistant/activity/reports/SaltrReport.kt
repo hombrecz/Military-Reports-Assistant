@@ -1,5 +1,6 @@
 package cz.hombre.militaryReportsAssistant.activity.reports
 
+import android.content.Intent
 import android.os.Bundle
 import cz.hombre.militaryReportsAssistant.R
 import cz.hombre.militaryReportsAssistant.dto.ReportData
@@ -9,7 +10,7 @@ import org.jetbrains.anko.setContentView
 
 class SaltrReport : AbstractReport() {
 
-    private var saltrReportUI = SaltrReportUI(dateTimeService)
+    private var saltrReportUI = SaltrReportUI(dateTimeService, locationService)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,11 @@ class SaltrReport : AbstractReport() {
         saltrReportUI.time.setValue(dateTimeService.getMilitaryDateTimeGroup())
         saltrReportUI.location.setValue(locationService.getCurrentMGRSLocation())
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        saltrReportUI.location.onLocationSelected(requestCode, resultCode, data!!)
     }
 
     override fun getReportData(): ReportData {

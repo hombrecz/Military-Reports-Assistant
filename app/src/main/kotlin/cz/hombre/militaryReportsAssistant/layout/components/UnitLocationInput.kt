@@ -1,18 +1,22 @@
 package cz.hombre.militaryReportsAssistant.layout.components
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.View
 import android.view.ViewManager
 import android.widget.EditText
 import android.widget.LinearLayout
+import com.google.android.gms.location.places.ui.PlacePicker
 import cz.hombre.militaryReportsAssistant.R.string.*
+import cz.hombre.militaryReportsAssistant.services.LocationService
 import org.jetbrains.anko.*
 import org.jetbrains.anko.custom.ankoView
 
-inline fun ViewManager.unitLocationInput() = unitLocationInput() {}
-inline fun ViewManager.unitLocationInput(init: UnitLocationInput.() -> Unit) = ankoView({ UnitLocationInput(it) }, 0, init)
+inline fun ViewManager.unitLocationInput(locationService: LocationService, activity: Activity) = unitLocationInput(locationService, activity) {}
+inline fun ViewManager.unitLocationInput(locationService: LocationService, activity: Activity, init: UnitLocationInput.() -> Unit) = ankoView({ UnitLocationInput(it, activity, locationService) }, 0, init)
 
-class UnitLocationInput(c: Context) : LinearLayout(c) {
+class UnitLocationInput(c: Context, activity: Activity, private val locationService: LocationService) : LinearLayout(c) {
 
     private lateinit var hideableContent: LinearLayout
     private lateinit var unit: EditText
@@ -38,10 +42,14 @@ class UnitLocationInput(c: Context) : LinearLayout(c) {
                     }
                 }
                 linearLayout {
-                    location = locationInput(report_medevac_line_1_coordinates, report_medevac_line_1_coordinates)
+                    location = locationInput(report_medevac_line_1_coordinates, report_medevac_line_1_coordinates, locationService, activity)
                 }
             }
         }
+    }
+
+    fun onLocationSelected(requestCode: Int, resultCode: Int, data: Intent) {
+        location.onLocationSelected(requestCode, resultCode, data)
     }
 
     fun getValue(): String {

@@ -7,11 +7,12 @@ import cz.hombre.militaryReportsAssistant.R.string.*
 import cz.hombre.militaryReportsAssistant.activity.reports.ExplosiveReport
 import cz.hombre.militaryReportsAssistant.layout.components.*
 import cz.hombre.militaryReportsAssistant.services.DateTimeService
+import cz.hombre.militaryReportsAssistant.services.LocationService
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton
 
-class ExplosiveReportUI(private val dateTimeService: DateTimeService) : AnkoComponent<ExplosiveReport> {
+class ExplosiveReportUI(private val dateTimeService: DateTimeService, private val locationService: LocationService) : AnkoComponent<ExplosiveReport> {
 
     lateinit var previewButton: FloatingActionButton
     lateinit var line1: TimeInput
@@ -30,7 +31,7 @@ class ExplosiveReportUI(private val dateTimeService: DateTimeService) : AnkoComp
             scrollView {
                 verticalLayout {
                     line1 = timeInput(explosive_report_line_1, report_time_hint, dateTimeService)
-                    line2 = unitLocationInput()
+                    line2 = unitLocationInput(locationService, ui.owner)
                     line3 = dualTextInput(explosive_report_line_3, report_frequency, report_call_sign)
                     line4 = radioInputDetailed(explosive_report_line_4, ammunitionTypeOptions(), explosive_report_line_4_description)
                     line5 = conditionTextInput(explosive_report_line_5, explosive_report_line_5_checkbox, explosive_report_line_5_description_hint)

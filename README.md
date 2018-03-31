@@ -26,11 +26,12 @@ For now it is available only from it's original author (see section Author for c
 ## Technologies used
 
 * [Kotlin](https://kotlinlang.org/) - The programming language - licensed under [Apache License 2.0](https://github.com/JetBrains/kotlin-web-site/blob/master/LICENSE)
-* [Gradle](https://gradle.org/) - Dependency Management - licensed under [Apache License 2.0](https://github.com/gradle/gradle/blob/master/LICENSE), (© Gradle Inc. 2018)
+* [Gradle](https://gradle.org/) - Dependency Management - licensed under [Apache License 2.0](https://github.com/gradle/gradle/blob/master/LICENSE), (© Gradle Inc. 2018), (Copyright © 2004-2005 United States Government as represented by the Administrator of the National Aeronautics and Space Administration. All Rights Reserved. Copyright © 2004-2005 Contributors. All Rights Reserved.)
 * [KOIN](https://github.com/Ekito/koin) - Used for dependency injection - licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 * [Anko](https://github.com/Kotlin/anko) - Used for dynamically created layout - licensed under [Apache License 2.0](https://github.com/Kotlin/anko/blob/master/LICENSE), (Copyright 2016 JetBrains s.r.o.)
 * [SingleDateAndTimePicker](https://github.com/florent37/SingleDateAndTimePicker) - Date time picker - licensed under [Apache License 2.0](https://github.com/florent37/SingleDateAndTimePicker/blob/master/LICENSE), (Copyright 2016 florent37, Inc.)
 * [Geo-Coordinate-Conversion-Java](https://github.com/Berico-Technologies/Geo-Coordinate-Conversion-Java) - Latitude/longitude to MGRS  - licensed under [NASA Open Source Agreement Version 1.3](https://github.com/Berico-Technologies/Geo-Coordinate-Conversion-Java/blob/master/NASA_Open_Source_Agreement_1.3.txt), (Copyright © 2004-2005 United States Government as represented by the Administrator of the National Aeronautics and Space Administration. All Rights Reserved. Copyright © 2004-2005 Contributors. All Rights Reserved.)
+* [Google Places API for Android](https://developers.google.com/places/android-api/) - Place picker for Android  - terms applied [Google Maps APIs Terms of Service](https://developers.google.com/maps/terms)
 
 ## Author
 
@@ -42,3 +43,4 @@ This software uses some third party libraries, technologies etc., that are aunde
 
 * Apache License 2.0 - Kotlin, Gradle, KOIN, Anko - see Apache_License_2.0.txt or [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 * NASA Open Source Agreement Version 1.3 - Geo-Coordinate-Conversion-Java - see NASA_Open_Source_Agreement_1.3.txt or [NASA Open Source Agreement Version 1.3](https://github.com/Berico-Technologies/Geo-Coordinate-Conversion-Java/blob/master/NASA_Open_Source_Agreement_1.3.txt)
+* Google Maps APIs Terms of Service - Google Places API for Android - see [Google Maps APIs Terms of Service](https://developers.google.com/maps/terms)

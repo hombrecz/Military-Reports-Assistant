@@ -6,6 +6,7 @@ import android.location.LocationManager
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.berico.coords.Coordinates
+import com.google.android.gms.location.places.Place
 import cz.hombre.militaryReportsAssistant.R
 import cz.hombre.militaryReportsAssistant.listener.LocationListener
 import cz.hombre.militaryReportsAssistant.services.DateTimeService
@@ -36,6 +37,8 @@ class LocationServiceImpl(private val applicationContext: Context, private val d
         }
     }
 
+    override fun getCurrentGPS() = this.locationListener.gpsLocation
+
     override fun getLocationTime() = dateTimeService.getLocalTime(Date(this.locationListener.gpsLocation.time))
 
     override fun getLocationTimeAgo() = dateTimeService.getTimeDifference(Date(this.locationListener.gpsLocation.time)).toLowerCase()
@@ -48,7 +51,9 @@ class LocationServiceImpl(private val applicationContext: Context, private val d
 
     override fun getCurrentGPSLocation() = getGPSFromLocation(this.locationListener.gpsLocation)
 
-    override fun getCurrentMGRSLocation() = getMGRSFromLocation(this.locationListener.gpsLocation)
+    override fun getCurrentMGRSLocation(): String = getMGRSFromLocation(this.locationListener.gpsLocation)
+
+    override fun getMGRSLocation(place: Place): String = getMGRSFromLocation(place.latLng.latitude, place.latLng.longitude)
 
     private fun getGPSFromLocation(location: Location): String {
         val latitudeSymbol = applicationContext.getString(
@@ -78,6 +83,7 @@ class LocationServiceImpl(private val applicationContext: Context, private val d
         return "$latitudeSymbol $latitude $longitudeSymbol $longitude"
     }
 
-    private fun getMGRSFromLocation(location: Location) = Coordinates.mgrsFromLatLon(location.latitude, location.longitude)
+    private fun getMGRSFromLocation(location: Location) = getMGRSFromLocation(location.latitude, location.longitude)
 
+    private fun getMGRSFromLocation(latitude: Double, longitude: Double) = Coordinates.mgrsFromLatLon(latitude, longitude)
 }

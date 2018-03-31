@@ -7,11 +7,12 @@ import cz.hombre.militaryReportsAssistant.R.string.*
 import cz.hombre.militaryReportsAssistant.activity.reports.SaltrReport
 import cz.hombre.militaryReportsAssistant.layout.components.*
 import cz.hombre.militaryReportsAssistant.services.DateTimeService
+import cz.hombre.militaryReportsAssistant.services.LocationService
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton
 
-class SaltrReportUI(private val dateTimeService: DateTimeService) : AnkoComponent<SaltrReport> {
+class SaltrReportUI(private val dateTimeService: DateTimeService, private val locationService: LocationService) : AnkoComponent<SaltrReport> {
 
     lateinit var previewButton: FloatingActionButton
     lateinit var size: TextInput
@@ -27,7 +28,7 @@ class SaltrReportUI(private val dateTimeService: DateTimeService) : AnkoComponen
                 verticalLayout {
                     size = textInput(report_size, report_size_hint)
                     activity = textInput(report_activity, report_activity_hint)
-                    location = locationInput(report_location, report_location_hint)
+                    location = locationInput(report_location, report_location_hint, locationService, ui.owner)
                     time = timeInput(report_time, report_time_hint, dateTimeService)
                     request = textInput(report_saltr_request, report_saltr_request_hint)
                 }

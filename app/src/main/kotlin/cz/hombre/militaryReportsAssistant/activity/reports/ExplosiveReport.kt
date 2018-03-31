@@ -1,5 +1,6 @@
 package cz.hombre.militaryReportsAssistant.activity.reports
 
+import android.content.Intent
 import android.os.Bundle
 import cz.hombre.militaryReportsAssistant.R
 import cz.hombre.militaryReportsAssistant.dto.ReportData
@@ -9,7 +10,7 @@ import org.jetbrains.anko.setContentView
 
 class ExplosiveReport : AbstractReport() {
 
-    private var explosiveReportUI = ExplosiveReportUI(dateTimeService)
+    private var explosiveReportUI = ExplosiveReportUI(dateTimeService, locationService)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +27,11 @@ class ExplosiveReport : AbstractReport() {
         explosiveReportUI.line2.setLocation(locationService.getCurrentMGRSLocation())
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        explosiveReportUI.line2.onLocationSelected(requestCode, resultCode, data!!)
     }
 
     override fun getReportData(): ReportData {

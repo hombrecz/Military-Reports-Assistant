@@ -1,5 +1,6 @@
 package cz.hombre.militaryReportsAssistant.activity.reports
 
+import android.content.Intent
 import android.os.Bundle
 import cz.hombre.militaryReportsAssistant.R
 import cz.hombre.militaryReportsAssistant.dto.ReportData
@@ -10,7 +11,7 @@ import org.jetbrains.anko.setContentView
 
 class MedevacReport : AbstractReport() {
 
-    private var medevacReportUI = MedevacReportUI()
+    private var medevacReportUI = MedevacReportUI(locationService)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +26,11 @@ class MedevacReport : AbstractReport() {
         medevacReportUI.line1.setValue(locationService.getCurrentMGRSLocation())
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        medevacReportUI.line1.onLocationSelected(requestCode, resultCode, data!!)
     }
 
     override fun getReportData(): ReportData {

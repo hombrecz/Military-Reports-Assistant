@@ -6,11 +6,12 @@ import cz.hombre.militaryReportsAssistant.R
 import cz.hombre.militaryReportsAssistant.R.string.*
 import cz.hombre.militaryReportsAssistant.activity.reports.MedevacReport
 import cz.hombre.militaryReportsAssistant.layout.components.*
+import cz.hombre.militaryReportsAssistant.services.LocationService
 import org.jetbrains.anko.*
 import org.jetbrains.anko.design.coordinatorLayout
 import org.jetbrains.anko.design.floatingActionButton
 
-class MedevacReportUI : AnkoComponent<MedevacReport> {
+class MedevacReportUI(private val locationService: LocationService) : AnkoComponent<MedevacReport> {
 
     lateinit var previewButton: FloatingActionButton
     lateinit var line1: LocationInput
@@ -28,7 +29,7 @@ class MedevacReportUI : AnkoComponent<MedevacReport> {
             id = R.id.medevac_report
             scrollView {
                 verticalLayout {
-                    line1 = locationInput(report_medevac_line_1, report_location_button)
+                    line1 = locationInput(report_medevac_line_1, report_location_button, locationService, ui.owner)
                     line2 = dualTextInput(report_medevac_line_2, report_frequency, report_call_sign)
                     line3 = multipleLineInput(report_medevac_line_3, patientsByPrecedenceOptions())
                     line4 = checkBoxInput(report_medevac_line_4, specialEquipmentOptions())

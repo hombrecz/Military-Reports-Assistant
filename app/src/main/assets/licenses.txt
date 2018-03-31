@@ -10,6 +10,9 @@ Apache License 2.0:
 NASA Open Source Agreement Version 1.3
     - Geo-Coordinate-Conversion-Java (Copyright © 2004-2005 United States Government as represented by the Administrator of the National Aeronautics and Space Administration. All Rights Reserved. Copyright © 2004-2005 Contributors. All Rights Reserved.)
 
+Google Maps APIs Terms of Service
+    - Google Maps API - license not included, see terms at: (https://developers.google.com/maps/terms)
+
 Licenses follow:
 --------------------------------------------
 Apache License

@@ -95,7 +95,7 @@
     <string name="report_situation_status_green">Green</string>
     <string name="status_gps_label">GPS</string>
     <string name="navigation_drawer_glossary">Glossary</string>
-    <string name="report_location_button">Get location</string>
+    <string name="report_location_button">Get other location</string>
     <string name="report_frequency">Frequency</string>
     <string name="report_situation_following">Following actions</string>
     <string name="report_salute_equipment_hint">Equipment and weapons observed</string>

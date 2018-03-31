@@ -23,9 +23,6 @@ inline fun ViewManager.timeInput(label: Int, valueHint: Int, dateTimeService: Da
 inline fun ViewManager.timeInput(label: Int, valueHint: Int, dateTimeService: DateTimeService, init: TimeInput.() -> Unit) = ankoView({ TimeInput(it, label, valueHint, dateTimeService) }, 0, init)
 
 class TimeInput(private val c: Context, val label: Int, val valueHint: Int, val dateTimeService: DateTimeService) : LinearLayout(c) {
-
-//    private val dateTimeService: DateTimeService by inject()
-
     private lateinit var hideableContent: LinearLayout
     private lateinit var valueEdit: EditText
     private lateinit var timeButton: Button
