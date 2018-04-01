@@ -281,4 +281,5 @@
     <string name="glossary_entry_deleted_all">Všechny záznamy byly smazány</string>
     <string name="glossary_entry_added_all_default">Defaultní záznamy byly přidány</string>
     <string name="report_datetime_dialog">Vyber čas a datum</string>
+    <string name="report_location_missing_api">Pro tuto akci je třeba nainstalovat Google Play Services</string>
 </resources>

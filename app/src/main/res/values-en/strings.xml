@@ -281,4 +281,5 @@
     <string name="glossary_entry_added_all_default">Added all default entries</string>
     <string name="report_datetime_button">Choose time</string>
     <string name="report_datetime_dialog">Select date and time</string>
+    <string name="report_location_missing_api">Please install Google Play Services to use this feature</string>
 </resources>

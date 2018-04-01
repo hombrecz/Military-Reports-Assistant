@@ -30,7 +30,9 @@ class MedevacReport : AbstractReport() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        medevacReportUI.line1.onLocationSelected(requestCode, resultCode, data!!)
+        if (data != null) {
+            medevacReportUI.line1.onLocationSelected(requestCode, resultCode, data)
+        }
     }
 
     override fun getReportData(): ReportData {

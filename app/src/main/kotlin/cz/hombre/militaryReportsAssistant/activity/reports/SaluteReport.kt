@@ -27,7 +27,9 @@ class SaluteReport : AbstractReport() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        saluteReportUI.location.onLocationSelected(requestCode, resultCode, data!!)
+        if (data != null) {
+            saluteReportUI.location.onLocationSelected(requestCode, resultCode, data)
+        }
     }
 
     override fun getReportData(): ReportData {

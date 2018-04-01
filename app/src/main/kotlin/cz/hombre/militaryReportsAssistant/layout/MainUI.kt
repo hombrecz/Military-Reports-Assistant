@@ -49,9 +49,6 @@ class MainUI : AnkoComponent<MainActivity> {
                     height = wrapContent
             )
 
-            constraintLayout {
-                textView(main_welcome)
-            }
         }.lparams(
                 width = matchParent,
                 height = matchParent

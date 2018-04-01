@@ -27,7 +27,9 @@ class SaltrReport : AbstractReport() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        saltrReportUI.location.onLocationSelected(requestCode, resultCode, data!!)
+        if (data != null) {
+            saltrReportUI.location.onLocationSelected(requestCode, resultCode, data)
+        }
     }
 
     override fun getReportData(): ReportData {

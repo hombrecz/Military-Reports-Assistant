@@ -31,7 +31,9 @@ class ExplosiveReport : AbstractReport() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        explosiveReportUI.line2.onLocationSelected(requestCode, resultCode, data!!)
+        if (data != null) {
+            explosiveReportUI.line2.onLocationSelected(requestCode, resultCode, data)
+        }
     }
 
     override fun getReportData(): ReportData {

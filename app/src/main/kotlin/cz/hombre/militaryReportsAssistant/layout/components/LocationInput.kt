@@ -2,6 +2,7 @@ package cz.hombre.militaryReportsAssistant.layout.components
 
 import android.app.Activity
 import android.app.Activity.RESULT_OK
+import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.support.v4.app.ActivityCompat.startActivityForResult
@@ -10,7 +11,15 @@ import android.view.ViewManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.GoogleApiAvailability
+import com.google.android.gms.location.places.ui.PlacePicker
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
 import cz.hombre.militaryReportsAssistant.R
+import cz.hombre.militaryReportsAssistant.services.LocationService
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.appcompat.v7.Appcompat
 import org.jetbrains.anko.button
 import org.jetbrains.anko.custom.ankoView
 import org.jetbrains.anko.editText
@@ -19,13 +28,10 @@ import org.jetbrains.anko.linearLayout
 import org.jetbrains.anko.textResource
 import org.jetbrains.anko.textView
 import org.jetbrains.anko.verticalLayout
-import com.google.android.gms.location.places.ui.PlacePicker
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.LatLngBounds
-import cz.hombre.militaryReportsAssistant.services.LocationService
 
-private val PLACE_PICKER_REQUEST = 1
-private val CORNER_POINT_DISTANCE = 0.1
+
+private const val PLACE_PICKER_REQUEST = 1
+private const val CORNER_POINT_DISTANCE = 0.1
 
 inline fun ViewManager.locationInput(label: Int, valueHint: Int, locationService: LocationService, activity: Activity) = locationInput(label, valueHint, locationService, activity) {}
 inline fun ViewManager.locationInput(label: Int, valueHint: Int, locationService: LocationService, activity: Activity, init: LocationInput.() -> Unit) = ankoView({ LocationInput(it, activity, label, valueHint, locationService) }, 0, init)
@@ -67,16 +73,6 @@ class LocationInput(private val c: Context, private val activity: Activity, val 
         return valueEdit.setText(value)
     }
 
-    private fun getLocationFromGMaps() {
-        val builder = PlacePicker.IntentBuilder()
-
-        val currentGPS = locationService.getCurrentGPS()
-        val bottomLeft = LatLng(currentGPS.latitude - CORNER_POINT_DISTANCE, currentGPS.longitude - CORNER_POINT_DISTANCE)
-        val topRight = LatLng(currentGPS.latitude + CORNER_POINT_DISTANCE, currentGPS.longitude + CORNER_POINT_DISTANCE)
-        builder.setLatLngBounds(LatLngBounds(bottomLeft, topRight))
-        startActivityForResult(activity, builder.build(activity), PLACE_PICKER_REQUEST, null)
-    }
-
     fun onLocationSelected(requestCode: Int, resultCode: Int, data: Intent) {
         if (requestCode == PLACE_PICKER_REQUEST) {
             if (resultCode == RESULT_OK) {
@@ -85,4 +81,21 @@ class LocationInput(private val c: Context, private val activity: Activity, val 
             }
         }
     }
+
+    private fun getLocationFromGMaps() {
+        val api = GoogleApiAvailability.getInstance()
+        val code = api.isGooglePlayServicesAvailable(activity)
+        if (code == ConnectionResult.SUCCESS) {
+            val builder = PlacePicker.IntentBuilder()
+
+            val currentGPS = locationService.getCurrentGPS()
+            val bottomLeft = LatLng(currentGPS.latitude - CORNER_POINT_DISTANCE, currentGPS.longitude - CORNER_POINT_DISTANCE)
+            val topRight = LatLng(currentGPS.latitude + CORNER_POINT_DISTANCE, currentGPS.longitude + CORNER_POINT_DISTANCE)
+            builder.setLatLngBounds(LatLngBounds(bottomLeft, topRight))
+            startActivityForResult(activity, builder.build(activity), PLACE_PICKER_REQUEST, null)
+        } else {
+            activity.alert(Appcompat, c.getString(R.string.report_location_missing_api)).show()
+        }
+    }
+
 }
