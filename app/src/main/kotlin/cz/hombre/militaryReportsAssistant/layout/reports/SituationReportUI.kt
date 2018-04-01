@@ -37,7 +37,7 @@ class SituationReportUI(private val dateTimeService: DateTimeService) : AnkoComp
             )
 
             previewButton = floatingActionButton {
-                imageResource = android.R.drawable.ic_dialog_email
+                imageResource = R.drawable.ic_prepare_fab
                 useCompatPadding = true
             }.lparams {
                 gravity = Gravity.BOTTOM or Gravity.END

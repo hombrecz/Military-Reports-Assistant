@@ -2,6 +2,7 @@ package cz.hombre.militaryReportsAssistant.layout.reports
 
 import android.support.design.widget.FloatingActionButton
 import android.view.Gravity
+import cz.hombre.militaryReportsAssistant.R
 import cz.hombre.militaryReportsAssistant.R.id.salute_report
 import cz.hombre.militaryReportsAssistant.R.string.*
 import cz.hombre.militaryReportsAssistant.activity.reports.SaluteReport
@@ -40,7 +41,7 @@ class SaluteReportUI(private val dateTimeService: DateTimeService, private val l
             )
 
             previewButton = floatingActionButton {
-                imageResource = android.R.drawable.ic_dialog_email
+                imageResource = R.drawable.ic_prepare_fab
                 useCompatPadding = true
             }.lparams {
                 gravity = Gravity.BOTTOM or Gravity.END

@@ -30,7 +30,7 @@ class ReportPreviewUI : AnkoComponent<ReportPreviewActivity> {
 
             shareButton = floatingActionButton {
                 id = R.id.share_fab
-                imageResource = android.R.drawable.ic_menu_share
+                imageResource = R.drawable.ic_share_fab
                 useCompatPadding = true
                 scaleType = ImageView.ScaleType.CENTER
             }.lparams {
@@ -41,7 +41,7 @@ class ReportPreviewUI : AnkoComponent<ReportPreviewActivity> {
 
             ramrodButton = floatingActionButton {
                 id = R.id.ramrod_fab
-                imageResource = android.R.drawable.ic_media_play
+                imageResource = R.drawable.ic_ramrod_fab
                 useCompatPadding = true
                 scaleType = ImageView.ScaleType.CENTER
             }.lparams {
@@ -53,7 +53,7 @@ class ReportPreviewUI : AnkoComponent<ReportPreviewActivity> {
 
             spellingButton = floatingActionButton {
                 id = R.id.spelling_fab
-                imageResource = android.R.drawable.ic_dialog_email
+                imageResource = R.drawable.ic_spelling_fab
                 useCompatPadding = true
                 scaleType = ImageView.ScaleType.CENTER
             }.lparams {

@@ -7,23 +7,23 @@
         <menu>
             <item
                 android:id="@+id/nav_medevac"
-                android:icon="@drawable/ic_menu_report"
+                android:icon="@drawable/ic_menu_medevac"
                 android:title="@string/navigation_drawer_reports_medevac" />
             <item
                 android:id="@+id/nav_sitrep"
-                android:icon="@drawable/ic_menu_report"
+                android:icon="@drawable/ic_menu_sitrep"
                 android:title="@string/navigation_drawer_reports_sitrep" />
             <item
                 android:id="@+id/nav_salute"
-                android:icon="@drawable/ic_menu_report"
+                android:icon="@drawable/ic_menu_salute"
                 android:title="@string/navigation_drawer_reports_salute" />
             <item
                 android:id="@+id/nav_saltr"
-                android:icon="@drawable/ic_menu_report"
+                android:icon="@drawable/ic_menu_saltr"
                 android:title="@string/navigation_drawer_reports_saltr" />
             <item
                 android:id="@+id/nav_ied"
-                android:icon="@drawable/ic_menu_report"
+                android:icon="@drawable/ic_menu_ied"
                 android:title="@string/navigation_drawer_reports_ied" />
         </menu>
     </item>
