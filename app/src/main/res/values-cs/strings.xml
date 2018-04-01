@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Military Reports Assistant</string>
-    <string name="main_welcome">Vítejte v aplikaci Military Reports Assistant!</string>
+    <string name="main_welcome">Vítej v aplikaci Military Reports Assistant!</string>
     <string name="navigation_drawer_open">Otevřít menu</string>
     <string name="navigation_drawer_close">Zavřít menu</string>
     <string name="navigation_drawer_reports">Hlášení</string>
@@ -282,4 +282,5 @@
     <string name="glossary_entry_added_all_default">Defaultní záznamy byly přidány</string>
     <string name="report_datetime_dialog">Vyber čas a datum</string>
     <string name="report_location_missing_api">Pro tuto akci je třeba nainstalovat Google Play Services</string>
+    <string name="main_description">Začni otevřením menu v levém horním rohu nebo úpravou nastavení v pravém horním rohu.</string>
 </resources>

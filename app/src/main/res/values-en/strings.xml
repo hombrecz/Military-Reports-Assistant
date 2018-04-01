@@ -282,4 +282,5 @@
     <string name="report_datetime_button">Choose time</string>
     <string name="report_datetime_dialog">Select date and time</string>
     <string name="report_location_missing_api">Please install Google Play Services to use this feature</string>
+    <string name="main_description">Start by opening menu in the top left corner or by adjusting settings on the top right corner.</string>
 </resources>

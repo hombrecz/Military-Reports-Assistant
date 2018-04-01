@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Military Reports Assistant</string>
     <string name="main_welcome">Welcome in Military Reports Assistant!</string>
+    <string name="main_description">Start by opening menu in the top left corner or by adjusting settings on the top right corner.</string>
 
     <!-- Menu -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
