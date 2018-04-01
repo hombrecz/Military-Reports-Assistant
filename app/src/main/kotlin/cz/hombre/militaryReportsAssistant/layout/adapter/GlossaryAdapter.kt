@@ -15,7 +15,6 @@ class GlossaryAdapter(private var glossary: ArrayList<GlossaryEntry> = ArrayList
         return with(parent!!.context) {
             linearLayout {
                 id = R.id.glossary_container
-                lparams(width = matchParent, height = wrapContent)
                 padding = dip(10)
                 orientation = HORIZONTAL
 
