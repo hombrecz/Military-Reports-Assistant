@@ -38,7 +38,7 @@ class ReportPreviewUI : AnkoComponent<ReportPreviewActivity> {
             }.lparams {
                 gravity = Gravity.BOTTOM or Gravity.END
                 anchorGravity = Gravity.TOP or Gravity.END
-                margin = dip(16)
+                margin = dip(4)
             }
 
             ramrodButton = floatingActionButton {
