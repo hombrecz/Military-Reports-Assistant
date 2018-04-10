@@ -35,6 +35,7 @@ class SaluteReportUI(private val dateTimeService: DateTimeService, private val l
                     time = timeInput(report_time, report_time_hint, dateTimeService)
                     enemy = textInput(report_salute_equipment, report_salute_equipment_hint)
                 }
+                padding = dip(10)
             }.lparams(
                     width = matchParent,
                     height = matchParent

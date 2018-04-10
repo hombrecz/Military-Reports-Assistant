@@ -24,7 +24,7 @@ class GlossaryAdapter(private var glossary: ArrayList<GlossaryEntry> = ArrayList
                     textSize = 16f
                     typeface = Typeface.DEFAULT_BOLD
                     padding = dip(5)
-                }
+                }.lparams(width = dip(100))
 
                 textView {
                     id = R.id.entry_description

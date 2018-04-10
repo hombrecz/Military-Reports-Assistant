@@ -8,7 +8,7 @@ const val NATO_ALPHABET_VALUE = 0
 const val CZECH_ALPHABET_VALUE = 1
 const val UTC_OFFSET = "0"
 const val DEFAULT_NIGHT_MODE = "0"
-const val DEFAULT_LOCALE = "English"
+const val DEFAULT_LOCALE = "en"
 const val DEFAULT_GLOSSARY_UNINITIALISED = 0
 const val DEFAULT_GLOSSARY_INITIALISED = 1
 
@@ -44,11 +44,11 @@ class PreferencesServiceImpl(context: Context) : PreferencesService {
     override fun setGlossaryInitialised(flag: Boolean) {
         with(preferences.edit()) {
             if (flag) {
-                putInt(GLOSSARY_INITIALISED, 1)
+                putInt(GLOSSARY_INITIALISED, DEFAULT_GLOSSARY_INITIALISED)
             } else {
-                putInt(GLOSSARY_INITIALISED, 0)
+                putInt(GLOSSARY_INITIALISED, DEFAULT_GLOSSARY_UNINITIALISED)
             }
-            commit()
+            apply()
         }
     }
 }

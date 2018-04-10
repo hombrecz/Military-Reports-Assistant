@@ -11,6 +11,7 @@ import cz.hombre.militaryReportsAssistant.R
 import cz.hombre.militaryReportsAssistant.services.DateTimeService
 import org.jetbrains.anko.button
 import org.jetbrains.anko.custom.ankoView
+import org.jetbrains.anko.dip
 import org.jetbrains.anko.editText
 import org.jetbrains.anko.hintResource
 import org.jetbrains.anko.linearLayout
@@ -31,6 +32,7 @@ class TimeInput(private val c: Context, val label: Int, val valueHint: Int, val 
         verticalLayout {
             textView(label) {
                 textResource = label
+                textSize = 20f
             }.setOnClickListener {
                 if (hideableContent.visibility == View.VISIBLE) {
                     hideableContent.visibility = View.GONE
@@ -46,6 +48,7 @@ class TimeInput(private val c: Context, val label: Int, val valueHint: Int, val 
                 timeButton = button(R.string.report_datetime_button)
                 timeButton.setOnClickListener { openDateTimePicker() }
             }
+            setPadding(0,0,0, 30)
         }
     }
 

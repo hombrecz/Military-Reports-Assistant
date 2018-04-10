@@ -21,7 +21,9 @@ class ConditionTextInput(val c: Context, val label: Int, val conditionLabel: Int
 
     init {
         verticalLayout {
-            textView(label).setOnClickListener {
+            textView(label){
+                textSize = 20f
+            }.setOnClickListener {
                 if (hideableContent.visibility == View.VISIBLE) {
                     hideableContent.visibility = View.GONE
                 } else {
@@ -43,6 +45,7 @@ class ConditionTextInput(val c: Context, val label: Int, val conditionLabel: Int
                     visibility = View.GONE
                 }
             }
+            setPadding(0,0,0, 30)
         }
     }
 

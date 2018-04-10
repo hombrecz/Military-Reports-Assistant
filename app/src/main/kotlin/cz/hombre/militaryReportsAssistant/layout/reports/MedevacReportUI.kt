@@ -39,6 +39,7 @@ class MedevacReportUI(private val locationService: LocationService) : AnkoCompon
                     line8 = multipleLineInput(report_medevac_line_8, patientNationalityAndStatusOptions())
                     line9 = checkBoxInput(report_medevac_line_9, nbcContaminationOptions())
                 }
+                padding = dip(10)
             }.lparams(
                     width = matchParent,
                     height = matchParent

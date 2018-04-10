@@ -84,7 +84,7 @@ class EncodingServiceImpl(private val preferencesService: PreferencesService) : 
             encoded += alphabet.getOrElse(symbol.toLowerCase()) { symbol }
         }
 
-        return encoded + Utilities.NEW_LINE
+        return encoded
     }
 
     private fun isCzechLetterChFirstSymbol(alphabet: Int, index: Int, text: String) =

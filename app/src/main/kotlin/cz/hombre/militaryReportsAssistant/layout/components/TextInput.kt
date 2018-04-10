@@ -20,6 +20,7 @@ class TextInput(c: Context, val label: Int, val valueHint: Int) : LinearLayout(c
         verticalLayout {
             textView(label) {
                 textResource = label
+                textSize = 20f
             }.setOnClickListener {
                 if (hideableContent.visibility == View.VISIBLE) {
                     hideableContent.visibility = View.GONE
@@ -32,6 +33,7 @@ class TextInput(c: Context, val label: Int, val valueHint: Int) : LinearLayout(c
                     hintResource = valueHint
                 }
             }
+            setPadding(0,0,0, 30)
         }
     }
 

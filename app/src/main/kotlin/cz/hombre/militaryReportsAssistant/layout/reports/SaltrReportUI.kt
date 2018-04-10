@@ -33,6 +33,7 @@ class SaltrReportUI(private val dateTimeService: DateTimeService, private val lo
                     time = timeInput(report_time, report_time_hint, dateTimeService)
                     request = textInput(report_saltr_request, report_saltr_request_hint)
                 }
+                padding = dip(10)
             }.lparams(
                     width = matchParent,
                     height = matchParent

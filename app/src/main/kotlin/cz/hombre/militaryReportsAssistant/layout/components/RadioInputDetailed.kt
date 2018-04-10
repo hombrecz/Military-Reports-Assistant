@@ -20,7 +20,9 @@ class RadioInputDetailed(val c: Context, val groupLabel: Int, val options: Map<I
 
     init {
         verticalLayout {
-            textView(groupLabel).setOnClickListener {
+            textView(groupLabel){
+                textSize = 20f
+            }.setOnClickListener {
                 if (hideableContent.visibility == View.VISIBLE) {
                     hideableContent.visibility = View.GONE
                 } else {
@@ -41,6 +43,7 @@ class RadioInputDetailed(val c: Context, val groupLabel: Int, val options: Map<I
                     hintResource = detailHint
                 }
             }
+            setPadding(0,0,0, 30)
         }
     }
 

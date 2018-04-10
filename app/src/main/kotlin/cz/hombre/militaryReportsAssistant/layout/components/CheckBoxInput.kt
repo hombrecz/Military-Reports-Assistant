@@ -23,7 +23,9 @@ class CheckBoxInput(val c: Context, private val groupLabel: Int, private val opt
 
     init {
         verticalLayout {
-            textView(groupLabel).setOnClickListener {
+            textView(groupLabel){
+                textSize = 20f
+            }.setOnClickListener {
                 if (hideableContent.visibility == View.VISIBLE) {
                     hideableContent.visibility = View.GONE
                 } else {
@@ -40,6 +42,7 @@ class CheckBoxInput(val c: Context, private val groupLabel: Int, private val opt
                     values = values.plus(value)
                 }
             }
+            setPadding(0,0,0, 30)
         }
     }
 

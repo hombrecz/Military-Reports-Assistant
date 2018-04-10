@@ -31,6 +31,7 @@ class SituationReportUI(private val dateTimeService: DateTimeService) : AnkoComp
                     own = textInput(R.string.report_situation_own, R.string.report_situation_own_hint)
                     following = textInput(R.string.report_situation_following, R.string.report_situation_following_hint)
                 }
+                padding = dip(10)
             }.lparams(
                     width = matchParent,
                     height = matchParent

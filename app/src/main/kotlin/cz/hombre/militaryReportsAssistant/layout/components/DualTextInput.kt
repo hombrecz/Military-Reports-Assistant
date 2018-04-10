@@ -19,7 +19,9 @@ class DualTextInput(val c: Context, val label: Int, val firstHint: Int, val seco
 
     init {
         verticalLayout {
-            textView(label).setOnClickListener {
+            textView(label){
+                textSize = 20f
+            }.setOnClickListener {
                 if (hideableContent.visibility == View.VISIBLE) {
                     hideableContent.visibility = View.GONE
                 } else {
@@ -34,6 +36,7 @@ class DualTextInput(val c: Context, val label: Int, val firstHint: Int, val seco
                     hintResource = secondHint
                 }
             }
+            setPadding(0,0,0, 30)
         }
     }
 

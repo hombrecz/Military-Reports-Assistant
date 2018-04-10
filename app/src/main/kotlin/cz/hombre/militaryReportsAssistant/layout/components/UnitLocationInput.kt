@@ -25,7 +25,9 @@ class UnitLocationInput(c: Context, activity: Activity, private val locationServ
 
     init {
         verticalLayout {
-            textView(explosive_report_line_2).setOnClickListener {
+            textView(explosive_report_line_2){
+                textSize = 20f
+            }.setOnClickListener {
                 if (hideableContent.visibility == View.VISIBLE) {
                     hideableContent.visibility = View.GONE
                 } else {
@@ -45,6 +47,7 @@ class UnitLocationInput(c: Context, activity: Activity, private val locationServ
                     location = locationInput(report_medevac_line_1_coordinates, report_medevac_line_1_coordinates, locationService, activity)
                 }
             }
+            setPadding(0,0,0, 30)
         }
     }
 

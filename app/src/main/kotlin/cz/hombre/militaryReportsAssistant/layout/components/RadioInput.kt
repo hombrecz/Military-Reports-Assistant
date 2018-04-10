@@ -17,7 +17,9 @@ class RadioInput(val c: Context, val groupLabel: Int, val options: Map<Int, Int>
 
     init {
         verticalLayout {
-            textView(groupLabel).setOnClickListener {
+            textView(groupLabel){
+                textSize = 20f
+            }.setOnClickListener {
                 if (radioGroup.visibility == View.VISIBLE) {
                     radioGroup.visibility = View.GONE
                 } else {
@@ -33,6 +35,7 @@ class RadioInput(val c: Context, val groupLabel: Int, val options: Map<Int, Int>
                 }
             }
             radioGroup.check(options.keys.first())
+            setPadding(0,0,0, 30)
         }
     }
 

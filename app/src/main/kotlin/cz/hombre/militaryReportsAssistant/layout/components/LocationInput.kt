@@ -46,6 +46,7 @@ class LocationInput(private val c: Context, private val activity: Activity, val 
         verticalLayout {
             textView(label) {
                 textResource = label
+                textSize = 20f
             }.setOnClickListener {
                 if (hideableContent.visibility == View.VISIBLE) {
                     hideableContent.visibility = View.GONE
@@ -61,6 +62,7 @@ class LocationInput(private val c: Context, private val activity: Activity, val 
                 locationButton = button(R.string.report_location_button)
                 locationButton.setOnClickListener { getLocationFromGMaps() }
             }
+            setPadding(0,0,0, 30)
 
         }
     }

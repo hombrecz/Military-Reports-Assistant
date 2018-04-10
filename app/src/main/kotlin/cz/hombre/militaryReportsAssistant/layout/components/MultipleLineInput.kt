@@ -23,7 +23,9 @@ class MultipleLineInput(val c: Context, val groupLabel: Int, val options: Map<In
 
     init {
         verticalLayout {
-            textView(groupLabel).setOnClickListener {
+            textView(groupLabel){
+                textSize = 20f
+            }.setOnClickListener {
                 if (hideableContent.visibility == View.VISIBLE) {
                     hideableContent.visibility = View.GONE
                 } else {
@@ -40,6 +42,7 @@ class MultipleLineInput(val c: Context, val groupLabel: Int, val options: Map<In
                     values = values.plus(value)
                 }
             }
+            setPadding(0,0,0, 30)
         }
     }
 

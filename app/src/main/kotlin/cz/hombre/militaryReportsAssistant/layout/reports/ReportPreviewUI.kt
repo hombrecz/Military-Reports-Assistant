@@ -26,6 +26,8 @@ class ReportPreviewUI : AnkoComponent<ReportPreviewActivity> {
                     textContent = this
                     hintResource = R.string.report_preview_hint
                 }
+            }.lparams{
+                setPadding(20, 0, 20, 20)
             }
 
             shareButton = floatingActionButton {
