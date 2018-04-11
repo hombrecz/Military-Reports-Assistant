@@ -46,7 +46,7 @@
     <string name="preference_military_offset_summary">Časové pásmo, ve kterém bude udáváno DTG datum</string>
     <string name="preference_night_mode_summary">Použitý vzhled aplikace</string>
     <string name="preference_night_mode_title">Denní/noční mód</string>
-    <string name="report_location_button">Jiné pozice</string>
+    <string name="report_location_button">Jiná pozice</string>
     <string name="report_time">Čas</string>
     <string name="report_time_hint">Čas a datum</string>
     <string name="report_size">Velikost</string>
