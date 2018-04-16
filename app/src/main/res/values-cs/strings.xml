@@ -59,6 +59,8 @@
     <string name="report_call_sign">Volací znak</string>
     <string name="report_line">Řádek</string>
     <string name="report_negative">Není</string>
+    <string name="report_leaving_dialog_label">Opouštíte rozpracované hlášení</string>
+    <string name="report_leaving_dialog_content">Opuštěním přijdete o vyplněná data!</string>
     <string name="title_activity_medevac_report">Medevac 9-ti bodové hlášení</string>
     <string name="report_medevac_line_1">Řádek 1 - Místo vyzvednutí</string>
     <string name="report_medevac_line_1_coordinates">Souřadnice</string>

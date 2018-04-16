@@ -161,6 +161,8 @@
     <string name="report_negative">Negative</string>
     <string name="report_datetime_button">Choose time</string>
     <string name="report_datetime_dialog">Select date and time</string>
+    <string name="report_leaving_dialog_label">Leaving report concept</string>
+    <string name="report_leaving_dialog_content">You will lose prepared report!</string>
 
     <!--Medevac-->
     <string name="title_activity_medevac_report">Medevac 9-line request</string>
