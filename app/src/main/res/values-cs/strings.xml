@@ -14,7 +14,7 @@
     <string name="action_settings">Nastavení</string>
     <string name="status_callname_default">Volací znak</string>
     <string name="status_frequency_default">0 MHz</string>
-    <string name="status_gps_label">GPS</string>
+    <string name="status_gps_label">WGS84 (GPS)</string>
     <string name="status_gps_default">-chybí údaje o pozici GPS-</string>
     <string name="status_mgrs_label">MGRS</string>
     <string name="status_mgrs_default">-chybí údaje o pozici MGRS-</string>

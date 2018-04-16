@@ -20,7 +20,7 @@
     <!-- Status -->
     <string name="status_callname_default">Callname</string>
     <string name="status_frequency_default">0 MHz</string>
-    <string name="status_gps_label">GPS</string>
+    <string name="status_gps_label">WGS 84 (GPS)</string>
     <string name="status_gps_default">-GPS no location data-</string>
     <string name="status_mgrs_label">MGRS</string>
     <string name="status_mgrs_default">-MGRS no location data-</string>
