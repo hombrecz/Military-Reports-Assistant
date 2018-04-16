@@ -44,7 +44,7 @@ class ReportPreviewActivity : AppCompatActivity() {
         }
 
         reportPreviewUI.shareButton.setOnClickListener {
-            share(encodingService.formatReportText(report), this.title.toString())
+            share(this.title.toString() + Utilities.NEW_LINE + encodingService.formatReportText(report), this.title.toString())
         }
 
         report = intent?.getSerializableExtra(REPORT_PROPERTY) as ReportData
