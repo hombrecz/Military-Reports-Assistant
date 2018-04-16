@@ -23,20 +23,17 @@ private const val MILITARY_ZONE_OFFSET = "YXWVUTSRQPONZABCDEFGHIKLM"
 
 class DateTimeServiceImpl(private val preferencesService: PreferencesService) : DateTimeService {
 
-    override fun getMilitaryDateTimeGroup(): String {
-        val preferredOffset = preferencesService.getPreferredOffset()
-
-        val date = Calendar.getInstance(TimeZone.getTimeZone("GMT$preferredOffset:00")).time
-
-        return getMilitaryDateTimeGroup(date)
-    }
+    override fun getMilitaryDateTimeGroup() = getMilitaryDateTimeGroup(Date())
 
     override fun getMilitaryDateTimeGroup(date: Date): String {
         val preferredOffset = preferencesService.getPreferredOffset()
 
         val formatWithZoneOffset = ZULU_FORMAT.replace('Z', getMilitaryOffset(preferredOffset))
 
-        return getFormattedUTCDateTime(date, formatWithZoneOffset)
+        val format = SimpleDateFormat(formatWithZoneOffset, Locale.getDefault())
+        format.timeZone = getTimeZone(preferredOffset)
+
+        return format.format(date).toUpperCase()
     }
 
     override fun getLocalTime() = getLocalTime(Calendar.getInstance().time)
@@ -72,4 +69,15 @@ class DateTimeServiceImpl(private val preferencesService: PreferencesService) : 
     }
 
     private fun getMilitaryOffset(offset: Int) = MILITARY_ZONE_OFFSET[offset + 12]
+
+
+    private fun getTimeZone(preferredOffset: Int): TimeZone {
+        val timeZone: TimeZone
+        if (preferredOffset < 0) {
+            timeZone = TimeZone.getTimeZone("GMT$preferredOffset:00")
+        } else {
+            timeZone = TimeZone.getTimeZone("GMT+$preferredOffset:00")
+        }
+        return timeZone
+    }
 }
