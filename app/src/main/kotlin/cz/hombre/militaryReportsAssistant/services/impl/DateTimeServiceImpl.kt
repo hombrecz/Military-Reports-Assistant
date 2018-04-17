@@ -30,7 +30,7 @@ class DateTimeServiceImpl(private val preferencesService: PreferencesService) : 
 
         val formatWithZoneOffset = ZULU_FORMAT.replace('Z', getMilitaryOffset(preferredOffset))
 
-        val format = SimpleDateFormat(formatWithZoneOffset, Locale.getDefault())
+        val format = SimpleDateFormat(formatWithZoneOffset, Locale.UK)
         format.timeZone = getTimeZone(preferredOffset)
 
         return format.format(date).toUpperCase()
