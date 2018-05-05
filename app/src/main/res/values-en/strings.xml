@@ -32,7 +32,8 @@
     <string name="title_activity_report_preview">Report Preview</string>
     <string name="report_preview_ramrod_message">Report numbers de/encoded with RAMROD</string>
     <string name="report_preview_spelling_message">Report letters were un/spelled</string>
-    <string name="report_situation_status_red_label">Red (75–60%)</string>
+    <string name="report_situation_status_red_label">Red (49–25%)</string>
+    <string name="report_situation_unit_status_red_label">Red (75–60%)</string>
     <string name="report_situation_status_red">Red</string>
     <string name="preference_ramrod_summary">RAMROD used to encode numbers.</string>
     <string name="preference_ramrod_title">RAMROD</string>
@@ -91,7 +92,8 @@
     <string name="navigation_drawer_reports_ied">IED/UXO</string>
     <string name="explosive_report_line_7_hint">How the IED/UXO is affecting the assigned mission?</string>
     <string name="preference_callsign_default">Grunt 1</string>
-    <string name="report_situation_status_green_label">Green (100–90%)</string>
+    <string name="report_situation_status_green_label">Green (100–75%)</string>
+    <string name="report_situation_unit_status_green_label">Green (100–90%)</string>
     <string name="report_situation_status_green">Green</string>
     <string name="status_gps_label">WGS84 (GPS)</string>
     <string name="navigation_drawer_glossary">Glossary</string>
@@ -135,7 +137,8 @@
     <string name="report_medevac_line_3_bravo">B - Urgent surgical</string>
     <string name="report_medevac_line_7_bravo">B - Pyrotechnic signal</string>
     <string name="report_medevac_line_6_bravo">P - Possible enemy troops in area (approach with caution)</string>
-    <string name="report_situation_status_black_label">Black (60–0%)</string>
+    <string name="report_situation_status_black_label">Black (24–0%)</string>
+    <string name="report_situation_unit_status_black_label">Black (60–0%)</string>
     <string name="report_situation_status_black">Black</string>
     <string name="report_medevac_line_4_bravo">B - Hoist</string>
     <string name="report_medevac_line_9_biological">B - Biological</string>
@@ -147,7 +150,8 @@
     <string name="report_saltr_request_hint">Another requests or remarks to be added to the report</string>
     <string name="report_medevac_line_4_alpha">A - None</string>
     <string name="report_medevac_line_6_alpha">N - No enemy troops in area</string>
-    <string name="report_situation_status_amber_label">Amber (90–75%)</string>
+    <string name="report_situation_status_amber_label">Amber (74–50%)</string>
+    <string name="report_situation_unit_status_amber_label">Amber (90–75%)</string>
     <string name="report_situation_status_amber">Amber</string>
     <string name="preference_ramrod_default">ALGORITMUS</string>
     <string name="report_situation_own_hint">Actual situation of my unit</string>
@@ -289,4 +293,10 @@
     <string name="report_medevac_line_9_none">none</string>
     <string name="status_precision">Precision</string>
     <string name="status_last_fix">Last fix at</string>
+    <string name="report_situation_location">Location</string>
+    <string name="report_situation_location_hint">Own location</string>
+    <string name="report_situation_vehicles">Vehicles</string>
+    <string name="report_situation_vehicles_hint">Vehicles status</string>
+    <string name="report_situation_ammunition">Ammuntion status</string>
+    <string name="report_situation_fuel">Fuel status</string>
 </resources>

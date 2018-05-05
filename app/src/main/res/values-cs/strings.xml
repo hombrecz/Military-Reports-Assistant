@@ -123,16 +123,20 @@
     <string name="report_saltr_request_hint">Další požadavky nebo poznámky</string>
     <string name="title_activity_situation_report">SITREP</string>
     <string name="report_situation_status">Stav jednotky</string>
-    <string name="report_situation_status_green_label">Zelená (100–90%)</string>
+    <string name="report_situation_status_green_label">Zelená (100–75%)</string>
+    <string name="report_situation_unit_status_green_label">Zelená (100–90%)</string>
     <string name="report_situation_status_green">Green</string>
-    <string name="report_situation_status_amber_label">Jantarová (90–75%) (90–75%)</string>
+    <string name="report_situation_status_amber_label">Jantarová (74–50%)</string>
+    <string name="report_situation_unit_status_amber_label">Jantarová (90–75%)</string>
     <string name="report_situation_status_amber">Amber</string>
-    <string name="report_situation_status_red_label">Červená (75–60%)</string>
+    <string name="report_situation_status_red_label">Červená (49–25%)</string>
+    <string name="report_situation_unit_status_red_label">Červená (75–60%)</string>
     <string name="report_situation_status_red">Červená</string>
-    <string name="report_situation_status_black_label">Černá (60–0%)</string>
+    <string name="report_situation_status_black_label">Černá (24–0%)</string>
+    <string name="report_situation_unit_status_black_label">Černá (60–0%)</string>
     <string name="report_situation_status_black">Černá</string>
     <string name="report_situation_enemy">Protivníkova situace</string>
-    <string name="report_situation_enemy_hint">Co protívník provádí</string>
+    <string name="report_situation_enemy_hint">Co protivník provádí</string>
     <string name="report_situation_own">Vlastní situace</string>
     <string name="report_situation_own_hint">Aktuální situace mojí jednotky</string>
     <string name="report_situation_following">Následující akce</string>
@@ -289,4 +293,10 @@
     <string name="report_medevac_line_9_none">žádný</string>
     <string name="status_precision">Přesnost</string>
     <string name="status_last_fix">Poslední fix v</string>
+    <string name="report_situation_location">Pozice</string>
+    <string name="report_situation_location_hint">Vlastní pozice</string>
+    <string name="report_situation_vehicles">Technika</string>
+    <string name="report_situation_vehicles_hint">Bojeschopnost techniky</string>
+    <string name="report_situation_ammunition">Stav munice</string>
+    <string name="report_situation_fuel">Stav paliva</string>
 </resources>
