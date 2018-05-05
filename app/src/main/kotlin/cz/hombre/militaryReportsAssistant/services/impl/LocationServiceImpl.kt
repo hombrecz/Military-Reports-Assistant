@@ -41,7 +41,7 @@ class LocationServiceImpl(private val applicationContext: Context, private val d
 
     override fun getLocationTime() = dateTimeService.getLocalTime(Date(this.locationListener.gpsLocation.time))
 
-    override fun getLocationTimeAgo() = dateTimeService.getTimeDifference(Date(this.locationListener.gpsLocation.time)).toLowerCase()
+    override fun getLocationTimeAgo() = "(" + dateTimeService.getTimeDifference(Date(this.locationListener.gpsLocation.time)).toLowerCase() + ")"
 
     override fun getLocationPrecision() = if (this.locationListener.gpsLocation.accuracy > 0) {
         "$ACCURACY_BEGIN${this.locationListener.gpsLocation.accuracy}$ACCURACY_END"
@@ -85,5 +85,5 @@ class LocationServiceImpl(private val applicationContext: Context, private val d
 
     private fun getMGRSFromLocation(location: Location) = getMGRSFromLocation(location.latitude, location.longitude)
 
-    private fun getMGRSFromLocation(latitude: Double, longitude: Double) = Coordinates.mgrsFromLatLon(latitude, longitude)
+    private fun getMGRSFromLocation(latitude: Double, longitude: Double) = Coordinates.mgrsFromLatLon(latitude, longitude).replace(" ", "")
 }

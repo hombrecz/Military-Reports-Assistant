@@ -7,7 +7,7 @@
     <string name="report_situation_status">Unit status</string>
     <string name="explosive_report_unit">Unit identifier</string>
     <string name="report_salute_uniform_hint">Unit identification - by markings, unforms etc</string>
-    <string name="report_salute_uniform">Uniform</string>
+    <string name="report_salute_uniform">Unit/Uniform</string>
     <string name="explosive_report_line_5_description_hint">Type of agent, if identified</string>
     <string name="preference_military_offset_summary">Time offset (zone) used for date time group</string>
     <string name="status_time_image_description">Time info</string>
@@ -17,7 +17,7 @@
     <string name="settings_tactical_category">Tactical stuff</string>
     <string name="app_name">Military Reports Assistant</string>
     <string name="report_size">Size</string>
-    <string name="navigation_drawer_reports_sitrep">Sitrep</string>
+    <string name="navigation_drawer_reports_sitrep">SITREP</string>
     <string name="title_activity_situation_report">SITREP</string>
     <string name="settings_app_reloaded">Settings has been applied</string>
     <string name="action_settings">Settings</string>
@@ -204,31 +204,31 @@
         <item>12</item>
     </string-array>
     <string-array name="preference_military_offset_labels">
-        <item>UTC-12:00</item>
-        <item>UTC-11:00</item>
-        <item>UTC-10:00</item>
-        <item>UTC-09:00</item>
-        <item>UTC-08:00</item>
-        <item>UTC-07:00</item>
-        <item>UTC-06:00</item>
-        <item>UTC-05:00</item>
-        <item>UTC-04:00</item>
-        <item>UTC-03:00</item>
-        <item>UTC-02:00</item>
-        <item>UTC-01:00</item>
-        <item>UTC+00:00</item>
-        <item>UTC+01:00</item>
-        <item>UTC+02:00</item>
-        <item>UTC+03:00</item>
-        <item>UTC+04:00</item>
-        <item>UTC+05:00</item>
-        <item>UTC+06:00</item>
-        <item>UTC+07:00</item>
-        <item>UTC+08:00</item>
-        <item>UTC+09:00</item>
-        <item>UTC+10:00</item>
-        <item>UTC+11:00</item>
-        <item>UTC+12:00</item>
+        <item>Z - UTC-12:00</item>
+        <item>Y - UTC-11:00</item>
+        <item>X - UTC-10:00</item>
+        <item>W - UTC-09:00</item>
+        <item>V - UTC-08:00</item>
+        <item>U - UTC-07:00</item>
+        <item>T - UTC-06:00</item>
+        <item>S - UTC-05:00</item>
+        <item>Q - UTC-04:00</item>
+        <item>P - UTC-03:00</item>
+        <item>O - UTC-02:00</item>
+        <item>N - UTC-01:00</item>
+        <item>Z - UTC+00:00</item>
+        <item>A - UTC+01:00</item>
+        <item>B - UTC+02:00</item>
+        <item>C - UTC+03:00</item>
+        <item>D - UTC+04:00</item>
+        <item>E - UTC+05:00</item>
+        <item>F - UTC+06:00</item>
+        <item>G - UTC+07:00</item>
+        <item>H - UTC+08:00</item>
+        <item>I - UTC+09:00</item>
+        <item>K - UTC+10:00</item>
+        <item>L - UTC+11:00</item>
+        <item>M - UTC+12:00</item>
     </string-array>
     <string-array name="preference_night_mode_values">
         <item>0</item>
@@ -285,4 +285,8 @@
     <string name="main_description">Start by opening menu in the top left corner or by adjusting settings on the top right corner.</string>
     <string name="report_leaving_dialog_label">Leaving report concept</string>
     <string name="report_leaving_dialog_content">You will lose prepared report!</string>
+    <string name="empty_symbol">-</string>
+    <string name="report_medevac_line_9_none">none</string>
+    <string name="status_precision">Precision</string>
+    <string name="status_last_fix">Last fix at</string>
 </resources>

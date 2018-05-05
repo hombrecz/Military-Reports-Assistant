@@ -6,7 +6,7 @@
     <string name="navigation_drawer_close">Zavřít menu</string>
     <string name="navigation_drawer_reports">Hlášení</string>
     <string name="navigation_drawer_reports_medevac">Medevac 9-liner</string>
-    <string name="navigation_drawer_reports_sitrep">Sitrep</string>
+    <string name="navigation_drawer_reports_sitrep">SITREP</string>
     <string name="navigation_drawer_reports_salute">SALUTE</string>
     <string name="navigation_drawer_reports_saltr">SALTR</string>
     <string name="navigation_drawer_reports_ied">IED/UXO</string>
@@ -114,7 +114,7 @@
     <string name="report_medevac_line_9_biological">B - biologické</string>
     <string name="report_medevac_line_9_chemical">C - chemické</string>
     <string name="title_activity_salute_report">SALUTE hlášení</string>
-    <string name="report_salute_uniform">Uniforma</string>
+    <string name="report_salute_uniform">Jednotka/Uniforma</string>
     <string name="report_salute_uniform_hint">Identifikace jednotky - podle uniformy, označení, nášivek</string>
     <string name="report_salute_equipment">Vybavení</string>
     <string name="report_salute_equipment_hint">Pozorované vybavení a zbraně</string>
@@ -206,31 +206,31 @@
         <item>12</item>
     </string-array>
     <string-array name="preference_military_offset_labels">
-        <item>UTC-12:00</item>
-        <item>UTC-11:00</item>
-        <item>UTC-10:00</item>
-        <item>UTC-09:00</item>
-        <item>UTC-08:00</item>
-        <item>UTC-07:00</item>
-        <item>UTC-06:00</item>
-        <item>UTC-05:00</item>
-        <item>UTC-04:00</item>
-        <item>UTC-03:00</item>
-        <item>UTC-02:00</item>
-        <item>UTC-01:00</item>
-        <item>UTC+00:00</item>
-        <item>UTC+01:00</item>
-        <item>UTC+02:00</item>
-        <item>UTC+03:00</item>
-        <item>UTC+04:00</item>
-        <item>UTC+05:00</item>
-        <item>UTC+06:00</item>
-        <item>UTC+07:00</item>
-        <item>UTC+08:00</item>
-        <item>UTC+09:00</item>
-        <item>UTC+10:00</item>
-        <item>UTC+11:00</item>
-        <item>UTC+12:00</item>
+        <item>Z - UTC-12:00</item>
+        <item>Y - UTC-11:00</item>
+        <item>X - UTC-10:00</item>
+        <item>W - UTC-09:00</item>
+        <item>V - UTC-08:00</item>
+        <item>U - UTC-07:00</item>
+        <item>T - UTC-06:00</item>
+        <item>S - UTC-05:00</item>
+        <item>Q - UTC-04:00</item>
+        <item>P - UTC-03:00</item>
+        <item>O - UTC-02:00</item>
+        <item>N - UTC-01:00</item>
+        <item>Z - UTC+00:00</item>
+        <item>A - UTC+01:00</item>
+        <item>B - UTC+02:00</item>
+        <item>C - UTC+03:00</item>
+        <item>D - UTC+04:00</item>
+        <item>E - UTC+05:00</item>
+        <item>F - UTC+06:00</item>
+        <item>G - UTC+07:00</item>
+        <item>H - UTC+08:00</item>
+        <item>I - UTC+09:00</item>
+        <item>K - UTC+10:00</item>
+        <item>L - UTC+11:00</item>
+        <item>M - UTC+12:00</item>
     </string-array>
     <string-array name="preference_night_mode_values">
         <item>0</item>
@@ -285,4 +285,8 @@
     <string name="report_datetime_dialog">Vyber čas a datum</string>
     <string name="report_location_missing_api">Pro tuto akci je třeba nainstalovat Google Play Services</string>
     <string name="main_description">Začni otevřením menu v levém horním rohu nebo úpravou nastavení v pravém horním rohu.</string>
+    <string name="empty_symbol">-</string>
+    <string name="report_medevac_line_9_none">žádný</string>
+    <string name="status_precision">Přesnost</string>
+    <string name="status_last_fix">Poslední fix v</string>
 </resources>

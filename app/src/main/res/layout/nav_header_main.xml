@@ -75,7 +75,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="3dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -99,7 +100,8 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingBottom="3dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -122,7 +124,16 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingBottom="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="2dp"
+                    android:paddingStart="2dp"
+                    android:text="@string/status_precision" />
 
                 <TextView
                     android:id="@+id/status_precision"
@@ -132,15 +143,37 @@
                     android:paddingEnd="2dp"
                     android:paddingStart="2dp"
                     android:text="@string/status_precision_default" />
+            </LinearLayout>
 
-                <TextView
-                    android:id="@+id/status_time_position_retrieved"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="3dp">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingEnd="2dp"
-                    android:paddingStart="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/status_last_fix" />
+
+                    <TextView
+                        android:id="@+id/status_time_position_retrieved"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingEnd="2dp"
+                        android:paddingStart="2dp"
                     android:text="@string/status_time_position_retrieved_default" />
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/status_duration_position_retrieved"

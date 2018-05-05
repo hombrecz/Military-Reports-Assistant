@@ -95,5 +95,6 @@ class MedevacReportUI(private val locationService: LocationService) : AnkoCompon
     private fun nbcContaminationOptions() = linkedMapOf(
             letter_n to report_medevac_line_9_november,
             letter_b to report_medevac_line_9_biological,
-            letter_c to report_medevac_line_9_chemical)
+            letter_c to report_medevac_line_9_chemical,
+            empty_symbol to report_medevac_line_9_none)
 }

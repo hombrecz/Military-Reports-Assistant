@@ -81,7 +81,7 @@ class EncodingServiceImpl(private val preferencesService: PreferencesService) : 
                 else -> char.toLowerCase().toString()
             }
 
-            encoded += alphabet.getOrElse(symbol.toLowerCase()) { symbol }
+            encoded += alphabet.getOrElse(symbol.toLowerCase()) { symbol } + " "
         }
 
         return encoded
